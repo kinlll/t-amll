@@ -16,6 +16,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Controller
 public class LoginController {
@@ -33,17 +34,11 @@ public class LoginController {
         return null;
     }
 
-   /* @GetMapping("/index")
-    public String index(){
-        Session session = SecurityUtils.getSubject().getSession();
-
-        return null;
-    }*/
 
     //登陆
     @PostMapping("/login")
     @ResponseBody
-    public ResultVO login(@RequestBody UserVO user){
+    public ResultVO login(@RequestBody UserVO user, HttpSession session){
         if ("0".equals(user.getLoginType())){
             user.setLoginType(USER_LOGIN_TYPE);
         } else if ("1".equals(user.getLoginType())){
@@ -72,7 +67,7 @@ public class LoginController {
         }
         if (subject.isAuthenticated()) {
             String loginType = user.getLoginType();
-            Session session = SecurityUtils.getSubject().getSession();
+            session.setAttribute("user", user);
             return ResultVOUtil.success(loginType);
         } else {
             token.clear();
@@ -80,5 +75,7 @@ public class LoginController {
         }
 
     }
+
+    //登出使用shiro实现
 
 }

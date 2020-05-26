@@ -14,7 +14,7 @@
                     linkDefaultActions();
                 },
                 methods: {
-                    logi3n:function(){
+                    login:function(){
                         var url =  this.uri;
                         if(0==this.user.name.length){
                             $("span.errorMessage").html("请输入用户名");
@@ -29,8 +29,10 @@
 
                         axios.post(url,this.user).then(function(response) {
                             var result = response.data;
-                            if(result.code==0){
+                            if(result.code==0 && result.data=="User"){
                                 location.href="home";
+                            }else if (result.code==0 && result.data=="Admin"){
+                                location.href="editCategory"
                             }
                             else{
                                 $("span.errorMessage").html(result.message);
