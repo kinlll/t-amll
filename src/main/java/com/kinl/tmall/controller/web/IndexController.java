@@ -20,7 +20,7 @@ public class IndexController {
     @Autowired
     private ProductService productService;
 
-    @GetMapping("/index")
+    @GetMapping("/forehome")
     public ResultVO index(){
         ResultVO resultVO = new ResultVO();
         try {
