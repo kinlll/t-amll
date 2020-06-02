@@ -1,0 +1,690 @@
+2020-05-29 01:16:39.453  INFO 13680 --- [restartedMain] com.kinl.tmall.TMallApplication          : Starting TMallApplication on DESKTOP-QI4508G with PID 13680 (D:\t-mall\target\classes started by ASUS in D:\t-mall)
+2020-05-29 01:16:39.453 DEBUG 13680 --- [restartedMain] com.kinl.tmall.TMallApplication          : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-29 01:16:39.453  INFO 13680 --- [restartedMain] com.kinl.tmall.TMallApplication          : No active profile set, falling back to default profiles: default
+2020-05-29 01:16:39.531  INFO 13680 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-29 01:16:39.531  INFO 13680 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-29 01:16:44.642  INFO 13680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webShiroConfig' of type [com.kinl.tmall.configuration.WebShiroConfig$$EnhancerBySpringCGLIB$$7eae2d8c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 01:16:45.095  INFO 13680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userWebShiroRealm' of type [com.kinl.tmall.Realm.UserWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 01:16:45.095  INFO 13680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 01:16:45.142  INFO 13680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 01:16:45.142  INFO 13680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$5bb11895] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 01:16:45.142  INFO 13680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 01:16:45.158  INFO 13680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 01:16:45.251  INFO 13680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 01:16:45.907  INFO 13680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 01:16:45.907  INFO 13680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 01:16:45.907  INFO 13680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 01:16:45.907  INFO 13680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [com.sun.proxy.$Proxy67] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 01:16:45.907  INFO 13680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminServiceImpl' of type [com.kinl.tmall.service.impl.SysAdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 01:16:45.907  INFO 13680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminWebShiroRealm' of type [com.kinl.tmall.Realm.AdminWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 01:16:45.907  INFO 13680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customizedModularRealmAuthenticator' of type [com.kinl.tmall.configuration.CustomizedModularRealmAuthenticator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 01:16:45.923  INFO 13680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 01:16:45.971  INFO 13680 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 01:16:46.799  INFO 13680 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-29 01:16:46.830  INFO 13680 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-29 01:16:46.830  INFO 13680 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-29 01:16:47.111  INFO 13680 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-05-29 01:16:47.127  INFO 13680 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-29 01:16:47.127  INFO 13680 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7596 ms
+2020-05-29 01:16:47.848  INFO 13680 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-29 01:16:48.801  INFO 13680 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-29 01:16:49.001  INFO 13680 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-29 01:16:49.032  INFO 13680 --- [restartedMain] com.kinl.tmall.TMallApplication          : Started TMallApplication in 14.952 seconds (JVM running for 25.278)
+2020-05-29 01:16:57.036  INFO 13680 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-29 01:16:57.037  INFO 13680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-29 01:16:57.054  INFO 13680 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2020-05-29 01:16:57.105  INFO 13680 --- [http-nio-8080-exec-1] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
+2020-05-29 01:16:57.112  INFO 13680 --- [http-nio-8080-exec-1] com.kinl.tmall.aspect.LogAspect          : result : fore/home
+2020-05-29 01:16:58.022  INFO 13680 --- [http-nio-8080-exec-4] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/web/forehome', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.IndexController.index', args=[]}
+2020-05-29 01:17:20.354  INFO 13680 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-29 01:17:21.565  INFO 13680 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-29 01:17:21.835 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.tmall.dao.CategoryMapper.finAllVO    : ==>  Preparing: select * from category 
+2020-05-29 01:17:22.002 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.tmall.dao.CategoryMapper.finAllVO    : ==> Parameters: 
+2020-05-29 01:17:22.070 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.tmall.dao.CategoryMapper.finAllVO    : <==      Total: 18
+2020-05-29 01:17:22.070 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:22.070 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 60(Integer)
+2020-05-29 01:17:22.102 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:22.102 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:22.102 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 64(Integer)
+2020-05-29 01:17:22.117 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:22.117 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:22.117 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 68(Integer)
+2020-05-29 01:17:22.117 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:22.117 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:22.117 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 69(Integer)
+2020-05-29 01:17:22.117 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:22.117 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:22.117 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 71(Integer)
+2020-05-29 01:17:22.117 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:22.117 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:22.117 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 72(Integer)
+2020-05-29 01:17:22.133 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:22.133 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:22.133 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 73(Integer)
+2020-05-29 01:17:22.149 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:22.149 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:22.149 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 74(Integer)
+2020-05-29 01:17:22.149 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:22.149 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:22.149 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 75(Integer)
+2020-05-29 01:17:22.149 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:22.149 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:22.149 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 76(Integer)
+2020-05-29 01:17:22.149 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:22.149 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:22.149 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 77(Integer)
+2020-05-29 01:17:22.164 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:22.164 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:22.164 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 78(Integer)
+2020-05-29 01:17:22.164 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:22.164 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:22.164 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 79(Integer)
+2020-05-29 01:17:22.164 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:22.164 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:22.164 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 80(Integer)
+2020-05-29 01:17:22.180 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:22.180 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:22.180 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 81(Integer)
+2020-05-29 01:17:22.180 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:22.180 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:22.180 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 82(Integer)
+2020-05-29 01:17:22.180 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:22.180 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:22.180 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 83(Integer)
+2020-05-29 01:17:22.180 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:22.180 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:22.180 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 92(Integer)
+2020-05-29 01:17:22.195 DEBUG 13680 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 1
+2020-05-29 01:17:22.195  INFO 13680 --- [http-nio-8080-exec-4] com.kinl.tmall.aspect.LogAspect          : result : ResultVO(code=0, message=成功, data=[CategoryVO [Hash = 173589857, id=60, name=安全座椅], CategoryVO [Hash = 819482574, id=64, name=太阳镜], CategoryVO [Hash = 1471791712, id=68, name=品牌女装], CategoryVO [Hash = 1595292285, id=69, name=时尚男鞋], CategoryVO [Hash = 321490739, id=71, name=男士西服], CategoryVO [Hash = 1635587239, id=72, name=男士手拿包], CategoryVO [Hash = 2026790954, id=73, name=男表], CategoryVO [Hash = 384133276, id=74, name=女表], CategoryVO [Hash = 1240083812, id=75, name=空调], CategoryVO [Hash = 1077661906, id=76, name=冰箱], CategoryVO [Hash = 1266624463, id=77, name=原汁机], CategoryVO [Hash = 1994594228, id=78, name=扫地机器人], CategoryVO [Hash = 1853523201, id=79, name=平衡车], CategoryVO [Hash = 1884906844, id=80, name=电热水器], CategoryVO [Hash = 1110078919, id=81, name=沙发], CategoryVO [Hash = 748328065, id=82, name=马桶], CategoryVO [Hash = 384982686, id=83, name=平板电视], CategoryVO [Hash = 758823577, id=92, name=洗衣机]])
+2020-05-29 01:17:47.960  INFO 13680 --- [http-nio-8080-exec-6] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
+2020-05-29 01:17:47.960  INFO 13680 --- [http-nio-8080-exec-6] com.kinl.tmall.aspect.LogAspect          : result : fore/home
+2020-05-29 01:17:48.307  INFO 13680 --- [http-nio-8080-exec-2] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/web/forehome', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.IndexController.index', args=[]}
+2020-05-29 01:17:51.805 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.tmall.dao.CategoryMapper.finAllVO    : ==>  Preparing: select * from category 
+2020-05-29 01:17:51.805 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.tmall.dao.CategoryMapper.finAllVO    : ==> Parameters: 
+2020-05-29 01:17:51.815 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.tmall.dao.CategoryMapper.finAllVO    : <==      Total: 18
+2020-05-29 01:17:51.820 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:51.821 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 60(Integer)
+2020-05-29 01:17:51.824 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:51.825 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:51.825 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 64(Integer)
+2020-05-29 01:17:51.835 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:51.835 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:51.836 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 68(Integer)
+2020-05-29 01:17:51.837 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:51.838 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:51.838 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 69(Integer)
+2020-05-29 01:17:51.840 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:51.840 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:51.840 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 71(Integer)
+2020-05-29 01:17:51.842 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:51.842 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:51.843 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 72(Integer)
+2020-05-29 01:17:51.845 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:51.845 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:51.846 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 73(Integer)
+2020-05-29 01:17:51.848 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:51.849 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:51.849 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 74(Integer)
+2020-05-29 01:17:51.851 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:51.852 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:51.852 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 75(Integer)
+2020-05-29 01:17:51.853 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:51.854 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:51.854 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 76(Integer)
+2020-05-29 01:17:51.855 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:51.856 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:51.856 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 77(Integer)
+2020-05-29 01:17:51.858 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:51.858 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:51.858 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 78(Integer)
+2020-05-29 01:17:51.860 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:51.860 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:51.861 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 79(Integer)
+2020-05-29 01:17:51.864 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:51.864 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:51.864 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 80(Integer)
+2020-05-29 01:17:51.867 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:51.867 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:51.867 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 81(Integer)
+2020-05-29 01:17:51.869 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:51.869 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:51.869 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 82(Integer)
+2020-05-29 01:17:51.871 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:51.871 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:51.872 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 83(Integer)
+2020-05-29 01:17:51.873 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:17:51.874 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:17:51.874 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 92(Integer)
+2020-05-29 01:17:51.875 DEBUG 13680 --- [http-nio-8080-exec-2] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 1
+2020-05-29 01:17:51.876  INFO 13680 --- [http-nio-8080-exec-2] com.kinl.tmall.aspect.LogAspect          : result : ResultVO(code=0, message=成功, data=[CategoryVO [Hash = 1716878995, id=60, name=安全座椅], CategoryVO [Hash = 1119677216, id=64, name=太阳镜], CategoryVO [Hash = 1041433626, id=68, name=品牌女装], CategoryVO [Hash = 1446596652, id=69, name=时尚男鞋], CategoryVO [Hash = 458558878, id=71, name=男士西服], CategoryVO [Hash = 1041563711, id=72, name=男士手拿包], CategoryVO [Hash = 402714675, id=73, name=男表], CategoryVO [Hash = 77884207, id=74, name=女表], CategoryVO [Hash = 925810648, id=75, name=空调], CategoryVO [Hash = 556553722, id=76, name=冰箱], CategoryVO [Hash = 1043511428, id=77, name=原汁机], CategoryVO [Hash = 426262910, id=78, name=扫地机器人], CategoryVO [Hash = 1543171572, id=79, name=平衡车], CategoryVO [Hash = 406511860, id=80, name=电热水器], CategoryVO [Hash = 870813167, id=81, name=沙发], CategoryVO [Hash = 1759467868, id=82, name=马桶], CategoryVO [Hash = 1690733822, id=83, name=平板电视], CategoryVO [Hash = 724889042, id=92, name=洗衣机]])
+2020-05-29 01:18:49.389  INFO 13680 --- [http-nio-8080-exec-5] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
+2020-05-29 01:18:49.389  INFO 13680 --- [http-nio-8080-exec-5] com.kinl.tmall.aspect.LogAspect          : result : fore/home
+2020-05-29 01:18:49.669  INFO 13680 --- [http-nio-8080-exec-1] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/web/forehome', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.IndexController.index', args=[]}
+2020-05-29 01:18:53.417 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.tmall.dao.CategoryMapper.finAllVO    : ==>  Preparing: select * from category 
+2020-05-29 01:18:53.417 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.tmall.dao.CategoryMapper.finAllVO    : ==> Parameters: 
+2020-05-29 01:18:53.420 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.tmall.dao.CategoryMapper.finAllVO    : <==      Total: 18
+2020-05-29 01:18:53.420 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:18:53.420 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 60(Integer)
+2020-05-29 01:18:53.423 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:18:53.423 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:18:53.424 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 64(Integer)
+2020-05-29 01:18:53.425 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:18:53.426 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:18:53.426 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 68(Integer)
+2020-05-29 01:18:53.427 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:18:53.428 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:18:53.428 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 69(Integer)
+2020-05-29 01:18:53.431 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:18:53.431 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:18:53.431 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 71(Integer)
+2020-05-29 01:18:53.433 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:18:53.434 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:18:53.434 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 72(Integer)
+2020-05-29 01:18:53.436 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:18:53.437 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:18:53.437 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 73(Integer)
+2020-05-29 01:18:53.448 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:18:53.448 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:18:53.448 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 74(Integer)
+2020-05-29 01:18:53.450 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:18:53.450 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:18:53.450 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 75(Integer)
+2020-05-29 01:18:53.452 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:18:53.452 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:18:53.453 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 76(Integer)
+2020-05-29 01:18:53.456 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:18:53.456 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:18:53.457 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 77(Integer)
+2020-05-29 01:18:53.459 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:18:53.460 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:18:53.461 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 78(Integer)
+2020-05-29 01:18:53.462 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:18:53.462 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:18:53.463 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 79(Integer)
+2020-05-29 01:18:53.464 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:18:53.464 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:18:53.464 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 80(Integer)
+2020-05-29 01:18:53.466 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:18:53.466 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:18:53.467 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 81(Integer)
+2020-05-29 01:18:53.468 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:18:53.469 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:18:53.470 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 82(Integer)
+2020-05-29 01:18:53.472 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:18:53.472 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:18:53.473 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 83(Integer)
+2020-05-29 01:18:53.476 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:18:53.476 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:18:53.476 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 92(Integer)
+2020-05-29 01:18:53.478 DEBUG 13680 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 1
+2020-05-29 01:18:53.478  INFO 13680 --- [http-nio-8080-exec-1] com.kinl.tmall.aspect.LogAspect          : result : ResultVO(code=0, message=成功, data=[CategoryVO [Hash = 30816187, id=60, name=安全座椅], CategoryVO [Hash = 1806540814, id=64, name=太阳镜], CategoryVO [Hash = 1170970921, id=68, name=品牌女装], CategoryVO [Hash = 1601479289, id=69, name=时尚男鞋], CategoryVO [Hash = 1873755587, id=71, name=男士西服], CategoryVO [Hash = 1770278376, id=72, name=男士手拿包], CategoryVO [Hash = 1881113376, id=73, name=男表], CategoryVO [Hash = 167936048, id=74, name=女表], CategoryVO [Hash = 475391382, id=75, name=空调], CategoryVO [Hash = 1467285753, id=76, name=冰箱], CategoryVO [Hash = 1543479220, id=77, name=原汁机], CategoryVO [Hash = 1172477947, id=78, name=扫地机器人], CategoryVO [Hash = 1982378884, id=79, name=平衡车], CategoryVO [Hash = 153425776, id=80, name=电热水器], CategoryVO [Hash = 780155871, id=81, name=沙发], CategoryVO [Hash = 2139892923, id=82, name=马桶], CategoryVO [Hash = 1284179037, id=83, name=平板电视], CategoryVO [Hash = 1840518187, id=92, name=洗衣机]])
+2020-05-29 01:20:26.402  INFO 13680 --- [http-nio-8080-exec-7] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
+2020-05-29 01:20:26.402  INFO 13680 --- [http-nio-8080-exec-7] com.kinl.tmall.aspect.LogAspect          : result : fore/home
+2020-05-29 01:20:26.723  INFO 13680 --- [http-nio-8080-exec-5] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/web/forehome', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.IndexController.index', args=[]}
+2020-05-29 01:20:31.442 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.tmall.dao.CategoryMapper.finAllVO    : ==>  Preparing: select * from category 
+2020-05-29 01:20:31.443 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.tmall.dao.CategoryMapper.finAllVO    : ==> Parameters: 
+2020-05-29 01:20:31.457 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.tmall.dao.CategoryMapper.finAllVO    : <==      Total: 18
+2020-05-29 01:20:33.450 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:20:33.450 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 60(Integer)
+2020-05-29 01:20:33.466 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:20:33.466 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:20:33.466 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 64(Integer)
+2020-05-29 01:20:33.466 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:20:33.466 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:20:33.466 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 68(Integer)
+2020-05-29 01:20:33.466 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:20:33.466 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:20:33.466 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 69(Integer)
+2020-05-29 01:20:33.466 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 71(Integer)
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 72(Integer)
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 73(Integer)
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 74(Integer)
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 75(Integer)
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 76(Integer)
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:20:33.482 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 77(Integer)
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 78(Integer)
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 79(Integer)
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 80(Integer)
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 81(Integer)
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 82(Integer)
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 83(Integer)
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 92(Integer)
+2020-05-29 01:20:33.497 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 1
+2020-05-29 01:20:33.497  INFO 13680 --- [http-nio-8080-exec-5] com.kinl.tmall.aspect.LogAspect          : result : ResultVO(code=0, message=成功, data=[CategoryVO [Hash = 1127147554, id=60, name=安全座椅], CategoryVO [Hash = 952332120, id=64, name=太阳镜], CategoryVO [Hash = 1515216236, id=68, name=品牌女装], CategoryVO [Hash = 333019267, id=69, name=时尚男鞋], CategoryVO [Hash = 662895906, id=71, name=男士西服], CategoryVO [Hash = 68747045, id=72, name=男士手拿包], CategoryVO [Hash = 1559980535, id=73, name=男表], CategoryVO [Hash = 79564683, id=74, name=女表], CategoryVO [Hash = 879073747, id=75, name=空调], CategoryVO [Hash = 2009573805, id=76, name=冰箱], CategoryVO [Hash = 1886700147, id=77, name=原汁机], CategoryVO [Hash = 79845793, id=78, name=扫地机器人], CategoryVO [Hash = 477230059, id=79, name=平衡车], CategoryVO [Hash = 1454488329, id=80, name=电热水器], CategoryVO [Hash = 36086, id=81, name=沙发], CategoryVO [Hash = 370786822, id=82, name=马桶], CategoryVO [Hash = 90477957, id=83, name=平板电视], CategoryVO [Hash = 1591087059, id=92, name=洗衣机]])
+2020-05-29 01:25:51.682  INFO 13680 --- [http-nio-8080-exec-10] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
+2020-05-29 01:25:51.682  INFO 13680 --- [http-nio-8080-exec-10] com.kinl.tmall.aspect.LogAspect          : result : fore/home
+2020-05-29 01:25:52.023  INFO 13680 --- [http-nio-8080-exec-9] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/web/forehome', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.IndexController.index', args=[]}
+2020-05-29 01:25:52.024 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.tmall.dao.CategoryMapper.finAllVO    : ==>  Preparing: select * from category 
+2020-05-29 01:25:52.024 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.tmall.dao.CategoryMapper.finAllVO    : ==> Parameters: 
+2020-05-29 01:25:52.028 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.tmall.dao.CategoryMapper.finAllVO    : <==      Total: 18
+2020-05-29 01:25:52.028 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:25:52.028 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 60(Integer)
+2020-05-29 01:25:52.031 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:25:52.031 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:25:52.031 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 64(Integer)
+2020-05-29 01:25:52.032 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:25:52.033 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:25:52.033 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 68(Integer)
+2020-05-29 01:25:52.035 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:25:52.035 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:25:52.035 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 69(Integer)
+2020-05-29 01:25:52.037 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:25:52.037 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:25:52.038 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 71(Integer)
+2020-05-29 01:25:52.040 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:25:52.040 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:25:52.040 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 72(Integer)
+2020-05-29 01:25:52.043 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:25:52.044 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:25:52.044 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 73(Integer)
+2020-05-29 01:25:52.045 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:25:52.046 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:25:52.046 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 74(Integer)
+2020-05-29 01:25:52.047 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:25:52.048 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:25:52.048 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 75(Integer)
+2020-05-29 01:25:52.050 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:25:52.050 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:25:52.050 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 76(Integer)
+2020-05-29 01:25:52.051 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:25:52.052 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:25:52.052 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 77(Integer)
+2020-05-29 01:25:52.053 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:25:52.054 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:25:52.054 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 78(Integer)
+2020-05-29 01:25:52.056 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:25:52.057 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:25:52.057 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 79(Integer)
+2020-05-29 01:25:52.058 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:25:52.059 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:25:52.059 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 80(Integer)
+2020-05-29 01:25:52.061 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:25:52.061 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:25:52.061 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 81(Integer)
+2020-05-29 01:25:52.063 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:25:52.063 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:25:52.063 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 82(Integer)
+2020-05-29 01:25:52.065 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:25:52.065 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:25:52.065 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 83(Integer)
+2020-05-29 01:25:52.066 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:25:52.067 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:25:52.067 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 92(Integer)
+2020-05-29 01:25:52.068 DEBUG 13680 --- [http-nio-8080-exec-9] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 1
+2020-05-29 01:25:52.068  INFO 13680 --- [http-nio-8080-exec-9] com.kinl.tmall.aspect.LogAspect          : result : ResultVO(code=0, message=成功, data=[CategoryVO [Hash = 1888643236, id=60, name=安全座椅], CategoryVO [Hash = 1472953613, id=64, name=太阳镜], CategoryVO [Hash = 1629731356, id=68, name=品牌女装], CategoryVO [Hash = 1999736444, id=69, name=时尚男鞋], CategoryVO [Hash = 344264566, id=71, name=男士西服], CategoryVO [Hash = 405416958, id=72, name=男士手拿包], CategoryVO [Hash = 1688568253, id=73, name=男表], CategoryVO [Hash = 530358587, id=74, name=女表], CategoryVO [Hash = 601809665, id=75, name=空调], CategoryVO [Hash = 1793218911, id=76, name=冰箱], CategoryVO [Hash = 570590679, id=77, name=原汁机], CategoryVO [Hash = 1483570645, id=78, name=扫地机器人], CategoryVO [Hash = 218061618, id=79, name=平衡车], CategoryVO [Hash = 1949291347, id=80, name=电热水器], CategoryVO [Hash = 1119214652, id=81, name=沙发], CategoryVO [Hash = 1896186474, id=82, name=马桶], CategoryVO [Hash = 131424691, id=83, name=平板电视], CategoryVO [Hash = 233475921, id=92, name=洗衣机]])
+2020-05-29 01:34:11.438  INFO 13680 --- [http-nio-8080-exec-1] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
+2020-05-29 01:34:11.438  INFO 13680 --- [http-nio-8080-exec-1] com.kinl.tmall.aspect.LogAspect          : result : fore/home
+2020-05-29 01:34:11.780  INFO 13680 --- [http-nio-8080-exec-5] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/web/forehome', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.IndexController.index', args=[]}
+2020-05-29 01:34:11.781 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.tmall.dao.CategoryMapper.finAllVO    : ==>  Preparing: select * from category 
+2020-05-29 01:34:11.781 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.tmall.dao.CategoryMapper.finAllVO    : ==> Parameters: 
+2020-05-29 01:34:11.783 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.tmall.dao.CategoryMapper.finAllVO    : <==      Total: 18
+2020-05-29 01:34:11.784 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:34:11.784 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 60(Integer)
+2020-05-29 01:34:11.787 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:34:11.788 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:34:11.788 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 64(Integer)
+2020-05-29 01:34:11.790 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:34:11.790 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:34:11.791 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 68(Integer)
+2020-05-29 01:34:11.792 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:34:11.792 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:34:11.792 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 69(Integer)
+2020-05-29 01:34:11.795 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:34:11.796 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:34:11.796 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 71(Integer)
+2020-05-29 01:34:11.797 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:34:11.797 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:34:11.798 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 72(Integer)
+2020-05-29 01:34:11.800 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:34:11.800 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:34:11.800 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 73(Integer)
+2020-05-29 01:34:11.801 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:34:11.802 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:34:11.803 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 74(Integer)
+2020-05-29 01:34:11.804 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:34:11.805 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:34:11.805 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 75(Integer)
+2020-05-29 01:34:11.807 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:34:11.807 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:34:11.808 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 76(Integer)
+2020-05-29 01:34:11.809 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:34:11.809 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:34:11.810 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 77(Integer)
+2020-05-29 01:34:11.811 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:34:11.811 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:34:11.812 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 78(Integer)
+2020-05-29 01:34:11.813 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:34:11.813 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:34:11.814 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 79(Integer)
+2020-05-29 01:34:11.815 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:34:11.815 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:34:11.815 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 80(Integer)
+2020-05-29 01:34:11.816 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:34:11.817 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:34:11.817 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 81(Integer)
+2020-05-29 01:34:11.818 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:34:11.819 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:34:11.819 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 82(Integer)
+2020-05-29 01:34:11.824 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:34:11.825 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:34:11.825 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 83(Integer)
+2020-05-29 01:34:11.829 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 01:34:11.829 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 01:34:11.829 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 92(Integer)
+2020-05-29 01:34:11.830 DEBUG 13680 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 1
+2020-05-29 01:34:11.831  INFO 13680 --- [http-nio-8080-exec-5] com.kinl.tmall.aspect.LogAspect          : result : ResultVO(code=0, message=成功, data=[CategoryVO [Hash = 1947841294, id=60, name=安全座椅], CategoryVO [Hash = 1728886305, id=64, name=太阳镜], CategoryVO [Hash = 620141574, id=68, name=品牌女装], CategoryVO [Hash = 980069386, id=69, name=时尚男鞋], CategoryVO [Hash = 55769482, id=71, name=男士西服], CategoryVO [Hash = 23984767, id=72, name=男士手拿包], CategoryVO [Hash = 292245752, id=73, name=男表], CategoryVO [Hash = 2123281443, id=74, name=女表], CategoryVO [Hash = 1787071697, id=75, name=空调], CategoryVO [Hash = 81014268, id=76, name=冰箱], CategoryVO [Hash = 1341346062, id=77, name=原汁机], CategoryVO [Hash = 1154993023, id=78, name=扫地机器人], CategoryVO [Hash = 184235312, id=79, name=平衡车], CategoryVO [Hash = 803553886, id=80, name=电热水器], CategoryVO [Hash = 2060127629, id=81, name=沙发], CategoryVO [Hash = 4042136, id=82, name=马桶], CategoryVO [Hash = 1404852762, id=83, name=平板电视], CategoryVO [Hash = 1456346497, id=92, name=洗衣机]])
+2020-05-29 01:36:13.552  INFO 13680 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-29 01:36:13.568  INFO 13680 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-29 01:36:13.589  INFO 13680 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-29 13:34:58.616  INFO 11460 --- [restartedMain] com.kinl.tmall.TMallApplication          : Starting TMallApplication on DESKTOP-QI4508G with PID 11460 (D:\t-mall\target\classes started by ASUS in D:\t-mall)
+2020-05-29 13:34:58.648 DEBUG 11460 --- [restartedMain] com.kinl.tmall.TMallApplication          : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-29 13:34:58.648  INFO 11460 --- [restartedMain] com.kinl.tmall.TMallApplication          : No active profile set, falling back to default profiles: default
+2020-05-29 13:34:58.835  INFO 11460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-29 13:34:58.835  INFO 11460 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-29 13:35:03.168  INFO 11460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webShiroConfig' of type [com.kinl.tmall.configuration.WebShiroConfig$$EnhancerBySpringCGLIB$$a4d8a7dd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 13:35:04.105  INFO 11460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userWebShiroRealm' of type [com.kinl.tmall.Realm.UserWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 13:35:04.152  INFO 11460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 13:35:04.214  INFO 11460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 13:35:04.214  INFO 11460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$81db92e6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 13:35:04.230  INFO 11460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 13:35:04.230  INFO 11460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 13:35:04.887  INFO 11460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 13:35:06.468  INFO 11460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 13:35:06.499  INFO 11460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 13:35:06.499  INFO 11460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 13:35:06.499  INFO 11460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [com.sun.proxy.$Proxy67] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 13:35:06.499  INFO 11460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminServiceImpl' of type [com.kinl.tmall.service.impl.SysAdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 13:35:06.499  INFO 11460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminWebShiroRealm' of type [com.kinl.tmall.Realm.AdminWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 13:35:06.499  INFO 11460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customizedModularRealmAuthenticator' of type [com.kinl.tmall.configuration.CustomizedModularRealmAuthenticator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 13:35:06.515  INFO 11460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 13:35:06.687  INFO 11460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-29 13:35:08.829  INFO 11460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-29 13:35:08.891  INFO 11460 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-29 13:35:08.891  INFO 11460 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-29 13:35:09.563  INFO 11460 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-05-29 13:35:09.563  INFO 11460 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-29 13:35:09.563  INFO 11460 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 10728 ms
+2020-05-29 13:35:11.063  INFO 11460 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-29 13:35:12.329  INFO 11460 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-29 13:35:12.564  INFO 11460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-29 13:35:12.564  INFO 11460 --- [restartedMain] com.kinl.tmall.TMallApplication          : Started TMallApplication in 22.072 seconds (JVM running for 44.963)
+2020-05-29 13:35:24.692  INFO 11460 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-29 13:35:24.694  INFO 11460 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-29 13:35:24.714  INFO 11460 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
+2020-05-29 13:35:24.818  INFO 11460 --- [http-nio-8080-exec-2] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
+2020-05-29 13:35:24.835  INFO 11460 --- [http-nio-8080-exec-2] com.kinl.tmall.aspect.LogAspect          : result : fore/home
+2020-05-29 13:35:27.795  INFO 11460 --- [http-nio-8080-exec-7] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/web/forehome', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.IndexController.index', args=[]}
+2020-05-29 13:35:27.963  INFO 11460 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-29 13:35:28.576  INFO 11460 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-29 13:35:28.622 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.tmall.dao.CategoryMapper.finAllVO    : ==>  Preparing: select * from category 
+2020-05-29 13:35:28.654 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.tmall.dao.CategoryMapper.finAllVO    : ==> Parameters: 
+2020-05-29 13:35:28.732 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.tmall.dao.CategoryMapper.finAllVO    : <==      Total: 18
+2020-05-29 13:35:28.732 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:35:28.732 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 60(Integer)
+2020-05-29 13:35:28.747 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:35:28.747 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:35:28.747 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 64(Integer)
+2020-05-29 13:35:28.747 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:35:28.747 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:35:28.747 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 68(Integer)
+2020-05-29 13:35:28.763 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:35:28.763 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:35:28.763 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 69(Integer)
+2020-05-29 13:35:28.763 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:35:28.763 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:35:28.763 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 71(Integer)
+2020-05-29 13:35:28.779 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:35:28.779 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:35:28.779 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 72(Integer)
+2020-05-29 13:35:28.779 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:35:28.779 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:35:28.779 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 73(Integer)
+2020-05-29 13:35:28.779 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:35:28.794 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:35:28.794 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 74(Integer)
+2020-05-29 13:35:28.794 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:35:28.794 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:35:28.794 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 75(Integer)
+2020-05-29 13:35:28.794 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:35:28.794 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:35:28.794 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 76(Integer)
+2020-05-29 13:35:28.794 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:35:28.810 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:35:28.810 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 77(Integer)
+2020-05-29 13:35:28.810 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:35:28.810 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:35:28.810 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 78(Integer)
+2020-05-29 13:35:28.810 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:35:28.810 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:35:28.810 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 79(Integer)
+2020-05-29 13:35:28.826 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:35:28.826 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:35:28.826 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 80(Integer)
+2020-05-29 13:35:28.826 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:35:28.826 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:35:28.826 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 81(Integer)
+2020-05-29 13:35:28.826 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:35:28.826 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:35:28.826 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 82(Integer)
+2020-05-29 13:35:28.826 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:35:28.826 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:35:28.826 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 83(Integer)
+2020-05-29 13:35:28.841 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:35:28.841 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:35:28.841 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 92(Integer)
+2020-05-29 13:35:28.841 DEBUG 11460 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 1
+2020-05-29 13:35:28.841  INFO 11460 --- [http-nio-8080-exec-7] com.kinl.tmall.aspect.LogAspect          : result : ResultVO(code=0, message=成功, data=[CategoryVO [Hash = 1618727304, id=60, name=安全座椅], CategoryVO [Hash = 1067327638, id=64, name=太阳镜], CategoryVO [Hash = 1739778795, id=68, name=品牌女装], CategoryVO [Hash = 831537613, id=69, name=时尚男鞋], CategoryVO [Hash = 265888230, id=71, name=男士西服], CategoryVO [Hash = 1099774491, id=72, name=男士手拿包], CategoryVO [Hash = 832071027, id=73, name=男表], CategoryVO [Hash = 45466788, id=74, name=女表], CategoryVO [Hash = 1143276293, id=75, name=空调], CategoryVO [Hash = 1817228408, id=76, name=冰箱], CategoryVO [Hash = 512882556, id=77, name=原汁机], CategoryVO [Hash = 850231534, id=78, name=扫地机器人], CategoryVO [Hash = 1593606293, id=79, name=平衡车], CategoryVO [Hash = 937827398, id=80, name=电热水器], CategoryVO [Hash = 643639249, id=81, name=沙发], CategoryVO [Hash = 2015979780, id=82, name=马桶], CategoryVO [Hash = 1122743996, id=83, name=平板电视], CategoryVO [Hash = 1172870795, id=92, name=洗衣机]])
+2020-05-29 13:36:48.842  INFO 11460 --- [http-nio-8080-exec-10] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
+2020-05-29 13:36:48.842  INFO 11460 --- [http-nio-8080-exec-10] com.kinl.tmall.aspect.LogAspect          : result : fore/home
+2020-05-29 13:36:49.207  INFO 11460 --- [http-nio-8080-exec-4] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/web/forehome', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.IndexController.index', args=[]}
+2020-05-29 13:36:49.208 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.tmall.dao.CategoryMapper.finAllVO    : ==>  Preparing: select * from category 
+2020-05-29 13:36:49.209 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.tmall.dao.CategoryMapper.finAllVO    : ==> Parameters: 
+2020-05-29 13:36:49.212 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.tmall.dao.CategoryMapper.finAllVO    : <==      Total: 18
+2020-05-29 13:36:49.214 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:36:49.214 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 60(Integer)
+2020-05-29 13:36:49.217 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:36:49.218 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:36:49.219 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 64(Integer)
+2020-05-29 13:36:49.221 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:36:49.222 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:36:49.222 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 68(Integer)
+2020-05-29 13:36:49.224 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:36:49.224 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:36:49.224 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 69(Integer)
+2020-05-29 13:36:49.226 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:36:49.226 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:36:49.227 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 71(Integer)
+2020-05-29 13:36:49.229 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:36:49.230 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:36:49.230 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 72(Integer)
+2020-05-29 13:36:49.232 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:36:49.233 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:36:49.233 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 73(Integer)
+2020-05-29 13:36:49.236 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:36:49.237 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:36:49.237 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 74(Integer)
+2020-05-29 13:36:49.239 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:36:49.239 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:36:49.240 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 75(Integer)
+2020-05-29 13:36:49.241 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:36:49.242 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:36:49.242 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 76(Integer)
+2020-05-29 13:36:49.244 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:36:49.245 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:36:49.245 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 77(Integer)
+2020-05-29 13:36:49.247 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:36:49.248 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:36:49.248 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 78(Integer)
+2020-05-29 13:36:49.251 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:36:49.252 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:36:49.252 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 79(Integer)
+2020-05-29 13:36:49.254 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:36:49.255 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:36:49.255 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 80(Integer)
+2020-05-29 13:36:49.257 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:36:49.257 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:36:49.257 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 81(Integer)
+2020-05-29 13:36:49.259 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:36:49.260 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:36:49.260 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 82(Integer)
+2020-05-29 13:36:49.262 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:36:49.262 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:36:49.262 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 83(Integer)
+2020-05-29 13:36:49.265 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:36:49.265 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:36:49.265 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 92(Integer)
+2020-05-29 13:36:49.267 DEBUG 11460 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 1
+2020-05-29 13:36:49.268  INFO 11460 --- [http-nio-8080-exec-4] com.kinl.tmall.aspect.LogAspect          : result : ResultVO(code=0, message=成功, data=[CategoryVO [Hash = 2135174386, id=60, name=安全座椅], CategoryVO [Hash = 1683565526, id=64, name=太阳镜], CategoryVO [Hash = 1379348339, id=68, name=品牌女装], CategoryVO [Hash = 1465083093, id=69, name=时尚男鞋], CategoryVO [Hash = 154067313, id=71, name=男士西服], CategoryVO [Hash = 604269593, id=72, name=男士手拿包], CategoryVO [Hash = 1327727453, id=73, name=男表], CategoryVO [Hash = 52044704, id=74, name=女表], CategoryVO [Hash = 2109833179, id=75, name=空调], CategoryVO [Hash = 2049093854, id=76, name=冰箱], CategoryVO [Hash = 701037996, id=77, name=原汁机], CategoryVO [Hash = 2073943062, id=78, name=扫地机器人], CategoryVO [Hash = 232016665, id=79, name=平衡车], CategoryVO [Hash = 1654631997, id=80, name=电热水器], CategoryVO [Hash = 215222879, id=81, name=沙发], CategoryVO [Hash = 423365311, id=82, name=马桶], CategoryVO [Hash = 908002818, id=83, name=平板电视], CategoryVO [Hash = 703510714, id=92, name=洗衣机]])
+2020-05-29 13:37:41.178  INFO 11460 --- [http-nio-8080-exec-7] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
+2020-05-29 13:37:41.178  INFO 11460 --- [http-nio-8080-exec-7] com.kinl.tmall.aspect.LogAspect          : result : fore/home
+2020-05-29 13:37:41.583  INFO 11460 --- [http-nio-8080-exec-10] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/web/forehome', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.IndexController.index', args=[]}
+2020-05-29 13:37:41.585 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.tmall.dao.CategoryMapper.finAllVO    : ==>  Preparing: select * from category 
+2020-05-29 13:37:41.585 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.tmall.dao.CategoryMapper.finAllVO    : ==> Parameters: 
+2020-05-29 13:37:41.588 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.tmall.dao.CategoryMapper.finAllVO    : <==      Total: 18
+2020-05-29 13:37:41.589 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:37:41.590 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 60(Integer)
+2020-05-29 13:37:41.593 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:37:41.593 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:37:41.593 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 64(Integer)
+2020-05-29 13:37:41.595 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:37:41.595 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:37:41.595 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 68(Integer)
+2020-05-29 13:37:41.597 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:37:41.598 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:37:41.598 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 69(Integer)
+2020-05-29 13:37:41.599 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:37:41.600 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:37:41.600 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 71(Integer)
+2020-05-29 13:37:41.602 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:37:41.602 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:37:41.603 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 72(Integer)
+2020-05-29 13:37:41.604 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:37:41.606 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:37:41.607 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 73(Integer)
+2020-05-29 13:37:41.608 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:37:41.609 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:37:41.609 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 74(Integer)
+2020-05-29 13:37:41.610 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:37:41.611 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:37:41.611 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 75(Integer)
+2020-05-29 13:37:41.612 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:37:41.613 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:37:41.613 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 76(Integer)
+2020-05-29 13:37:41.614 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:37:41.615 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:37:41.615 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 77(Integer)
+2020-05-29 13:37:41.618 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:37:41.619 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:37:41.619 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 78(Integer)
+2020-05-29 13:37:41.625 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:37:41.626 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:37:41.626 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 79(Integer)
+2020-05-29 13:37:41.629 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:37:41.630 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:37:41.630 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 80(Integer)
+2020-05-29 13:37:41.631 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:37:41.631 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:37:41.632 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 81(Integer)
+2020-05-29 13:37:41.633 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:37:41.633 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:37:41.633 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 82(Integer)
+2020-05-29 13:37:41.635 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:37:41.635 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:37:41.635 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 83(Integer)
+2020-05-29 13:37:41.637 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:37:41.639 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:37:41.639 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 92(Integer)
+2020-05-29 13:37:41.641 DEBUG 11460 --- [http-nio-8080-exec-10] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 1
+2020-05-29 13:37:41.641  INFO 11460 --- [http-nio-8080-exec-10] com.kinl.tmall.aspect.LogAspect          : result : ResultVO(code=0, message=成功, data=[CategoryVO [Hash = 376460409, id=60, name=安全座椅], CategoryVO [Hash = 846842324, id=64, name=太阳镜], CategoryVO [Hash = 2018537005, id=68, name=品牌女装], CategoryVO [Hash = 1947938238, id=69, name=时尚男鞋], CategoryVO [Hash = 1616669912, id=71, name=男士西服], CategoryVO [Hash = 479669870, id=72, name=男士手拿包], CategoryVO [Hash = 1733102295, id=73, name=男表], CategoryVO [Hash = 1251392861, id=74, name=女表], CategoryVO [Hash = 1236214395, id=75, name=空调], CategoryVO [Hash = 1827574142, id=76, name=冰箱], CategoryVO [Hash = 1668949382, id=77, name=原汁机], CategoryVO [Hash = 486080737, id=78, name=扫地机器人], CategoryVO [Hash = 745887231, id=79, name=平衡车], CategoryVO [Hash = 881345646, id=80, name=电热水器], CategoryVO [Hash = 107741548, id=81, name=沙发], CategoryVO [Hash = 1388767048, id=82, name=马桶], CategoryVO [Hash = 1411025474, id=83, name=平板电视], CategoryVO [Hash = 583471003, id=92, name=洗衣机]])
+2020-05-29 13:50:15.347  INFO 11460 --- [http-nio-8080-exec-10] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
+2020-05-29 13:50:15.348  INFO 11460 --- [http-nio-8080-exec-10] com.kinl.tmall.aspect.LogAspect          : result : fore/home
+2020-05-29 13:50:24.281  INFO 11460 --- [http-nio-8080-exec-5] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/web/forehome', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.IndexController.index', args=[]}
+2020-05-29 13:50:24.282 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.tmall.dao.CategoryMapper.finAllVO    : ==>  Preparing: select * from category 
+2020-05-29 13:50:24.282 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.tmall.dao.CategoryMapper.finAllVO    : ==> Parameters: 
+2020-05-29 13:50:24.285 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.tmall.dao.CategoryMapper.finAllVO    : <==      Total: 18
+2020-05-29 13:50:24.286 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:50:24.286 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 60(Integer)
+2020-05-29 13:50:24.291 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:50:24.291 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:50:24.291 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 64(Integer)
+2020-05-29 13:50:24.307 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:50:24.307 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:50:24.307 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 68(Integer)
+2020-05-29 13:50:24.312 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:50:24.312 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:50:24.313 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 69(Integer)
+2020-05-29 13:50:24.318 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:50:24.318 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:50:24.319 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 71(Integer)
+2020-05-29 13:50:24.321 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:50:24.321 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:50:24.321 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 72(Integer)
+2020-05-29 13:50:24.324 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:50:24.325 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:50:24.325 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 73(Integer)
+2020-05-29 13:50:24.326 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:50:24.327 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:50:24.327 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 74(Integer)
+2020-05-29 13:50:24.328 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:50:24.328 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:50:24.329 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 75(Integer)
+2020-05-29 13:50:24.330 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:50:24.330 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:50:24.331 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 76(Integer)
+2020-05-29 13:50:24.333 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:50:24.333 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:50:24.334 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 77(Integer)
+2020-05-29 13:50:24.335 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:50:24.336 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:50:24.336 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 78(Integer)
+2020-05-29 13:50:24.338 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:50:24.338 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:50:24.339 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 79(Integer)
+2020-05-29 13:50:24.341 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:50:24.341 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:50:24.341 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 80(Integer)
+2020-05-29 13:50:24.342 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:50:24.343 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:50:24.343 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 81(Integer)
+2020-05-29 13:50:24.344 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:50:24.345 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:50:24.345 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 82(Integer)
+2020-05-29 13:50:24.346 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:50:24.347 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:50:24.347 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 83(Integer)
+2020-05-29 13:50:24.348 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-29 13:50:24.349 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-29 13:50:24.349 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 92(Integer)
+2020-05-29 13:50:24.350 DEBUG 11460 --- [http-nio-8080-exec-5] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 1
+2020-05-29 13:50:24.351  INFO 11460 --- [http-nio-8080-exec-5] com.kinl.tmall.aspect.LogAspect          : result : ResultVO(code=0, message=成功, data=[CategoryVO [Hash = 1617924854, id=60, name=安全座椅], CategoryVO [Hash = 1013757743, id=64, name=太阳镜], CategoryVO [Hash = 1746664605, id=68, name=品牌女装], CategoryVO [Hash = 1367021240, id=69, name=时尚男鞋], CategoryVO [Hash = 1302316611, id=71, name=男士西服], CategoryVO [Hash = 345232656, id=72, name=男士手拿包], CategoryVO [Hash = 601566219, id=73, name=男表], CategoryVO [Hash = 714879006, id=74, name=女表], CategoryVO [Hash = 427972304, id=75, name=空调], CategoryVO [Hash = 330513317, id=76, name=冰箱], CategoryVO [Hash = 1777530540, id=77, name=原汁机], CategoryVO [Hash = 581252940, id=78, name=扫地机器人], CategoryVO [Hash = 698007838, id=79, name=平衡车], CategoryVO [Hash = 595503515, id=80, name=电热水器], CategoryVO [Hash = 1564966094, id=81, name=沙发], CategoryVO [Hash = 1456684925, id=82, name=马桶], CategoryVO [Hash = 691963528, id=83, name=平板电视], CategoryVO [Hash = 2145046597, id=92, name=洗衣机]])
+2020-05-29 14:01:04.440  INFO 11460 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-29 14:01:04.440  INFO 11460 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-29 14:01:04.456  INFO 11460 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

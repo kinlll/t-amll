@@ -1,0 +1,1227 @@
+2020-05-31 16:17:49.064  INFO 15468 --- [restartedMain] com.kinl.tmall.TMallApplication          : Starting TMallApplication on DESKTOP-QI4508G with PID 15468 (D:\t-mall\target\classes started by ASUS in D:\t-mall)
+2020-05-31 16:17:49.073 DEBUG 15468 --- [restartedMain] com.kinl.tmall.TMallApplication          : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-31 16:17:49.074  INFO 15468 --- [restartedMain] com.kinl.tmall.TMallApplication          : No active profile set, falling back to default profiles: default
+2020-05-31 16:17:49.141  INFO 15468 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-31 16:17:49.142  INFO 15468 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-31 16:17:51.594  INFO 15468 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-31 16:17:51.596  INFO 15468 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-31 16:17:51.685  INFO 15468 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46ms. Found 0 Redis repository interfaces.
+2020-05-31 16:17:52.052  INFO 15468 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webShiroConfig' of type [com.kinl.tmall.configuration.WebShiroConfig$$EnhancerBySpringCGLIB$$e241727e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 16:17:52.353  INFO 15468 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userWebShiroRealm' of type [com.kinl.tmall.Realm.UserWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 16:17:52.358  INFO 15468 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 16:17:52.405  INFO 15468 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 16:17:52.420  INFO 15468 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$bf445d87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 16:17:52.423  INFO 15468 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 16:17:52.442  INFO 15468 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 16:17:52.541  INFO 15468 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 16:17:52.954  INFO 15468 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 16:17:52.959  INFO 15468 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 16:17:52.960  INFO 15468 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 16:17:52.962  INFO 15468 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [com.sun.proxy.$Proxy70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 16:17:52.963  INFO 15468 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminServiceImpl' of type [com.kinl.tmall.service.impl.SysAdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 16:17:52.964  INFO 15468 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminWebShiroRealm' of type [com.kinl.tmall.Realm.AdminWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 16:17:52.965  INFO 15468 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customizedModularRealmAuthenticator' of type [com.kinl.tmall.configuration.CustomizedModularRealmAuthenticator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 16:17:52.968  INFO 15468 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 16:17:53.030  INFO 15468 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 16:17:53.824  INFO 15468 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 16:17:53.840  INFO 15468 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 16:17:53.841  INFO 15468 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-31 16:17:54.123  INFO 15468 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-05-31 16:17:54.129  INFO 15468 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 16:17:54.129  INFO 15468 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4987 ms
+2020-05-31 16:17:55.604  INFO 15468 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 16:17:56.633  INFO 15468 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-31 16:17:56.790  INFO 15468 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 16:17:56.795  INFO 15468 --- [restartedMain] com.kinl.tmall.TMallApplication          : Started TMallApplication in 8.798 seconds (JVM running for 11.067)
+2020-05-31 16:18:07.232  INFO 15468 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 16:18:07.232  INFO 15468 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 16:18:07.253  INFO 15468 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2020-05-31 16:18:07.356  INFO 15468 --- [http-nio-8080-exec-2] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
+2020-05-31 16:18:07.363  INFO 15468 --- [http-nio-8080-exec-2] com.kinl.tmall.aspect.LogAspect          : result : fore/home
+2020-05-31 16:18:08.369  INFO 15468 --- [http-nio-8080-exec-7] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/web/forehome', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.IndexController.index', args=[]}
+2020-05-31 16:18:13.209  INFO 15468 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 16:18:13.891  INFO 15468 --- [http-nio-8080-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 16:18:13.949 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.tmall.dao.CategoryMapper.finAllVO    : ==>  Preparing: select * from category 
+2020-05-31 16:18:14.278 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.tmall.dao.CategoryMapper.finAllVO    : ==> Parameters: 
+2020-05-31 16:18:14.549 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.tmall.dao.CategoryMapper.finAllVO    : <==      Total: 17
+2020-05-31 17:24:41.416  WARN 15468 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h6m27s422ms234µs700ns).
+2020-05-31 17:24:41.485 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 17:24:41.487 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 60(Integer)
+2020-05-31 17:24:41.507 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 17:24:41.507 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 17:24:41.508 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 64(Integer)
+2020-05-31 17:24:41.526 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 17:24:41.526 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 17:24:41.527 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 68(Integer)
+2020-05-31 17:24:41.533 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 17:24:41.533 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 17:24:41.534 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 69(Integer)
+2020-05-31 17:24:41.550 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 17:24:41.550 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 17:24:41.550 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 71(Integer)
+2020-05-31 17:24:41.553 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 17:24:41.553 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 17:24:41.554 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 72(Integer)
+2020-05-31 17:24:41.570 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 17:24:41.571 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 17:24:41.571 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 73(Integer)
+2020-05-31 17:24:41.573 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 17:24:41.573 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 17:24:41.574 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 74(Integer)
+2020-05-31 17:24:41.576 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 17:24:41.576 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 17:24:41.576 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 75(Integer)
+2020-05-31 17:24:41.590 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 17:24:41.591 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 17:24:41.592 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 76(Integer)
+2020-05-31 17:24:41.594 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 17:24:41.595 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 17:24:41.595 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 77(Integer)
+2020-05-31 17:24:41.600 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 17:24:41.600 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 17:24:41.601 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 78(Integer)
+2020-05-31 17:24:41.608 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 17:24:41.609 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 17:24:41.609 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 79(Integer)
+2020-05-31 17:24:41.619 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 17:24:41.619 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 17:24:41.620 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 80(Integer)
+2020-05-31 17:24:41.622 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 17:24:41.623 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 17:24:41.624 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 81(Integer)
+2020-05-31 17:24:41.637 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 17:24:41.639 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 17:24:41.639 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 82(Integer)
+2020-05-31 17:24:41.654 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 17:24:41.655 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 17:24:41.655 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 83(Integer)
+2020-05-31 17:24:41.670 DEBUG 15468 --- [http-nio-8080-exec-7] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 17:24:41.670  INFO 15468 --- [http-nio-8080-exec-7] com.kinl.tmall.aspect.LogAspect          : result : ResultVO(code=0, message=成功, data=[CategoryVO [Hash = 650607971, id=60, name=安全座椅], CategoryVO [Hash = 1369847186, id=64, name=太阳镜], CategoryVO [Hash = 1211531453, id=68, name=品牌女装], CategoryVO [Hash = 1683085824, id=69, name=时尚男鞋], CategoryVO [Hash = 2036371340, id=71, name=男士西服], CategoryVO [Hash = 428490647, id=72, name=男士手拿包], CategoryVO [Hash = 1699047283, id=73, name=男表], CategoryVO [Hash = 263069697, id=74, name=女表], CategoryVO [Hash = 1917829783, id=75, name=空调], CategoryVO [Hash = 980499918, id=76, name=冰箱], CategoryVO [Hash = 1958853388, id=77, name=原汁机], CategoryVO [Hash = 177284029, id=78, name=扫地机器人], CategoryVO [Hash = 113640194, id=79, name=平衡车], CategoryVO [Hash = 904581465, id=80, name=电热水器], CategoryVO [Hash = 1275725107, id=81, name=沙发], CategoryVO [Hash = 1325747140, id=82, name=马桶], CategoryVO [Hash = 2045615925, id=83, name=平板电视]])
+2020-05-31 17:24:41.774  INFO 15468 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-31 17:24:41.858  INFO 15468 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-31 17:24:41.972  INFO 15468 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-31 22:06:47.783  INFO 13308 --- [restartedMain] com.kinl.tmall.TMallApplication          : Starting TMallApplication on DESKTOP-QI4508G with PID 13308 (D:\t-mall\target\classes started by ASUS in D:\t-mall)
+2020-05-31 22:06:47.783 DEBUG 13308 --- [restartedMain] com.kinl.tmall.TMallApplication          : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-31 22:06:47.783  INFO 13308 --- [restartedMain] com.kinl.tmall.TMallApplication          : No active profile set, falling back to default profiles: default
+2020-05-31 22:06:47.862  INFO 13308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-31 22:06:47.862  INFO 13308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-31 22:06:49.841  INFO 13308 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-31 22:06:49.844  INFO 13308 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-31 22:06:49.926  INFO 13308 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55ms. Found 0 Redis repository interfaces.
+2020-05-31 22:06:50.371  INFO 13308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webShiroConfig' of type [com.kinl.tmall.configuration.WebShiroConfig$$EnhancerBySpringCGLIB$$98f413e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 22:06:50.655  INFO 13308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userWebShiroRealm' of type [com.kinl.tmall.Realm.UserWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 22:06:50.660  INFO 13308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 22:06:50.703  INFO 13308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 22:06:50.711  INFO 13308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$e6922c47] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 22:06:50.713  INFO 13308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 22:06:50.728  INFO 13308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 22:06:50.794  INFO 13308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 22:06:51.298  INFO 13308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 22:06:51.304  INFO 13308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 22:06:51.305  INFO 13308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 22:06:51.308  INFO 13308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [com.sun.proxy.$Proxy70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 22:06:51.309  INFO 13308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminServiceImpl' of type [com.kinl.tmall.service.impl.SysAdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 22:06:51.309  INFO 13308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminWebShiroRealm' of type [com.kinl.tmall.Realm.AdminWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 22:06:51.310  INFO 13308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customizedModularRealmAuthenticator' of type [com.kinl.tmall.configuration.CustomizedModularRealmAuthenticator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 22:06:51.315  INFO 13308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 22:06:51.376  INFO 13308 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 22:06:52.212  INFO 13308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 22:06:52.227  INFO 13308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 22:06:52.228  INFO 13308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-31 22:06:52.513  INFO 13308 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-05-31 22:06:52.518  INFO 13308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 22:06:52.518  INFO 13308 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4655 ms
+2020-05-31 22:06:53.972  INFO 13308 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 22:06:54.909  INFO 13308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-31 22:06:55.008  INFO 13308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 22:06:55.013  INFO 13308 --- [restartedMain] com.kinl.tmall.TMallApplication          : Started TMallApplication in 8.005 seconds (JVM running for 12.951)
+2020-05-31 22:12:44.061  INFO 13308 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 22:12:44.061  INFO 13308 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 22:12:44.079  INFO 13308 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-05-31 22:12:44.125  INFO 13308 --- [http-nio-8080-exec-2] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
+2020-05-31 22:12:44.130  INFO 13308 --- [http-nio-8080-exec-2] com.kinl.tmall.aspect.LogAspect          : result : fore/home
+2020-05-31 22:12:45.029  INFO 13308 --- [http-nio-8080-exec-4] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/web/forehome', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.IndexController.index', args=[]}
+2020-05-31 22:12:49.399  INFO 13308 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 22:12:49.609  INFO 13308 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 22:12:49.616 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.tmall.dao.CategoryMapper.finAllVO    : ==>  Preparing: select * from category 
+2020-05-31 22:12:49.642 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.tmall.dao.CategoryMapper.finAllVO    : ==> Parameters: 
+2020-05-31 22:12:49.672 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.tmall.dao.CategoryMapper.finAllVO    : <==      Total: 17
+2020-05-31 22:12:49.679 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 22:12:49.680 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 60(Integer)
+2020-05-31 22:12:49.685 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 22:12:49.686 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 22:12:49.686 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 64(Integer)
+2020-05-31 22:12:49.689 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 22:12:49.690 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 22:12:49.690 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 68(Integer)
+2020-05-31 22:12:49.693 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 22:12:49.693 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 22:12:49.694 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 69(Integer)
+2020-05-31 22:12:49.698 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 22:12:49.699 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 22:12:49.699 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 71(Integer)
+2020-05-31 22:12:49.701 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 22:12:49.702 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 22:12:49.702 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 72(Integer)
+2020-05-31 22:12:49.706 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 22:12:49.707 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 22:12:49.708 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 73(Integer)
+2020-05-31 22:12:49.710 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 22:12:49.711 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 22:12:49.711 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 74(Integer)
+2020-05-31 22:12:49.714 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 22:12:49.715 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 22:12:49.715 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 75(Integer)
+2020-05-31 22:12:49.725 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 22:12:49.725 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 22:12:49.725 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 76(Integer)
+2020-05-31 22:12:49.727 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 22:12:49.728 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 22:12:49.728 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 77(Integer)
+2020-05-31 22:12:49.730 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 22:12:49.731 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 22:12:49.731 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 78(Integer)
+2020-05-31 22:12:49.741 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 22:12:49.742 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 22:12:49.742 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 79(Integer)
+2020-05-31 22:12:49.745 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 22:12:49.745 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 22:12:49.746 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 80(Integer)
+2020-05-31 22:12:49.748 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 22:12:49.749 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 22:12:49.750 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 81(Integer)
+2020-05-31 22:12:49.760 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 22:12:49.762 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 22:12:49.763 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 82(Integer)
+2020-05-31 22:12:49.765 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 22:12:49.766 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 22:12:49.767 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 83(Integer)
+2020-05-31 22:12:49.777 DEBUG 13308 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 22:12:49.777  INFO 13308 --- [http-nio-8080-exec-4] com.kinl.tmall.aspect.LogAspect          : result : ResultVO(code=0, message=成功, data=[CategoryVO [Hash = 2145357553, id=60, name=安全座椅], CategoryVO [Hash = 1228932927, id=64, name=太阳镜], CategoryVO [Hash = 1191513086, id=68, name=品牌女装], CategoryVO [Hash = 2061433239, id=69, name=时尚男鞋], CategoryVO [Hash = 2046117947, id=71, name=男士西服], CategoryVO [Hash = 818266565, id=72, name=男士手拿包], CategoryVO [Hash = 1609590488, id=73, name=男表], CategoryVO [Hash = 1391410928, id=74, name=女表], CategoryVO [Hash = 25694214, id=75, name=空调], CategoryVO [Hash = 526197275, id=76, name=冰箱], CategoryVO [Hash = 1128747406, id=77, name=原汁机], CategoryVO [Hash = 1752498088, id=78, name=扫地机器人], CategoryVO [Hash = 700308096, id=79, name=平衡车], CategoryVO [Hash = 1602648150, id=80, name=电热水器], CategoryVO [Hash = 640977161, id=81, name=沙发], CategoryVO [Hash = 1769122776, id=82, name=马桶], CategoryVO [Hash = 777786796, id=83, name=平板电视]])
+2020-05-31 22:57:24.769  INFO 13308 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-31 22:57:24.839  INFO 13308 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-31 22:57:24.849  INFO 13308 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-31 23:00:25.429  INFO 14472 --- [restartedMain] com.kinl.tmall.TMallApplication          : Starting TMallApplication on DESKTOP-QI4508G with PID 14472 (D:\t-mall\target\classes started by ASUS in D:\t-mall)
+2020-05-31 23:00:25.432 DEBUG 14472 --- [restartedMain] com.kinl.tmall.TMallApplication          : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-31 23:00:25.432  INFO 14472 --- [restartedMain] com.kinl.tmall.TMallApplication          : No active profile set, falling back to default profiles: default
+2020-05-31 23:00:25.497  INFO 14472 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-31 23:00:25.497  INFO 14472 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-31 23:00:26.436  INFO 14472 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-31 23:00:26.441  INFO 14472 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-31 23:00:26.524  INFO 14472 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58ms. Found 0 Redis repository interfaces.
+2020-05-31 23:00:26.926  INFO 14472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webShiroConfig' of type [com.kinl.tmall.configuration.WebShiroConfig$$EnhancerBySpringCGLIB$$f0f3c428] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:00:27.192  INFO 14472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userWebShiroRealm' of type [com.kinl.tmall.Realm.UserWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:00:27.208  INFO 14472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:00:27.254  INFO 14472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:00:27.254  INFO 14472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$cdf6af31] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:00:27.254  INFO 14472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:00:27.270  INFO 14472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:00:27.395  INFO 14472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:00:27.911  INFO 14472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:00:27.911  INFO 14472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:00:27.911  INFO 14472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:00:27.911  INFO 14472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [com.sun.proxy.$Proxy70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:00:27.911  INFO 14472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminServiceImpl' of type [com.kinl.tmall.service.impl.SysAdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:00:27.911  INFO 14472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminWebShiroRealm' of type [com.kinl.tmall.Realm.AdminWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:00:27.911  INFO 14472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customizedModularRealmAuthenticator' of type [com.kinl.tmall.configuration.CustomizedModularRealmAuthenticator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:00:27.911  INFO 14472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:00:27.973  INFO 14472 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:00:28.677  INFO 14472 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 23:00:28.693  INFO 14472 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 23:00:28.693  INFO 14472 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-31 23:00:28.991  INFO 14472 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-05-31 23:00:28.997  INFO 14472 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 23:00:28.997  INFO 14472 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3499 ms
+2020-05-31 23:00:30.211  INFO 14472 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 23:00:31.108  INFO 14472 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-31 23:00:31.217  INFO 14472 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 23:00:31.222  INFO 14472 --- [restartedMain] com.kinl.tmall.TMallApplication          : Started TMallApplication in 6.584 seconds (JVM running for 8.579)
+2020-05-31 23:00:37.119  INFO 14472 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 23:00:37.119  INFO 14472 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 23:00:37.137  INFO 14472 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-05-31 23:00:37.188  INFO 14472 --- [http-nio-8080-exec-2] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
+2020-05-31 23:00:37.193  INFO 14472 --- [http-nio-8080-exec-2] com.kinl.tmall.aspect.LogAspect          : result : fore/home
+2020-05-31 23:00:37.981  INFO 14472 --- [http-nio-8080-exec-6] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/web/forehome', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.IndexController.index', args=[]}
+2020-05-31 23:00:38.012  INFO 14472 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 23:00:38.256  INFO 14472 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 23:00:38.264 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.tmall.dao.CategoryMapper.finAllVO    : ==>  Preparing: select * from category 
+2020-05-31 23:00:38.327 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.tmall.dao.CategoryMapper.finAllVO    : ==> Parameters: 
+2020-05-31 23:00:38.359 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.tmall.dao.CategoryMapper.finAllVO    : <==      Total: 17
+2020-05-31 23:00:38.366 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:38.367 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 60(Integer)
+2020-05-31 23:00:38.375 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:38.375 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:38.375 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 64(Integer)
+2020-05-31 23:00:38.387 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:38.387 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:38.388 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 68(Integer)
+2020-05-31 23:00:38.390 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:38.391 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:38.391 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 69(Integer)
+2020-05-31 23:00:38.406 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:38.406 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:38.407 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 71(Integer)
+2020-05-31 23:00:38.409 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:38.409 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:38.410 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 72(Integer)
+2020-05-31 23:00:38.420 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:38.420 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:38.421 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 73(Integer)
+2020-05-31 23:00:38.423 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:38.423 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:38.424 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 74(Integer)
+2020-05-31 23:00:38.434 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:38.434 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:38.435 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 75(Integer)
+2020-05-31 23:00:38.437 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:38.437 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:38.438 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 76(Integer)
+2020-05-31 23:00:38.448 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:38.449 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:38.449 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 77(Integer)
+2020-05-31 23:00:38.452 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:38.452 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:38.453 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 78(Integer)
+2020-05-31 23:00:38.455 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:38.456 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:38.456 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 79(Integer)
+2020-05-31 23:00:38.465 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:38.465 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:38.466 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 80(Integer)
+2020-05-31 23:00:38.470 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:38.471 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:38.471 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 81(Integer)
+2020-05-31 23:00:38.475 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:38.476 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:38.477 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 82(Integer)
+2020-05-31 23:00:38.488 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:38.489 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:38.489 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 83(Integer)
+2020-05-31 23:00:38.491 DEBUG 14472 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:38.492  INFO 14472 --- [http-nio-8080-exec-6] com.kinl.tmall.aspect.LogAspect          : result : ResultVO(code=0, message=成功, data=[CategoryVO [Hash = 1453899766, id=60, name=安全座椅], CategoryVO [Hash = 219581602, id=64, name=太阳镜], CategoryVO [Hash = 1136332676, id=68, name=品牌女装], CategoryVO [Hash = 376680370, id=69, name=时尚男鞋], CategoryVO [Hash = 87553413, id=71, name=男士西服], CategoryVO [Hash = 1023220253, id=72, name=男士手拿包], CategoryVO [Hash = 664921385, id=73, name=男表], CategoryVO [Hash = 740610128, id=74, name=女表], CategoryVO [Hash = 369460108, id=75, name=空调], CategoryVO [Hash = 1115446947, id=76, name=冰箱], CategoryVO [Hash = 1792832360, id=77, name=原汁机], CategoryVO [Hash = 1626376243, id=78, name=扫地机器人], CategoryVO [Hash = 1523805762, id=79, name=平衡车], CategoryVO [Hash = 2063252221, id=80, name=电热水器], CategoryVO [Hash = 1932837369, id=81, name=沙发], CategoryVO [Hash = 400654012, id=82, name=马桶], CategoryVO [Hash = 1442952060, id=83, name=平板电视]])
+2020-05-31 23:00:56.887  INFO 14472 --- [http-nio-8080-exec-5] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
+2020-05-31 23:00:56.887  INFO 14472 --- [http-nio-8080-exec-5] com.kinl.tmall.aspect.LogAspect          : result : fore/home
+2020-05-31 23:00:57.124  INFO 14472 --- [http-nio-8080-exec-1] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/web/forehome', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.IndexController.index', args=[]}
+2020-05-31 23:00:57.125 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.tmall.dao.CategoryMapper.finAllVO    : ==>  Preparing: select * from category 
+2020-05-31 23:00:57.126 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.tmall.dao.CategoryMapper.finAllVO    : ==> Parameters: 
+2020-05-31 23:00:57.128 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.tmall.dao.CategoryMapper.finAllVO    : <==      Total: 17
+2020-05-31 23:00:57.129 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:57.129 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 60(Integer)
+2020-05-31 23:00:57.132 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:57.132 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:57.133 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 64(Integer)
+2020-05-31 23:00:57.135 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:57.135 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:57.136 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 68(Integer)
+2020-05-31 23:00:57.138 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:57.138 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:57.138 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 69(Integer)
+2020-05-31 23:00:57.142 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:57.142 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:57.143 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 71(Integer)
+2020-05-31 23:00:57.145 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:57.145 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:57.146 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 72(Integer)
+2020-05-31 23:00:57.149 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:57.150 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:57.151 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 73(Integer)
+2020-05-31 23:00:57.154 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:57.154 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:57.154 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 74(Integer)
+2020-05-31 23:00:57.156 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:57.157 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:57.157 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 75(Integer)
+2020-05-31 23:00:57.158 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:57.159 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:57.159 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 76(Integer)
+2020-05-31 23:00:57.161 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:57.161 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:57.161 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 77(Integer)
+2020-05-31 23:00:57.163 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:57.163 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:57.164 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 78(Integer)
+2020-05-31 23:00:57.165 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:57.166 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:57.166 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 79(Integer)
+2020-05-31 23:00:57.167 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:57.168 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:57.169 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 80(Integer)
+2020-05-31 23:00:57.170 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:57.171 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:57.171 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 81(Integer)
+2020-05-31 23:00:57.173 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:57.173 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:57.173 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 82(Integer)
+2020-05-31 23:00:57.175 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:57.175 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:00:57.175 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 83(Integer)
+2020-05-31 23:00:57.177 DEBUG 14472 --- [http-nio-8080-exec-1] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:00:57.177  INFO 14472 --- [http-nio-8080-exec-1] com.kinl.tmall.aspect.LogAspect          : result : ResultVO(code=0, message=成功, data=[CategoryVO [Hash = 140821293, id=60, name=安全座椅], CategoryVO [Hash = 729793896, id=64, name=太阳镜], CategoryVO [Hash = 1754036987, id=68, name=品牌女装], CategoryVO [Hash = 838854510, id=69, name=时尚男鞋], CategoryVO [Hash = 531376087, id=71, name=男士西服], CategoryVO [Hash = 1252910543, id=72, name=男士手拿包], CategoryVO [Hash = 1107101123, id=73, name=男表], CategoryVO [Hash = 259476997, id=74, name=女表], CategoryVO [Hash = 1897616035, id=75, name=空调], CategoryVO [Hash = 1413300946, id=76, name=冰箱], CategoryVO [Hash = 2110232203, id=77, name=原汁机], CategoryVO [Hash = 1224075344, id=78, name=扫地机器人], CategoryVO [Hash = 1674589607, id=79, name=平衡车], CategoryVO [Hash = 1573241053, id=80, name=电热水器], CategoryVO [Hash = 477591072, id=81, name=沙发], CategoryVO [Hash = 2074589846, id=82, name=马桶], CategoryVO [Hash = 423155016, id=83, name=平板电视]])
+2020-05-31 23:00:59.669 DEBUG 14472 --- [http-nio-8080-exec-3] c.kinl.tmall.dao.CategoryMapper.findAll  : ==>  Preparing: select * from category 
+2020-05-31 23:00:59.670 DEBUG 14472 --- [http-nio-8080-exec-3] c.kinl.tmall.dao.CategoryMapper.findAll  : ==> Parameters: 
+2020-05-31 23:00:59.674 DEBUG 14472 --- [http-nio-8080-exec-3] c.kinl.tmall.dao.CategoryMapper.findAll  : <==      Total: 17
+2020-05-31 23:00:59.674 DEBUG 14472 --- [http-nio-8080-exec-3] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-05-31 23:00:59.675 DEBUG 14472 --- [http-nio-8080-exec-3] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 60(Integer)
+2020-05-31 23:00:59.677 DEBUG 14472 --- [http-nio-8080-exec-3] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-05-31 23:01:10.868  INFO 14472 --- [http-nio-8080-exec-3] c.k.t.h.ControllerExceptionHandler       : RequestUrl : http://localhost:8080/test, Exception : {}
+
+java.lang.IndexOutOfBoundsException: Index: 5, Size: 5
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at com.kinl.tmall.controller.TestController.setHomeRedisData(TestController.java:103)
+	at com.kinl.tmall.controller.TestController.test(TestController.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+2020-05-31 23:01:10.869  WARN 14472 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 5, Size: 5]
+2020-05-31 23:06:22.545 DEBUG 14472 --- [http-nio-8080-exec-7] c.kinl.tmall.dao.CategoryMapper.findAll  : ==>  Preparing: select * from category 
+2020-05-31 23:06:22.545 DEBUG 14472 --- [http-nio-8080-exec-7] c.kinl.tmall.dao.CategoryMapper.findAll  : ==> Parameters: 
+2020-05-31 23:06:22.548 DEBUG 14472 --- [http-nio-8080-exec-7] c.kinl.tmall.dao.CategoryMapper.findAll  : <==      Total: 17
+2020-05-31 23:06:22.549 DEBUG 14472 --- [http-nio-8080-exec-7] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-05-31 23:06:22.549 DEBUG 14472 --- [http-nio-8080-exec-7] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 60(Integer)
+2020-05-31 23:06:22.552 DEBUG 14472 --- [http-nio-8080-exec-7] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-05-31 23:07:15.870  INFO 14472 --- [http-nio-8080-exec-7] c.k.t.h.ControllerExceptionHandler       : RequestUrl : http://localhost:8080/test, Exception : {}
+
+java.lang.IndexOutOfBoundsException: Index: 5, Size: 5
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at com.kinl.tmall.controller.TestController.setHomeRedisData(TestController.java:103)
+	at com.kinl.tmall.controller.TestController.test(TestController.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+2020-05-31 23:07:15.870  WARN 14472 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 5, Size: 5]
+2020-05-31 23:07:15.953  INFO 14472 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-31 23:07:15.977  INFO 14472 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-31 23:07:15.995  INFO 14472 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-31 23:08:15.394  INFO 8316 --- [restartedMain] com.kinl.tmall.TMallApplication          : Starting TMallApplication on DESKTOP-QI4508G with PID 8316 (D:\t-mall\target\classes started by ASUS in D:\t-mall)
+2020-05-31 23:08:15.397 DEBUG 8316 --- [restartedMain] com.kinl.tmall.TMallApplication          : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-31 23:08:15.397  INFO 8316 --- [restartedMain] com.kinl.tmall.TMallApplication          : No active profile set, falling back to default profiles: default
+2020-05-31 23:08:15.464  INFO 8316 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-31 23:08:15.464  INFO 8316 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-31 23:08:16.394  INFO 8316 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-31 23:08:16.397  INFO 8316 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-31 23:08:16.481  INFO 8316 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50ms. Found 0 Redis repository interfaces.
+2020-05-31 23:08:16.909  INFO 8316 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webShiroConfig' of type [com.kinl.tmall.configuration.WebShiroConfig$$EnhancerBySpringCGLIB$$c8ee10fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:08:17.175  INFO 8316 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userWebShiroRealm' of type [com.kinl.tmall.Realm.UserWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:08:17.175  INFO 8316 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:08:17.237  INFO 8316 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:08:17.253  INFO 8316 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$a5f0fc04] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:08:17.253  INFO 8316 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:08:17.268  INFO 8316 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:08:17.346  INFO 8316 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:08:17.799  INFO 8316 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:08:17.799  INFO 8316 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:08:17.815  INFO 8316 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:08:17.818  INFO 8316 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [com.sun.proxy.$Proxy70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:08:17.819  INFO 8316 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminServiceImpl' of type [com.kinl.tmall.service.impl.SysAdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:08:17.819  INFO 8316 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminWebShiroRealm' of type [com.kinl.tmall.Realm.AdminWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:08:17.821  INFO 8316 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customizedModularRealmAuthenticator' of type [com.kinl.tmall.configuration.CustomizedModularRealmAuthenticator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:08:17.824  INFO 8316 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:08:17.882  INFO 8316 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:08:18.603  INFO 8316 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 23:08:18.616  INFO 8316 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 23:08:18.617  INFO 8316 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-31 23:08:18.898  INFO 8316 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-05-31 23:08:18.904  INFO 8316 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 23:08:18.904  INFO 8316 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3440 ms
+2020-05-31 23:08:20.215  INFO 8316 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 23:08:21.126  INFO 8316 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-31 23:08:21.254  INFO 8316 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 23:08:21.258  INFO 8316 --- [restartedMain] com.kinl.tmall.TMallApplication          : Started TMallApplication in 6.625 seconds (JVM running for 8.448)
+2020-05-31 23:08:21.361  INFO 8316 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 23:08:21.361  INFO 8316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 23:08:21.383  INFO 8316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2020-05-31 23:08:21.447  INFO 8316 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 23:08:21.616  INFO 8316 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 23:08:21.623 DEBUG 8316 --- [http-nio-8080-exec-1] c.kinl.tmall.dao.CategoryMapper.findAll  : ==>  Preparing: select * from category 
+2020-05-31 23:08:21.651 DEBUG 8316 --- [http-nio-8080-exec-1] c.kinl.tmall.dao.CategoryMapper.findAll  : ==> Parameters: 
+2020-05-31 23:08:21.688 DEBUG 8316 --- [http-nio-8080-exec-1] c.kinl.tmall.dao.CategoryMapper.findAll  : <==      Total: 17
+2020-05-31 23:08:21.694 DEBUG 8316 --- [http-nio-8080-exec-1] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-05-31 23:08:21.695 DEBUG 8316 --- [http-nio-8080-exec-1] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 60(Integer)
+2020-05-31 23:08:21.700 DEBUG 8316 --- [http-nio-8080-exec-1] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-05-31 23:08:25.470  INFO 8316 --- [http-nio-8080-exec-1] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-05-31 23:08:25.473  INFO 8316 --- [http-nio-8080-exec-1] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-05-31 23:08:35.907 DEBUG 8316 --- [http-nio-8080-exec-5] c.kinl.tmall.dao.CategoryMapper.findAll  : ==>  Preparing: select * from category 
+2020-05-31 23:08:35.908 DEBUG 8316 --- [http-nio-8080-exec-5] c.kinl.tmall.dao.CategoryMapper.findAll  : ==> Parameters: 
+2020-05-31 23:08:35.911 DEBUG 8316 --- [http-nio-8080-exec-5] c.kinl.tmall.dao.CategoryMapper.findAll  : <==      Total: 17
+2020-05-31 23:08:35.912 DEBUG 8316 --- [http-nio-8080-exec-5] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-05-31 23:08:35.912 DEBUG 8316 --- [http-nio-8080-exec-5] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 60(Integer)
+2020-05-31 23:08:35.916 DEBUG 8316 --- [http-nio-8080-exec-5] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-05-31 23:08:46.566  INFO 8316 --- [http-nio-8080-exec-1] c.k.t.h.ControllerExceptionHandler       : RequestUrl : http://localhost:8080/test, Exception : {}
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 47.105.164.91:6379
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1199)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1178)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:942)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:353)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:134)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:97)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:84)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:215)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:188)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:236)
+	at com.kinl.tmall.controller.TestController.setHomeRedisData(TestController.java:106)
+	at com.kinl.tmall.controller.TestController.test(TestController.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 47.105.164.91:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:234)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:207)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1197)
+	... 72 common frames omitted
+Caused by: io.netty.channel.ConnectTimeoutException: connection timed out: /47.105.164.91:6379
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe$1.run(AbstractNioChannel.java:261)
+	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:98)
+	at io.netty.util.concurrent.ScheduledFutureTask.run(ScheduledFutureTask.java:170)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute$$$capture(AbstractEventExecutor.java:164)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:500)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+
+2020-05-31 23:08:46.570  WARN 8316 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 47.105.164.91:6379]
+2020-05-31 23:08:46.577  INFO 8316 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-31 23:09:17.683  INFO 15712 --- [restartedMain] com.kinl.tmall.TMallApplication          : Starting TMallApplication on DESKTOP-QI4508G with PID 15712 (D:\t-mall\target\classes started by ASUS in D:\t-mall)
+2020-05-31 23:09:17.683 DEBUG 15712 --- [restartedMain] com.kinl.tmall.TMallApplication          : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-31 23:09:17.683  INFO 15712 --- [restartedMain] com.kinl.tmall.TMallApplication          : No active profile set, falling back to default profiles: default
+2020-05-31 23:09:17.730  INFO 15712 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-31 23:09:17.730  INFO 15712 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-31 23:09:18.722  INFO 15712 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-31 23:09:18.738  INFO 15712 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-31 23:09:18.800  INFO 15712 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52ms. Found 0 Redis repository interfaces.
+2020-05-31 23:09:19.455  INFO 15712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webShiroConfig' of type [com.kinl.tmall.configuration.WebShiroConfig$$EnhancerBySpringCGLIB$$6addbdd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:09:19.763  INFO 15712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userWebShiroRealm' of type [com.kinl.tmall.Realm.UserWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:09:19.763  INFO 15712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:09:19.817  INFO 15712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:09:19.825  INFO 15712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$e3b0c6e6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:09:19.827  INFO 15712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:09:19.844  INFO 15712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:09:19.923  INFO 15712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:09:20.457  INFO 15712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:09:20.465  INFO 15712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:09:20.466  INFO 15712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:09:20.469  INFO 15712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [com.sun.proxy.$Proxy70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:09:20.470  INFO 15712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminServiceImpl' of type [com.kinl.tmall.service.impl.SysAdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:09:20.470  INFO 15712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminWebShiroRealm' of type [com.kinl.tmall.Realm.AdminWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:09:20.471  INFO 15712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customizedModularRealmAuthenticator' of type [com.kinl.tmall.configuration.CustomizedModularRealmAuthenticator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:09:20.478  INFO 15712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:09:20.544  INFO 15712 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:09:21.291  INFO 15712 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 23:09:21.306  INFO 15712 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 23:09:21.306  INFO 15712 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-31 23:09:21.606  INFO 15712 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-05-31 23:09:21.612  INFO 15712 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 23:09:21.612  INFO 15712 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3882 ms
+2020-05-31 23:09:22.865  INFO 15712 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 23:09:23.755  INFO 15712 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-31 23:09:23.863  INFO 15712 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 23:09:23.869  INFO 15712 --- [restartedMain] com.kinl.tmall.TMallApplication          : Started TMallApplication in 6.933 seconds (JVM running for 8.995)
+2020-05-31 23:09:24.005  INFO 15712 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 23:09:24.005  INFO 15712 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 23:09:24.028  INFO 15712 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2020-05-31 23:09:29.807  INFO 15712 --- [http-nio-8080-exec-1] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
+2020-05-31 23:09:29.812  INFO 15712 --- [http-nio-8080-exec-1] com.kinl.tmall.aspect.LogAspect          : result : fore/home
+2020-05-31 23:09:30.027  INFO 15712 --- [http-nio-8080-exec-8] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/web/forehome', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.IndexController.index', args=[]}
+2020-05-31 23:09:30.068  INFO 15712 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 23:09:30.267  INFO 15712 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 23:09:30.274 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.tmall.dao.CategoryMapper.finAllVO    : ==>  Preparing: select * from category 
+2020-05-31 23:09:30.302 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.tmall.dao.CategoryMapper.finAllVO    : ==> Parameters: 
+2020-05-31 23:09:30.333 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.tmall.dao.CategoryMapper.finAllVO    : <==      Total: 17
+2020-05-31 23:09:30.340 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:09:30.340 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 60(Integer)
+2020-05-31 23:09:30.346 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:09:30.346 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:09:30.347 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 64(Integer)
+2020-05-31 23:09:30.349 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:09:30.350 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:09:30.350 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 68(Integer)
+2020-05-31 23:09:30.353 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:09:30.353 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:09:30.354 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 69(Integer)
+2020-05-31 23:09:30.358 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:09:30.359 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:09:30.359 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 71(Integer)
+2020-05-31 23:09:30.362 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:09:30.362 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:09:30.362 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 72(Integer)
+2020-05-31 23:09:30.365 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:09:30.365 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:09:30.365 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 73(Integer)
+2020-05-31 23:09:30.367 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:09:30.368 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:09:30.368 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 74(Integer)
+2020-05-31 23:09:30.371 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:09:30.371 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:09:30.371 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 75(Integer)
+2020-05-31 23:09:30.384 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:09:30.385 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:09:30.385 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 76(Integer)
+2020-05-31 23:09:30.388 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:09:30.389 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:09:30.389 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 77(Integer)
+2020-05-31 23:09:30.391 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:09:30.392 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:09:30.392 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 78(Integer)
+2020-05-31 23:09:30.405 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:09:30.405 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:09:30.405 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 79(Integer)
+2020-05-31 23:09:30.408 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:09:30.409 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:09:30.409 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 80(Integer)
+2020-05-31 23:09:30.412 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:09:30.412 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:09:30.413 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 81(Integer)
+2020-05-31 23:09:30.426 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:09:30.427 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:09:30.428 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 82(Integer)
+2020-05-31 23:09:30.430 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:09:30.430 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-05-31 23:09:30.430 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 83(Integer)
+2020-05-31 23:09:30.442 DEBUG 15712 --- [http-nio-8080-exec-8] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-05-31 23:09:30.442  INFO 15712 --- [http-nio-8080-exec-8] com.kinl.tmall.aspect.LogAspect          : result : ResultVO(code=0, message=成功, data=[CategoryVO [Hash = 413737749, id=60, name=安全座椅], CategoryVO [Hash = 1031056831, id=64, name=太阳镜], CategoryVO [Hash = 88998455, id=68, name=品牌女装], CategoryVO [Hash = 995204901, id=69, name=时尚男鞋], CategoryVO [Hash = 1790030545, id=71, name=男士西服], CategoryVO [Hash = 1924195181, id=72, name=男士手拿包], CategoryVO [Hash = 119150774, id=73, name=男表], CategoryVO [Hash = 814024647, id=74, name=女表], CategoryVO [Hash = 1472535612, id=75, name=空调], CategoryVO [Hash = 572208674, id=76, name=冰箱], CategoryVO [Hash = 1964197247, id=77, name=原汁机], CategoryVO [Hash = 1840308005, id=78, name=扫地机器人], CategoryVO [Hash = 317397587, id=79, name=平衡车], CategoryVO [Hash = 1773831178, id=80, name=电热水器], CategoryVO [Hash = 116198655, id=81, name=沙发], CategoryVO [Hash = 1842328304, id=82, name=马桶], CategoryVO [Hash = 658244760, id=83, name=平板电视]])
+2020-05-31 23:09:32.681 DEBUG 15712 --- [http-nio-8080-exec-6] c.kinl.tmall.dao.CategoryMapper.findAll  : ==>  Preparing: select * from category 
+2020-05-31 23:09:32.681 DEBUG 15712 --- [http-nio-8080-exec-6] c.kinl.tmall.dao.CategoryMapper.findAll  : ==> Parameters: 
+2020-05-31 23:09:32.686 DEBUG 15712 --- [http-nio-8080-exec-6] c.kinl.tmall.dao.CategoryMapper.findAll  : <==      Total: 17
+2020-05-31 23:09:32.687 DEBUG 15712 --- [http-nio-8080-exec-6] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-05-31 23:09:32.688 DEBUG 15712 --- [http-nio-8080-exec-6] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 60(Integer)
+2020-05-31 23:09:32.690 DEBUG 15712 --- [http-nio-8080-exec-6] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-05-31 23:10:48.857  INFO 15712 --- [http-nio-8080-exec-6] c.k.t.h.ControllerExceptionHandler       : RequestUrl : http://localhost:8080/test, Exception : {}
+
+java.lang.IndexOutOfBoundsException: Index: 5, Size: 5
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at com.kinl.tmall.controller.TestController.setHomeRedisData(TestController.java:103)
+	at com.kinl.tmall.controller.TestController.test(TestController.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+2020-05-31 23:10:48.859  WARN 15712 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 5, Size: 5]
+2020-05-31 23:11:34.789  INFO 15712 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-31 23:11:34.810  INFO 15712 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-31 23:11:34.822  INFO 15712 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-31 23:11:44.454  INFO 14288 --- [restartedMain] com.kinl.tmall.TMallApplication          : Starting TMallApplication on DESKTOP-QI4508G with PID 14288 (D:\t-mall\target\classes started by ASUS in D:\t-mall)
+2020-05-31 23:11:44.469 DEBUG 14288 --- [restartedMain] com.kinl.tmall.TMallApplication          : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-31 23:11:44.469  INFO 14288 --- [restartedMain] com.kinl.tmall.TMallApplication          : No active profile set, falling back to default profiles: default
+2020-05-31 23:11:44.532  INFO 14288 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-31 23:11:44.532  INFO 14288 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-31 23:11:45.450  INFO 14288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-31 23:11:45.454  INFO 14288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-31 23:11:45.524  INFO 14288 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49ms. Found 0 Redis repository interfaces.
+2020-05-31 23:11:46.057  INFO 14288 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webShiroConfig' of type [com.kinl.tmall.configuration.WebShiroConfig$$EnhancerBySpringCGLIB$$3bd67281] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:11:46.315  INFO 14288 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userWebShiroRealm' of type [com.kinl.tmall.Realm.UserWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:11:46.324  INFO 14288 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:11:46.404  INFO 14288 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:11:46.411  INFO 14288 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$18d95d8a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:11:46.414  INFO 14288 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:11:46.431  INFO 14288 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:11:46.512  INFO 14288 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:11:47.041  INFO 14288 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:11:47.047  INFO 14288 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:11:47.048  INFO 14288 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:11:47.050  INFO 14288 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [com.sun.proxy.$Proxy70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:11:47.051  INFO 14288 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminServiceImpl' of type [com.kinl.tmall.service.impl.SysAdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:11:47.051  INFO 14288 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminWebShiroRealm' of type [com.kinl.tmall.Realm.AdminWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:11:47.052  INFO 14288 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customizedModularRealmAuthenticator' of type [com.kinl.tmall.configuration.CustomizedModularRealmAuthenticator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:11:47.056  INFO 14288 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:11:47.130  INFO 14288 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:11:47.859  INFO 14288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 23:11:47.874  INFO 14288 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 23:11:47.875  INFO 14288 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-31 23:11:48.168  INFO 14288 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-05-31 23:11:48.174  INFO 14288 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 23:11:48.175  INFO 14288 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3643 ms
+2020-05-31 23:11:49.373  INFO 14288 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 23:11:50.330  INFO 14288 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-31 23:11:50.433  INFO 14288 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 23:11:50.438  INFO 14288 --- [restartedMain] com.kinl.tmall.TMallApplication          : Started TMallApplication in 6.805 seconds (JVM running for 8.627)
+2020-05-31 23:12:08.495  INFO 14288 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 23:12:08.495  INFO 14288 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 23:12:08.501  INFO 14288 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-05-31 23:12:08.571  INFO 14288 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 23:12:08.729  INFO 14288 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 23:12:08.735 DEBUG 14288 --- [http-nio-8080-exec-2] c.kinl.tmall.dao.CategoryMapper.findAll  : ==>  Preparing: select * from category 
+2020-05-31 23:12:08.762 DEBUG 14288 --- [http-nio-8080-exec-2] c.kinl.tmall.dao.CategoryMapper.findAll  : ==> Parameters: 
+2020-05-31 23:12:08.800 DEBUG 14288 --- [http-nio-8080-exec-2] c.kinl.tmall.dao.CategoryMapper.findAll  : <==      Total: 17
+2020-05-31 23:12:08.807 DEBUG 14288 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-05-31 23:12:08.808 DEBUG 14288 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 60(Integer)
+2020-05-31 23:12:08.813 DEBUG 14288 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-05-31 23:12:16.581 DEBUG 14288 --- [http-nio-8080-exec-1] c.kinl.tmall.dao.CategoryMapper.findAll  : ==>  Preparing: select * from category 
+2020-05-31 23:12:16.583 DEBUG 14288 --- [http-nio-8080-exec-1] c.kinl.tmall.dao.CategoryMapper.findAll  : ==> Parameters: 
+2020-05-31 23:12:21.311 DEBUG 14288 --- [http-nio-8080-exec-1] c.kinl.tmall.dao.CategoryMapper.findAll  : <==      Total: 17
+2020-05-31 23:12:21.315 DEBUG 14288 --- [http-nio-8080-exec-1] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-05-31 23:12:21.315 DEBUG 14288 --- [http-nio-8080-exec-1] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 60(Integer)
+2020-05-31 23:12:37.091 DEBUG 14288 --- [http-nio-8080-exec-1] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-05-31 23:12:40.931  INFO 14288 --- [http-nio-8080-exec-2] c.k.t.h.ControllerExceptionHandler       : RequestUrl : http://localhost:8080/test, Exception : {}
+
+java.lang.IndexOutOfBoundsException: Index: 5, Size: 5
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at com.kinl.tmall.controller.TestController.setHomeRedisData(TestController.java:103)
+	at com.kinl.tmall.controller.TestController.test(TestController.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+2020-05-31 23:12:47.040  WARN 14288 --- [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 5, Size: 5]
+2020-05-31 23:12:47.039  INFO 14288 --- [http-nio-8080-exec-1] c.k.t.h.ControllerExceptionHandler       : RequestUrl : http://localhost:8080/test, Exception : {}
+
+java.lang.IndexOutOfBoundsException: Index: 5, Size: 5
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at com.kinl.tmall.controller.TestController.setHomeRedisData(TestController.java:103)
+	at com.kinl.tmall.controller.TestController.test(TestController.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+2020-05-31 23:12:47.043  WARN 14288 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 5, Size: 5]
+2020-05-31 23:37:08.600  INFO 14288 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-31 23:37:08.621  INFO 14288 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-31 23:37:08.632  INFO 14288 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-31 23:37:18.256  INFO 10652 --- [restartedMain] com.kinl.tmall.TMallApplication          : Starting TMallApplication on DESKTOP-QI4508G with PID 10652 (D:\t-mall\target\classes started by ASUS in D:\t-mall)
+2020-05-31 23:37:18.256 DEBUG 10652 --- [restartedMain] com.kinl.tmall.TMallApplication          : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-31 23:37:18.256  INFO 10652 --- [restartedMain] com.kinl.tmall.TMallApplication          : No active profile set, falling back to default profiles: default
+2020-05-31 23:37:18.318  INFO 10652 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-31 23:37:18.318  INFO 10652 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-31 23:37:19.231  INFO 10652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-31 23:37:19.234  INFO 10652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-31 23:37:19.318  INFO 10652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63ms. Found 0 Redis repository interfaces.
+2020-05-31 23:37:19.801  INFO 10652 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webShiroConfig' of type [com.kinl.tmall.configuration.WebShiroConfig$$EnhancerBySpringCGLIB$$183170a8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:37:20.066  INFO 10652 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userWebShiroRealm' of type [com.kinl.tmall.Realm.UserWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:37:20.066  INFO 10652 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:37:20.113  INFO 10652 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:37:20.113  INFO 10652 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$f5345bb1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:37:20.113  INFO 10652 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:37:20.128  INFO 10652 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:37:20.222  INFO 10652 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:37:20.675  INFO 10652 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:37:20.691  INFO 10652 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:37:20.691  INFO 10652 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:37:20.691  INFO 10652 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [com.sun.proxy.$Proxy70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:37:20.691  INFO 10652 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminServiceImpl' of type [com.kinl.tmall.service.impl.SysAdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:37:20.691  INFO 10652 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminWebShiroRealm' of type [com.kinl.tmall.Realm.AdminWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:37:20.691  INFO 10652 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customizedModularRealmAuthenticator' of type [com.kinl.tmall.configuration.CustomizedModularRealmAuthenticator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:37:20.691  INFO 10652 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:37:20.753  INFO 10652 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:37:21.480  INFO 10652 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 23:37:21.493  INFO 10652 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 23:37:21.494  INFO 10652 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-31 23:37:21.771  INFO 10652 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-05-31 23:37:21.777  INFO 10652 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 23:37:21.777  INFO 10652 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3459 ms
+2020-05-31 23:37:22.957  INFO 10652 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 23:37:23.822  INFO 10652 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-31 23:37:23.925  INFO 10652 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 23:37:23.930  INFO 10652 --- [restartedMain] com.kinl.tmall.TMallApplication          : Started TMallApplication in 6.408 seconds (JVM running for 8.288)
+2020-05-31 23:40:04.772  INFO 10652 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-31 23:40:04.773  INFO 10652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-31 23:40:04.790  INFO 10652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2020-05-31 23:40:04.857  INFO 10652 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-31 23:40:05.050  INFO 10652 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-31 23:40:05.058 DEBUG 10652 --- [http-nio-8080-exec-1] c.kinl.tmall.dao.CategoryMapper.findAll  : ==>  Preparing: select * from category 
+2020-05-31 23:40:05.085 DEBUG 10652 --- [http-nio-8080-exec-1] c.kinl.tmall.dao.CategoryMapper.findAll  : ==> Parameters: 
+2020-05-31 23:40:05.119 DEBUG 10652 --- [http-nio-8080-exec-1] c.kinl.tmall.dao.CategoryMapper.findAll  : <==      Total: 17
+2020-05-31 23:40:05.125 DEBUG 10652 --- [http-nio-8080-exec-1] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-05-31 23:40:05.126 DEBUG 10652 --- [http-nio-8080-exec-1] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 60(Integer)
+2020-05-31 23:40:05.130 DEBUG 10652 --- [http-nio-8080-exec-1] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-05-31 23:40:47.147  WARN 10652 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m12s95ms652µs700ns).
+2020-05-31 23:54:16.955  WARN 10652 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m29s809ms63µs300ns).
+2020-05-31 23:54:58.348  INFO 10652 --- [http-nio-8080-exec-1] c.k.t.h.ControllerExceptionHandler       : RequestUrl : http://localhost:8080/test, Exception : {}
+
+java.lang.IndexOutOfBoundsException: Index: 5, Size: 5
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at com.kinl.tmall.controller.TestController.setHomeRedisData(TestController.java:103)
+	at com.kinl.tmall.controller.TestController.test(TestController.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+2020-05-31 23:54:58.356  WARN 10652 --- [http-nio-8080-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.IndexOutOfBoundsException: Index: 5, Size: 5]
+2020-05-31 23:54:58.449  INFO 10652 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-31 23:54:58.466  INFO 10652 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-31 23:54:58.481  INFO 10652 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-31 23:55:16.470  INFO 11296 --- [restartedMain] com.kinl.tmall.TMallApplication          : Starting TMallApplication on DESKTOP-QI4508G with PID 11296 (D:\t-mall\target\classes started by ASUS in D:\t-mall)
+2020-05-31 23:55:16.470 DEBUG 11296 --- [restartedMain] com.kinl.tmall.TMallApplication          : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-31 23:55:16.470  INFO 11296 --- [restartedMain] com.kinl.tmall.TMallApplication          : No active profile set, falling back to default profiles: default
+2020-05-31 23:55:16.532  INFO 11296 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-31 23:55:16.532  INFO 11296 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-31 23:55:17.481  INFO 11296 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-31 23:55:17.484  INFO 11296 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-31 23:55:17.561  INFO 11296 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 0 Redis repository interfaces.
+2020-05-31 23:55:18.100  INFO 11296 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webShiroConfig' of type [com.kinl.tmall.configuration.WebShiroConfig$$EnhancerBySpringCGLIB$$c7d2a6ba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:55:18.443  INFO 11296 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userWebShiroRealm' of type [com.kinl.tmall.Realm.UserWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:55:18.443  INFO 11296 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:55:18.490  INFO 11296 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:55:18.490  INFO 11296 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$a4d591c3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:55:18.490  INFO 11296 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:55:18.506  INFO 11296 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:55:18.584  INFO 11296 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:55:19.037  INFO 11296 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:55:19.042  INFO 11296 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:55:19.043  INFO 11296 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:55:19.045  INFO 11296 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [com.sun.proxy.$Proxy70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:55:19.046  INFO 11296 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminServiceImpl' of type [com.kinl.tmall.service.impl.SysAdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:55:19.046  INFO 11296 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminWebShiroRealm' of type [com.kinl.tmall.Realm.AdminWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:55:19.047  INFO 11296 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customizedModularRealmAuthenticator' of type [com.kinl.tmall.configuration.CustomizedModularRealmAuthenticator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:55:19.052  INFO 11296 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:55:19.120  INFO 11296 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:55:19.863  INFO 11296 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 23:55:19.875  INFO 11296 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 23:55:19.876  INFO 11296 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-31 23:55:20.157  INFO 11296 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-05-31 23:55:20.162  INFO 11296 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 23:55:20.162  INFO 11296 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3630 ms
+2020-05-31 23:55:21.371  INFO 11296 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 23:55:22.254  INFO 11296 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-31 23:55:22.355  INFO 11296 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 23:55:22.359  INFO 11296 --- [restartedMain] com.kinl.tmall.TMallApplication          : Started TMallApplication in 6.706 seconds (JVM running for 8.541)
+2020-05-31 23:57:23.914  INFO 11296 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-31 23:57:33.172  INFO 16104 --- [restartedMain] com.kinl.tmall.TMallApplication          : Starting TMallApplication on DESKTOP-QI4508G with PID 16104 (D:\t-mall\target\classes started by ASUS in D:\t-mall)
+2020-05-31 23:57:33.176 DEBUG 16104 --- [restartedMain] com.kinl.tmall.TMallApplication          : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-31 23:57:33.177  INFO 16104 --- [restartedMain] com.kinl.tmall.TMallApplication          : No active profile set, falling back to default profiles: default
+2020-05-31 23:57:33.235  INFO 16104 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-31 23:57:33.235  INFO 16104 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-31 23:57:34.138  INFO 16104 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-05-31 23:57:34.140  INFO 16104 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-05-31 23:57:34.212  INFO 16104 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51ms. Found 0 Redis repository interfaces.
+2020-05-31 23:57:34.555  INFO 16104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webShiroConfig' of type [com.kinl.tmall.configuration.WebShiroConfig$$EnhancerBySpringCGLIB$$3f12e819] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:57:34.750  INFO 16104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userWebShiroRealm' of type [com.kinl.tmall.Realm.UserWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:57:34.754  INFO 16104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:57:34.792  INFO 16104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:57:34.798  INFO 16104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$1c15d322] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:57:34.800  INFO 16104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:57:34.814  INFO 16104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:57:34.882  INFO 16104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:57:35.280  INFO 16104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:57:35.287  INFO 16104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:57:35.288  INFO 16104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:57:35.291  INFO 16104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [com.sun.proxy.$Proxy70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:57:35.292  INFO 16104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminServiceImpl' of type [com.kinl.tmall.service.impl.SysAdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:57:35.293  INFO 16104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminWebShiroRealm' of type [com.kinl.tmall.Realm.AdminWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:57:35.294  INFO 16104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customizedModularRealmAuthenticator' of type [com.kinl.tmall.configuration.CustomizedModularRealmAuthenticator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:57:35.299  INFO 16104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:57:35.361  INFO 16104 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 23:57:36.077  INFO 16104 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-31 23:57:36.090  INFO 16104 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-31 23:57:36.090  INFO 16104 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-31 23:57:36.385  INFO 16104 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-05-31 23:57:36.392  INFO 16104 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-31 23:57:36.392  INFO 16104 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3157 ms
+2020-05-31 23:57:37.583  INFO 16104 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-31 23:57:38.442  INFO 16104 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-31 23:57:38.548  INFO 16104 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-31 23:57:38.552  INFO 16104 --- [restartedMain] com.kinl.tmall.TMallApplication          : Started TMallApplication in 6.276 seconds (JVM running for 8.047)
