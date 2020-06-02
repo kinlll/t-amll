@@ -99,4 +99,10 @@ public class ProductServiceImpl implements ProductService {
         return productMapper.findNameById(id);
     }
 
+    @Override
+    public List<Product> findbyCid(Integer cid) {
+
+        return productMapper.findbyCid(cid);
+    }
+
 }

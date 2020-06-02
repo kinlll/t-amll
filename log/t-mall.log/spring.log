@@ -1,82 +1,126 @@
-2020-05-28 00:04:26.875  INFO 14604 --- [http-nio-8080-exec-7] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
-2020-05-28 00:04:26.880  INFO 14604 --- [http-nio-8080-exec-7] com.kinl.tmall.aspect.LogAspect          : result : fore/home
-2020-05-28 00:20:42.423  INFO 14604 --- [http-nio-8080-exec-1] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
-2020-05-28 00:20:42.424  INFO 14604 --- [http-nio-8080-exec-1] com.kinl.tmall.aspect.LogAspect          : result : fore/home
-2020-05-28 00:20:42.706  INFO 14604 --- [http-nio-8080-exec-6] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/web/forehome', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.IndexController.index', args=[]}
-2020-05-28 00:20:54.322  INFO 14604 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-05-28 00:20:54.954  INFO 14604 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-05-28 00:20:54.970 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.tmall.dao.CategoryMapper.finAllVO    : ==>  Preparing: select * from category 
-2020-05-28 00:20:55.012 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.tmall.dao.CategoryMapper.finAllVO    : ==> Parameters: 
-2020-05-28 00:20:55.041 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.tmall.dao.CategoryMapper.finAllVO    : <==      Total: 18
-2020-05-28 00:20:55.056 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:20:55.056 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 60(Integer)
-2020-05-28 00:20:55.090 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:20:55.091 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:20:55.091 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 64(Integer)
-2020-05-28 00:20:55.091 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:20:55.091 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:20:55.091 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 68(Integer)
-2020-05-28 00:20:55.091 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:20:55.091 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:20:55.091 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 69(Integer)
-2020-05-28 00:20:55.107 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:20:55.107 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:20:55.107 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 71(Integer)
-2020-05-28 00:20:55.107 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:20:55.107 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:20:55.107 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 72(Integer)
-2020-05-28 00:20:55.125 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:20:55.125 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:20:55.126 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 73(Integer)
-2020-05-28 00:20:55.130 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:20:55.130 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:20:55.131 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 74(Integer)
-2020-05-28 00:20:55.133 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:20:55.134 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:20:55.134 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 75(Integer)
-2020-05-28 00:20:55.140 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:20:55.140 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:20:55.140 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 76(Integer)
-2020-05-28 00:20:55.140 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:20:55.140 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:20:55.140 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 77(Integer)
-2020-05-28 00:20:55.159 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:20:55.160 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:20:55.160 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 78(Integer)
-2020-05-28 00:20:55.163 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:20:55.163 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:20:55.163 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 79(Integer)
-2020-05-28 00:20:55.166 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:20:55.167 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:20:55.167 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 80(Integer)
-2020-05-28 00:20:55.171 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:20:55.172 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:20:55.173 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 81(Integer)
-2020-05-28 00:20:55.187 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:20:55.189 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:20:55.189 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 82(Integer)
-2020-05-28 00:20:55.193 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:20:55.194 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:20:55.194 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 83(Integer)
-2020-05-28 00:20:55.196 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:20:55.196 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:20:55.197 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 92(Integer)
-2020-05-28 00:20:55.207 DEBUG 14604 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 1
-2020-05-28 00:20:55.207  INFO 14604 --- [http-nio-8080-exec-6] com.kinl.tmall.aspect.LogAspect          : result : ResultVO(code=0, message=成功, data=[CategoryVO [Hash = 1710948359, id=60, name=安全座椅], CategoryVO [Hash = 639150455, id=64, name=太阳镜], CategoryVO [Hash = 1554389002, id=68, name=品牌女装], CategoryVO [Hash = 1273783964, id=69, name=时尚男鞋], CategoryVO [Hash = 1982512350, id=71, name=男士西服], CategoryVO [Hash = 362471549, id=72, name=男士手拿包], CategoryVO [Hash = 2039532684, id=73, name=男表], CategoryVO [Hash = 1373674916, id=74, name=女表], CategoryVO [Hash = 1921976074, id=75, name=空调], CategoryVO [Hash = 819238958, id=76, name=冰箱], CategoryVO [Hash = 1340069396, id=77, name=原汁机], CategoryVO [Hash = 436695030, id=78, name=扫地机器人], CategoryVO [Hash = 280665323, id=79, name=平衡车], CategoryVO [Hash = 79393594, id=80, name=电热水器], CategoryVO [Hash = 895843023, id=81, name=沙发], CategoryVO [Hash = 347921226, id=82, name=马桶], CategoryVO [Hash = 1353011442, id=83, name=平板电视], CategoryVO [Hash = 265866111, id=92, name=洗衣机]])
-2020-05-28 00:23:23.257  INFO 14604 --- [http-nio-8080-exec-3] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
-2020-05-28 00:23:23.258  INFO 14604 --- [http-nio-8080-exec-3] com.kinl.tmall.aspect.LogAspect          : result : fore/home
-2020-05-28 00:23:34.850  WARN 14604 --- [http-nio-8080-exec-10] o.a.shiro.authc.AbstractAuthenticator    : Authentication failed for token submission [com.kinl.tmall.configuration.CustomizedToken - 123, rememberMe=false].  Possible unexpected error? (Typical or expected login exceptions should extend from AuthenticationException).
+2020-06-03 00:03:50.698  INFO 7268 --- [restartedMain] com.kinl.tmall.TMallApplication          : Starting TMallApplication on DESKTOP-QI4508G with PID 7268 (D:\t-mall\target\classes started by ASUS in D:\t-mall)
+2020-06-03 00:03:50.704 DEBUG 7268 --- [restartedMain] com.kinl.tmall.TMallApplication          : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-03 00:03:50.705  INFO 7268 --- [restartedMain] com.kinl.tmall.TMallApplication          : No active profile set, falling back to default profiles: default
+2020-06-03 00:03:50.784  INFO 7268 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-03 00:03:50.785  INFO 7268 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-03 00:03:51.754  INFO 7268 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-03 00:03:51.757  INFO 7268 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-03 00:03:51.824  INFO 7268 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46ms. Found 0 Redis repository interfaces.
+2020-06-03 00:03:52.155  INFO 7268 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webShiroConfig' of type [com.kinl.tmall.configuration.WebShiroConfig$$EnhancerBySpringCGLIB$$d5315440] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:03:52.369  INFO 7268 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userWebShiroRealm' of type [com.kinl.tmall.Realm.UserWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:03:52.373  INFO 7268 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:03:52.414  INFO 7268 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:03:52.421  INFO 7268 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$b2343f49] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:03:52.422  INFO 7268 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:03:52.437  INFO 7268 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:03:52.504  INFO 7268 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:03:52.924  INFO 7268 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:03:52.929  INFO 7268 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:03:52.930  INFO 7268 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:03:52.933  INFO 7268 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [com.sun.proxy.$Proxy70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:03:52.933  INFO 7268 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminServiceImpl' of type [com.kinl.tmall.service.impl.SysAdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:03:52.934  INFO 7268 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminWebShiroRealm' of type [com.kinl.tmall.Realm.AdminWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:03:52.935  INFO 7268 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customizedModularRealmAuthenticator' of type [com.kinl.tmall.configuration.CustomizedModularRealmAuthenticator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:03:52.939  INFO 7268 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:03:52.995  INFO 7268 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:03:53.737  INFO 7268 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-03 00:03:53.751  INFO 7268 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-03 00:03:53.751  INFO 7268 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-06-03 00:03:54.089  INFO 7268 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-06-03 00:03:54.093  INFO 7268 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-03 00:03:54.093  INFO 7268 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3308 ms
+2020-06-03 00:03:55.381  INFO 7268 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-03 00:03:56.299  INFO 7268 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-03 00:03:56.411  INFO 7268 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-03 00:03:56.417  INFO 7268 --- [restartedMain] com.kinl.tmall.TMallApplication          : Started TMallApplication in 6.585 seconds (JVM running for 8.547)
+2020-06-03 00:04:06.915  INFO 7268 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-03 00:04:06.915  INFO 7268 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-03 00:04:06.933  INFO 7268 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2020-06-03 00:04:12.560  INFO 7268 --- [http-nio-8080-exec-1] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
+2020-06-03 00:04:12.566  INFO 7268 --- [http-nio-8080-exec-1] com.kinl.tmall.aspect.LogAspect          : result : fore/home
+2020-06-03 00:04:12.771  INFO 7268 --- [http-nio-8080-exec-6] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/web/forehome', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.IndexController.index', args=[]}
+2020-06-03 00:04:12.817  INFO 7268 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-03 00:04:13.030  INFO 7268 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-03 00:04:13.037 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.tmall.dao.CategoryMapper.finAllVO    : ==>  Preparing: select * from category 
+2020-06-03 00:04:13.065 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.tmall.dao.CategoryMapper.finAllVO    : ==> Parameters: 
+2020-06-03 00:04:13.097 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.tmall.dao.CategoryMapper.finAllVO    : <==      Total: 17
+2020-06-03 00:04:13.104 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-06-03 00:04:13.105 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 60(Integer)
+2020-06-03 00:04:13.111 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-06-03 00:04:13.112 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-06-03 00:04:13.112 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 64(Integer)
+2020-06-03 00:04:13.116 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-06-03 00:04:13.116 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-06-03 00:04:13.116 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 68(Integer)
+2020-06-03 00:04:13.119 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-06-03 00:04:13.119 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-06-03 00:04:13.119 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 69(Integer)
+2020-06-03 00:04:13.124 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-06-03 00:04:13.124 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-06-03 00:04:13.124 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 71(Integer)
+2020-06-03 00:04:13.127 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-06-03 00:04:13.127 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-06-03 00:04:13.127 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 72(Integer)
+2020-06-03 00:04:13.131 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-06-03 00:04:13.131 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-06-03 00:04:13.132 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 73(Integer)
+2020-06-03 00:04:13.134 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-06-03 00:04:13.134 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-06-03 00:04:13.135 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 74(Integer)
+2020-06-03 00:04:13.136 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-06-03 00:04:13.137 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-06-03 00:04:13.137 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 75(Integer)
+2020-06-03 00:04:13.140 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-06-03 00:04:13.141 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-06-03 00:04:13.141 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 76(Integer)
+2020-06-03 00:04:13.144 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-06-03 00:04:13.145 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-06-03 00:04:13.145 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 77(Integer)
+2020-06-03 00:04:13.148 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-06-03 00:04:13.148 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-06-03 00:04:13.148 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 78(Integer)
+2020-06-03 00:04:13.161 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-06-03 00:04:13.162 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-06-03 00:04:13.162 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 79(Integer)
+2020-06-03 00:04:13.166 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-06-03 00:04:13.167 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-06-03 00:04:13.167 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 80(Integer)
+2020-06-03 00:04:13.169 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-06-03 00:04:13.170 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-06-03 00:04:13.170 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 81(Integer)
+2020-06-03 00:04:13.183 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-06-03 00:04:13.185 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-06-03 00:04:13.185 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 82(Integer)
+2020-06-03 00:04:13.187 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-06-03 00:04:13.188 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
+2020-06-03 00:04:13.188 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 83(Integer)
+2020-06-03 00:04:13.199 DEBUG 7268 --- [http-nio-8080-exec-6] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
+2020-06-03 00:04:13.200  INFO 7268 --- [http-nio-8080-exec-6] com.kinl.tmall.aspect.LogAspect          : result : ResultVO(code=0, message=成功, data=[CategoryVO [Hash = 973622011, id=60, name=安全座椅], CategoryVO [Hash = 1103981413, id=64, name=太阳镜], CategoryVO [Hash = 690013927, id=68, name=品牌女装], CategoryVO [Hash = 571848700, id=69, name=时尚男鞋], CategoryVO [Hash = 1521643223, id=71, name=男士西服], CategoryVO [Hash = 1880010919, id=72, name=男士手拿包], CategoryVO [Hash = 1597396927, id=73, name=男表], CategoryVO [Hash = 1351852530, id=74, name=女表], CategoryVO [Hash = 429832673, id=75, name=空调], CategoryVO [Hash = 470854141, id=76, name=冰箱], CategoryVO [Hash = 1903599215, id=77, name=原汁机], CategoryVO [Hash = 1009204610, id=78, name=扫地机器人], CategoryVO [Hash = 1343933014, id=79, name=平衡车], CategoryVO [Hash = 1230819049, id=80, name=电热水器], CategoryVO [Hash = 203207755, id=81, name=沙发], CategoryVO [Hash = 156390247, id=82, name=马桶], CategoryVO [Hash = 253522017, id=83, name=平板电视]])
+2020-06-03 00:04:15.633 DEBUG 7268 --- [http-nio-8080-exec-3] c.kinl.tmall.dao.CategoryMapper.findAll  : ==>  Preparing: select * from category 
+2020-06-03 00:04:15.633 DEBUG 7268 --- [http-nio-8080-exec-3] c.kinl.tmall.dao.CategoryMapper.findAll  : ==> Parameters: 
+2020-06-03 00:04:15.637 DEBUG 7268 --- [http-nio-8080-exec-3] c.kinl.tmall.dao.CategoryMapper.findAll  : <==      Total: 17
+2020-06-03 00:04:15.638 DEBUG 7268 --- [http-nio-8080-exec-3] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-06-03 00:04:15.638 DEBUG 7268 --- [http-nio-8080-exec-3] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 60(Integer)
+2020-06-03 00:04:15.641 DEBUG 7268 --- [http-nio-8080-exec-3] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-06-03 00:04:16.089  INFO 7268 --- [http-nio-8080-exec-3] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-06-03 00:04:16.091  INFO 7268 --- [http-nio-8080-exec-3] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-06-03 00:04:17.792  INFO 7268 --- [http-nio-8080-exec-3] c.k.t.h.ControllerExceptionHandler       : RequestUrl : http://localhost:8080/test, Exception : {}
 
-com.kinl.tmall.exception.AllException: 密码不正确
-	at com.kinl.tmall.Realm.UserWebShiroRealm.doGetAuthenticationInfo(UserWebShiroRealm.java:34)
-	at org.apache.shiro.realm.AuthenticatingRealm.getAuthenticationInfo(AuthenticatingRealm.java:571)
-	at org.apache.shiro.authc.pam.ModularRealmAuthenticator.doSingleRealmAuthentication(ModularRealmAuthenticator.java:180)
-	at com.kinl.tmall.configuration.CustomizedModularRealmAuthenticator.doAuthenticate(CustomizedModularRealmAuthenticator.java:40)
-	at org.apache.shiro.authc.AbstractAuthenticator.authenticate(AbstractAuthenticator.java:198)
-	at org.apache.shiro.mgt.AuthenticatingSecurityManager.authenticate(AuthenticatingSecurityManager.java:106)
-	at org.apache.shiro.mgt.DefaultSecurityManager.login(DefaultSecurityManager.java:274)
-	at org.apache.shiro.subject.support.DelegatingSubject.login(DelegatingSubject.java:260)
-	at com.kinl.tmall.controller.LoginController.login(LoginController.java:56)
+org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 47.105.164.91:6379
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:109)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1197)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1178)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:942)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:353)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:134)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:97)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:84)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:215)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:188)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:96)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:236)
+	at com.kinl.tmall.controller.TestController.setHomeRedisData(TestController.java:105)
+	at com.kinl.tmall.controller.TestController.test(TestController.java:69)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -90,8 +134,8 @@ com.kinl.tmall.exception.AllException: 密码不正确
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
@@ -137,69 +181,150 @@ com.kinl.tmall.exception.AllException: 密码不正确
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:745)
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 47.105.164.91:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:234)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:207)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:115)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:115)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.lambda$null$0(LettucePoolingConnectionProvider.java:97)
+	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:209)
+	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:199)
+	at org.apache.commons.pool2.BasePooledObjectFactory.makeObject(BasePooledObjectFactory.java:58)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:889)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:424)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:349)
+	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:122)
+	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:117)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:103)
+	... 73 common frames omitted
+Caused by: io.lettuce.core.RedisCommandExecutionException: ERR Client sent AUTH, but no password is set
+	at io.lettuce.core.ExceptionFactory.createExecutionException(ExceptionFactory.java:135)
+	at io.lettuce.core.ExceptionFactory.createExecutionException(ExceptionFactory.java:108)
+	at io.lettuce.core.protocol.AsyncCommand.completeResult(AsyncCommand.java:120)
+	at io.lettuce.core.protocol.AsyncCommand.complete(AsyncCommand.java:111)
+	at io.lettuce.core.protocol.CommandHandler.complete(CommandHandler.java:654)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:614)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:565)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:163)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
 
-2020-05-28 00:23:36.780  INFO 14604 --- [http-nio-8080-exec-2] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/home', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.UserJumpController.home', args=[]}
-2020-05-28 00:23:36.780  INFO 14604 --- [http-nio-8080-exec-2] com.kinl.tmall.aspect.LogAspect          : result : fore/home
-2020-05-28 00:23:36.943  INFO 14604 --- [http-nio-8080-exec-4] com.kinl.tmall.aspect.LogAspect          : Request : RequestLog{url='http://localhost:8080/web/forehome', ip='0:0:0:0:0:0:0:1', classMethod='com.kinl.tmall.controller.web.IndexController.index', args=[]}
-2020-05-28 00:24:27.576  WARN 14604 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m2s468ms509µs300ns).
-2020-05-28 00:24:27.593 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.tmall.dao.CategoryMapper.finAllVO    : ==>  Preparing: select * from category 
-2020-05-28 00:24:27.594 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.tmall.dao.CategoryMapper.finAllVO    : ==> Parameters: 
-2020-05-28 00:24:27.613 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.tmall.dao.CategoryMapper.finAllVO    : <==      Total: 18
-2020-05-28 00:24:27.619 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:24:27.619 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 60(Integer)
-2020-05-28 00:24:27.623 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:24:27.624 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:24:27.624 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 64(Integer)
-2020-05-28 00:24:27.628 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:24:27.628 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:24:27.628 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 68(Integer)
-2020-05-28 00:24:27.630 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:24:27.630 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:24:27.631 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 69(Integer)
-2020-05-28 00:24:27.633 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:24:27.633 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:24:27.633 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 71(Integer)
-2020-05-28 00:24:27.638 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:24:27.638 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:24:27.639 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 72(Integer)
-2020-05-28 00:24:27.644 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:24:27.645 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:24:27.645 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 73(Integer)
-2020-05-28 00:24:27.647 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:24:27.647 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:24:27.648 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 74(Integer)
-2020-05-28 00:24:27.649 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:24:27.650 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:24:27.651 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 75(Integer)
-2020-05-28 00:24:27.653 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:24:27.654 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:24:27.654 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 76(Integer)
-2020-05-28 00:24:27.656 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:24:27.657 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:24:27.657 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 77(Integer)
-2020-05-28 00:24:27.660 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:24:27.661 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:24:27.661 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 78(Integer)
-2020-05-28 00:24:27.663 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:24:27.663 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:24:27.663 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 79(Integer)
-2020-05-28 00:24:27.665 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:24:27.665 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:24:27.666 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 80(Integer)
-2020-05-28 00:24:27.669 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:24:27.670 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:24:27.670 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 81(Integer)
-2020-05-28 00:24:27.672 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:24:27.673 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:24:27.673 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 82(Integer)
-2020-05-28 00:24:27.675 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:24:27.675 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:24:27.675 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 83(Integer)
-2020-05-28 00:24:27.677 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 5
-2020-05-28 00:24:27.677 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==>  Preparing: select * from Product where cid = ? limit 5 
-2020-05-28 00:24:27.678 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : ==> Parameters: 92(Integer)
-2020-05-28 00:24:27.679 DEBUG 14604 --- [http-nio-8080-exec-4] c.k.t.dao.ProductMapper.findByCidFive    : <==      Total: 1
-2020-05-28 00:24:27.680  INFO 14604 --- [http-nio-8080-exec-4] com.kinl.tmall.aspect.LogAspect          : result : ResultVO(code=0, message=成功, data=[CategoryVO [Hash = 1788080481, id=60, name=安全座椅], CategoryVO [Hash = 41108453, id=64, name=太阳镜], CategoryVO [Hash = 265346163, id=68, name=品牌女装], CategoryVO [Hash = 702058690, id=69, name=时尚男鞋], CategoryVO [Hash = 1555391585, id=71, name=男士西服], CategoryVO [Hash = 1153529977, id=72, name=男士手拿包], CategoryVO [Hash = 1299912662, id=73, name=男表], CategoryVO [Hash = 541638715, id=74, name=女表], CategoryVO [Hash = 1470709311, id=75, name=空调], CategoryVO [Hash = 409241091, id=76, name=冰箱], CategoryVO [Hash = 221575038, id=77, name=原汁机], CategoryVO [Hash = 1796974587, id=78, name=扫地机器人], CategoryVO [Hash = 1969042529, id=79, name=平衡车], CategoryVO [Hash = 1236660311, id=80, name=电热水器], CategoryVO [Hash = 1670406424, id=81, name=沙发], CategoryVO [Hash = 1426208494, id=82, name=马桶], CategoryVO [Hash = 1231089171, id=83, name=平板电视], CategoryVO [Hash = 791779360, id=92, name=洗衣机]])
-2020-05-28 00:29:47.482  INFO 14604 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-05-28 00:29:47.482  INFO 14604 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-05-28 00:29:47.497  INFO 14604 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-03 00:04:17.794  WARN 7268 --- [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 47.105.164.91:6379]
+2020-06-03 00:06:41.619  INFO 7268 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-03 00:06:41.739  INFO 7268 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-03 00:06:41.753  INFO 7268 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-06-03 00:06:48.383  INFO 14716 --- [restartedMain] com.kinl.tmall.TMallApplication          : Starting TMallApplication on DESKTOP-QI4508G with PID 14716 (D:\t-mall\target\classes started by ASUS in D:\t-mall)
+2020-06-03 00:06:48.386 DEBUG 14716 --- [restartedMain] com.kinl.tmall.TMallApplication          : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-03 00:06:48.387  INFO 14716 --- [restartedMain] com.kinl.tmall.TMallApplication          : No active profile set, falling back to default profiles: default
+2020-06-03 00:06:48.483  INFO 14716 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-06-03 00:06:48.483  INFO 14716 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-06-03 00:06:49.486  INFO 14716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-03 00:06:49.490  INFO 14716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-03 00:06:49.565  INFO 14716 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50ms. Found 0 Redis repository interfaces.
+2020-06-03 00:06:49.945  INFO 14716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'webShiroConfig' of type [com.kinl.tmall.configuration.WebShiroConfig$$EnhancerBySpringCGLIB$$e7fb42c4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:06:50.162  INFO 14716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'userWebShiroRealm' of type [com.kinl.tmall.Realm.UserWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:06:50.167  INFO 14716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'credentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:06:50.208  INFO 14716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:06:50.215  INFO 14716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$c4fe2dcd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:06:50.216  INFO 14716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:06:50.231  INFO 14716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:06:50.305  INFO 14716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:06:50.732  INFO 14716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:06:50.737  INFO 14716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:06:50.738  INFO 14716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:06:50.740  INFO 14716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminMapper' of type [com.sun.proxy.$Proxy70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:06:50.741  INFO 14716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'sysAdminServiceImpl' of type [com.kinl.tmall.service.impl.SysAdminServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:06:50.742  INFO 14716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'adminWebShiroRealm' of type [com.kinl.tmall.Realm.AdminWebShiroRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:06:50.743  INFO 14716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'customizedModularRealmAuthenticator' of type [com.kinl.tmall.configuration.CustomizedModularRealmAuthenticator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:06:50.747  INFO 14716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:06:50.815  INFO 14716 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-03 00:06:51.604  INFO 14716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-03 00:06:51.617  INFO 14716 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-03 00:06:51.617  INFO 14716 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-06-03 00:06:51.916  INFO 14716 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-06-03 00:06:51.921  INFO 14716 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-03 00:06:51.921  INFO 14716 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3438 ms
+2020-06-03 00:06:53.245  INFO 14716 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-03 00:06:54.212  INFO 14716 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-06-03 00:06:54.354  INFO 14716 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-03 00:06:54.361  INFO 14716 --- [restartedMain] com.kinl.tmall.TMallApplication          : Started TMallApplication in 6.944 seconds (JVM running for 9.01)
+2020-06-03 00:06:57.816  INFO 14716 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-03 00:06:57.816  INFO 14716 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-03 00:06:57.833  INFO 14716 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2020-06-03 00:06:57.906  INFO 14716 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-03 00:06:58.086  INFO 14716 --- [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-03 00:06:58.094 DEBUG 14716 --- [http-nio-8080-exec-2] c.kinl.tmall.dao.CategoryMapper.findAll  : ==>  Preparing: select * from category 
+2020-06-03 00:06:58.120 DEBUG 14716 --- [http-nio-8080-exec-2] c.kinl.tmall.dao.CategoryMapper.findAll  : ==> Parameters: 
+2020-06-03 00:06:58.150 DEBUG 14716 --- [http-nio-8080-exec-2] c.kinl.tmall.dao.CategoryMapper.findAll  : <==      Total: 17
+2020-06-03 00:06:58.158 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-06-03 00:06:58.159 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 60(Integer)
+2020-06-03 00:06:58.164 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-06-03 00:06:58.507  INFO 14716 --- [http-nio-8080-exec-2] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-06-03 00:06:58.509  INFO 14716 --- [http-nio-8080-exec-2] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-06-03 00:07:00.299 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-06-03 00:07:00.299 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 64(Integer)
+2020-06-03 00:07:00.304 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-06-03 00:07:00.377 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-06-03 00:07:00.378 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 68(Integer)
+2020-06-03 00:07:00.381 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-06-03 00:07:00.444 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-06-03 00:07:00.444 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 69(Integer)
+2020-06-03 00:07:00.449 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-06-03 00:07:00.544 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-06-03 00:07:00.545 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 71(Integer)
+2020-06-03 00:07:00.548 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-06-03 00:07:00.651 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-06-03 00:07:00.651 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 72(Integer)
+2020-06-03 00:07:00.655 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-06-03 00:07:00.729 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-06-03 00:07:00.729 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 73(Integer)
+2020-06-03 00:07:00.732 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-06-03 00:07:00.820 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-06-03 00:07:00.820 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 74(Integer)
+2020-06-03 00:07:00.823 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-06-03 00:07:00.914 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-06-03 00:07:00.915 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 75(Integer)
+2020-06-03 00:07:00.918 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-06-03 00:07:01.010 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-06-03 00:07:01.010 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 76(Integer)
+2020-06-03 00:07:01.013 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-06-03 00:07:01.095 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-06-03 00:07:01.095 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 77(Integer)
+2020-06-03 00:07:01.098 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-06-03 00:07:01.193 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-06-03 00:07:01.193 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 78(Integer)
+2020-06-03 00:07:01.197 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-06-03 00:07:01.301 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-06-03 00:07:01.302 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 79(Integer)
+2020-06-03 00:07:01.305 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-06-03 00:07:01.395 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-06-03 00:07:01.395 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 80(Integer)
+2020-06-03 00:07:01.398 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-06-03 00:07:01.505 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-06-03 00:07:01.506 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 81(Integer)
+2020-06-03 00:07:01.513 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-06-03 00:07:01.619 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-06-03 00:07:01.620 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 82(Integer)
+2020-06-03 00:07:01.623 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-06-03 00:07:01.714 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==>  Preparing: select * from product where cid=? 
+2020-06-03 00:07:01.714 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : ==> Parameters: 83(Integer)
+2020-06-03 00:07:01.717 DEBUG 14716 --- [http-nio-8080-exec-2] c.k.tmall.dao.ProductMapper.findbyCid    : <==      Total: 5
+2020-06-03 00:08:26.133  INFO 14716 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-06-03 00:08:26.259  INFO 14716 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-06-03 00:08:26.271  INFO 14716 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

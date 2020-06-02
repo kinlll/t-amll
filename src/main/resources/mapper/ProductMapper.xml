@@ -345,4 +345,8 @@
     select name from product where id=#{id}
   </select>
 
+  <select id="findbyCid" parameterType="Integer" resultType="Product">
+    select * from product where cid=#{cid}
+  </select>
+
 </mapper>

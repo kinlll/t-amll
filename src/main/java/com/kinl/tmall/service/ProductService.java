@@ -26,4 +26,6 @@ public interface ProductService {
 
     String findNameById(Integer id);
 
+    List<Product> findbyCid(Integer cid);
+
 }

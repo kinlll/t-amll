@@ -110,4 +110,6 @@ public interface ProductMapper {
 
     String findNameById(Integer id);
 
+    List<Product> findbyCid(Integer cid);
+
 }

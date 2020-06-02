@@ -13,6 +13,9 @@ public class CategoryVO implements Serializable {
 
     private List<Product> products;
 
+    //redis里的首页的自定义标签
+    private List<Product> productsByRow;
+
     public Integer getId() {
         return id;
     }
@@ -35,6 +38,14 @@ public class CategoryVO implements Serializable {
 
     public void setProducts(List<Product> products) {
         this.products = products;
+    }
+
+    public List<Product> getProductsByRow() {
+        return productsByRow;
+    }
+
+    public void setProductsByRow(List<Product> productsByRow) {
+        this.productsByRow = productsByRow;
     }
 
     @Override
