@@ -14,7 +14,7 @@ public class CategoryVO implements Serializable {
     private List<Product> products;
 
     //redis里的首页的自定义标签
-    private List<Product> productsByRow;
+    private List<ProductRedisVO> data;
 
     public Integer getId() {
         return id;
@@ -40,23 +40,21 @@ public class CategoryVO implements Serializable {
         this.products = products;
     }
 
-    public List<Product> getProductsByRow() {
-        return productsByRow;
+    public List<ProductRedisVO> getData() {
+        return data;
     }
 
-    public void setProductsByRow(List<Product> productsByRow) {
-        this.productsByRow = productsByRow;
+    public void setData(List<ProductRedisVO> data) {
+        this.data = data;
     }
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", name=").append(name);
-        sb.append("]");
-        return sb.toString();
+        return "CategoryVO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", products=" + products +
+                ", data=" + data +
+                '}';
     }
 }
