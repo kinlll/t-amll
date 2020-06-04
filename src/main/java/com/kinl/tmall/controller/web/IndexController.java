@@ -34,7 +34,26 @@ public class IndexController {
             for (CategoryVO categoryVO : categoryVOS) {
                 List<Product> products = productService.findbyCid(categoryVO.getId());
                 categoryVO.setProducts(products);
-                List<List<Product>> lists = groupList(products);
+                //List<List<Product>> listList = groupList(products);
+
+                /**
+                 * 拆分List集合成多个
+                 */
+                List<List<Product>> lists = new ArrayList<>();
+                int size = products.size();
+                //截取的子集合长度
+                int toIndex = 7;
+                for (int i = 0; i < lists.size(); i+=7){
+                    if (i + 7 > size){
+                        toIndex = size - i;
+                    }
+                    List<Product> products1 = products.subList(i, i + toIndex);
+                    lists.add(products1);
+                    categoryVO.setProducts(products1);
+                }
+
+
+
                 categoryVO.setData(lists);
 
             }
@@ -64,6 +83,7 @@ public class IndexController {
 
         return lists;
     }
+
 
 
 }
