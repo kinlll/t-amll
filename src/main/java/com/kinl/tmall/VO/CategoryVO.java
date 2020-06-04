@@ -13,8 +13,11 @@ public class CategoryVO implements Serializable {
 
     private List<Product> products;
 
-    //redis里的首页的自定义标签
-    private List<ProductRedisVO> data;
+    //一个分类有多行
+    private List<List<Product>> data;
+
+    //一行里有多个产品
+    private List<Product> productsByRow;
 
     public Integer getId() {
         return id;
@@ -40,12 +43,20 @@ public class CategoryVO implements Serializable {
         this.products = products;
     }
 
-    public List<ProductRedisVO> getData() {
+    public List<List<Product>> getData() {
         return data;
     }
 
-    public void setData(List<ProductRedisVO> data) {
+    public void setData(List<List<Product>> data) {
         this.data = data;
+    }
+
+    public List<Product> getProductsByRow() {
+        return productsByRow;
+    }
+
+    public void setProductsByRow(List<Product> productsByRow) {
+        this.productsByRow = productsByRow;
     }
 
     @Override
@@ -55,6 +66,7 @@ public class CategoryVO implements Serializable {
                 ", name='" + name + '\'' +
                 ", products=" + products +
                 ", data=" + data +
+                ", productsByRow=" + productsByRow +
                 '}';
     }
 }

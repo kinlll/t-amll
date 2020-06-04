@@ -32,24 +32,10 @@ public class IndexController {
         try {
             List<CategoryVO> categoryVOS = categoryService.finAllVO();
             for (CategoryVO categoryVO : categoryVOS) {
-                List<Product> products = productService.findByCidFive(categoryVO.getId());
+                List<Product> products = productService.findbyCid(categoryVO.getId());
                 categoryVO.setProducts(products);
-
-                //从redis加载home页自定义标签
-                String s = stringRedisTemplate.opsForValue().get(categoryVO.getName());
-
-                List<ProductRedisVO> productRedisVOS = new ArrayList<>();
-                HashMap hashMap = JSONObject.parseObject(s, HashMap.class);
-
-                Iterator iterator = hashMap.keySet().iterator();
-                while (iterator.hasNext()) {
-                    ProductRedisVO productRedisVO = new ProductRedisVO();
-                    Integer key = (Integer) iterator.next();
-                    productRedisVO.setId(key);
-                    productRedisVO.setName((String) hashMap.get(key));
-                    productRedisVOS.add(productRedisVO);
-                }
-                categoryVO.setData(productRedisVOS);
+                List<List<Product>> lists = groupList(products);
+                categoryVO.setData(lists);
 
             }
             resultVO.setData(categoryVOS);
@@ -61,6 +47,23 @@ public class IndexController {
         return resultVO;
     }
 
+
+    //拆分List集合成多个
+    public static List<List<Product>> groupList(List<Product> products){
+        List<List<Product>> lists = new ArrayList<>();
+        int size = products.size();
+        //截取的子集合长度
+        int toIndex = 7;
+        for (int i = 0; i < lists.size(); i+=7){
+            if (i + 7 > size){
+                toIndex = size - i;
+            }
+            List<Product> products1 = products.subList(i, i + toIndex);
+            lists.add(products1);
+        }
+
+        return lists;
+    }
 
 
 }
