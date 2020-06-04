@@ -14,7 +14,7 @@ logging:
 spring:
   ## mysql配置
   datasource:
-    url: jdbc:mysql://localhost:3306/tmall?serverTimezone=UTC&characterEncoding=utf-8&userSSL=false&useAffectedRows=true
+    url: jdbc:mysql://47.105.164.91:3306/tmall?serverTimezone=UTC&characterEncoding=utf-8&userSSL=false&useAffectedRows=true
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
