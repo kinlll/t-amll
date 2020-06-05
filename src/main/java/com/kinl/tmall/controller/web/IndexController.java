@@ -1,8 +1,6 @@
 package com.kinl.tmall.controller.web;
 
-import com.alibaba.fastjson.JSONObject;
 import com.kinl.tmall.VO.CategoryVO;
-import com.kinl.tmall.VO.ProductRedisVO;
 import com.kinl.tmall.VO.ResultVO;
 import com.kinl.tmall.pojo.Product;
 import com.kinl.tmall.service.CategoryService;
@@ -43,15 +41,15 @@ public class IndexController {
                 int size = products.size();
                 //截取的子集合长度
                 int toIndex = 7;
-                for (int i = 0; i < lists.size(); i+=7){
+                for (int i = 0; i < products.size(); i += 7){
                     if (i + 7 > size){
                         toIndex = size - i;
                     }
                     List<Product> products1 = products.subList(i, i + toIndex);
                     lists.add(products1);
                     categoryVO.setProducts(products1);
+                    categoryVO.setProductsByRow(products1);
                 }
-
 
 
                 categoryVO.setData(lists);
