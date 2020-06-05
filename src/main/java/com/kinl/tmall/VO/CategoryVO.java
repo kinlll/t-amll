@@ -10,14 +10,11 @@ public class CategoryVO implements Serializable {
     private Integer id;
 
     private String name;
-
+    //一个分类有多行
     private List<Product> products;
 
-    //一个分类有多行
-    private List<List<Product>> data;
-
     //一行里有多个产品
-    private List<Product> productsByRow;
+    private List<List<Product>> productsByRow;
 
     public Integer getId() {
         return id;
@@ -43,19 +40,11 @@ public class CategoryVO implements Serializable {
         this.products = products;
     }
 
-    public List<List<Product>> getData() {
-        return data;
-    }
-
-    public void setData(List<List<Product>> data) {
-        this.data = data;
-    }
-
-    public List<Product> getProductsByRow() {
+    public List<List<Product>> getProductsByRow() {
         return productsByRow;
     }
 
-    public void setProductsByRow(List<Product> productsByRow) {
+    public void setProductsByRow(List<List<Product>> productsByRow) {
         this.productsByRow = productsByRow;
     }
 
@@ -65,7 +54,6 @@ public class CategoryVO implements Serializable {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", products=" + products +
-                ", data=" + data +
                 ", productsByRow=" + productsByRow +
                 '}';
     }
