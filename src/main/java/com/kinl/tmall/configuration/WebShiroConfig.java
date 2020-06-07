@@ -46,6 +46,8 @@ public class WebShiroConfig {
         filterChainDefinitionMap.put("/login","anon");
         filterChainDefinitionMap.put("/home","anon");
         filterChainDefinitionMap.put("/web/forehome","anon");
+        filterChainDefinitionMap.put("/category/**", "anon");
+        filterChainDefinitionMap.put("/product/**", "anon");
 
 
         filterChainDefinitionMap.put("/**", "authc");

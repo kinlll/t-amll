@@ -325,7 +325,7 @@
   </select>
 
   <select id="pageQuery" resultType="Product">
-    select * from Product where cid = #{map.categoryId} limit #{map.startIndex},#{map.pageSize}
+    select * from Product where cid = #{map.categoryId} limit #{map.start},#{map.pageSize}
   </select>
 
   <select id="queryCount" resultType="Integer">

@@ -236,7 +236,7 @@
   </select>
 
   <select id="queryList" resultType="Category">
-    select * from category limit #{map.startIndex},#{map.pageSize}
+    select * from category limit #{map.start},#{map.pageSize}
   </select>
   
   <select id="queryCount" resultType="Integer">

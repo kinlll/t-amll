@@ -5,14 +5,15 @@ import java.util.List;
 public class Page {
 
     private Integer pageSize;           //页大小
+    private Integer start;              //起始位置
     private Integer pageIndex;          //当前页号
     private Integer totalPageCount;     //页总数
     private Integer record;             //记录总数
     private List datas;             //对象
 
-    public Page(Integer pageSize, Integer pageIndex) {
+    public Page(Integer pageSize, Integer start) {
         this.pageSize = pageSize;
-        this.pageIndex = pageIndex;
+        this.start = start;
     }
 
     public Integer getPageSize() {
@@ -27,8 +28,8 @@ public class Page {
         return pageIndex;
     }
 
-    public void setPageIndex(Integer pageIndex) {
-        this.pageIndex = pageIndex;
+    public void setPageIndex() {
+        this.pageIndex = (start/pageSize)+1;
     }
 
     public Integer getTotalPageCount() {
@@ -55,7 +56,11 @@ public class Page {
         this.datas = datas;
     }
 
-    public Integer getStartIndex(){
-        return (this.pageIndex-1)*pageSize;
+    public Integer getStart() {
+        return start;
+    }
+
+    public void setStart(Integer start) {
+        this.start = start;
     }
 }

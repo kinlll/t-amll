@@ -240,14 +240,26 @@
   </update>
 
   <select id="findByIdAndSimple" resultType="Integer" parameterType="Integer">
-    select id from Productimage where pid=#{productId} and type="单个图片"
+    select id from productimage where pid=#{productId} and type="单个图片"
   </select>
 
   <select id="findByIdAndDetails" resultType="Integer" parameterType="Integer">
-    select id from Productimage where pid=#{productId} and type="详情图片"
+    select id from productimage where pid=#{productId} and type="详情图片"
   </select>
 
   <select id="findFirstImage" parameterType="Integer" resultType="Integer">
     select id from productimage where pid=#{pid} limit 0,1
+  </select>
+
+  <select id="findFirstImageByPid" parameterType="Integer" resultType="Productimage">
+    select * from productimage where pid=#{pid} and type="单个图片" order by 'id' desc limit 0,1
+  </select>
+
+  <select id="findAllSimpleByPid" parameterType="Integer" resultType="Productimage">
+    select * from productimage where pid=#{pid} and type ="单个图片"
+  </select>
+
+  <select id="findAllDetailsByPid" parameterType="Integer" resultType="Productimage">
+    select * from productimage where pid=#{pid} and type ="详情图片"
   </select>
 </mapper>

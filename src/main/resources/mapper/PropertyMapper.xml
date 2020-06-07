@@ -240,7 +240,7 @@
   </update>
 
   <select id="queryPage" resultType="property">
-    select * from property where cid=#{map.categoryId} limit #{map.startIndex},#{map.pageSize}
+    select * from property where cid=#{map.categoryId} limit #{map.start},#{map.pageSize}
   </select>
 
   <select id="queryCount" resultType="Integer">

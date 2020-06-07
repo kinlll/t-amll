@@ -32,7 +32,7 @@
                             if(result.code==0 && result.data=="User"){
                                 location.href="home";
                             }else if (result.code==0 && result.data=="Admin"){
-                                location.href="editCategory"
+                                location.href="listCategory"
                             }
                             else{
                                 $("span.errorMessage").html(result.message);

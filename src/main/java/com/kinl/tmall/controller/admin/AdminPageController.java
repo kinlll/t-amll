@@ -15,9 +15,9 @@ import java.util.Arrays;
 public class AdminPageController {
 
     @RequiresPermissions(value = {"admin:select"})
-    @RequestMapping("/editCategory")
+    @RequestMapping("/listCategory")
     public String editCategory(){
-        return "admin/editCategory";
+        return "admin/listCategory";
     }
 
 }

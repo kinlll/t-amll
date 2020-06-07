@@ -40,8 +40,8 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Page queryPage(Map<String, Object> map) throws ParseException {
-        Page page = new Page((Integer) map.get("pageSize"), (Integer) map.get("pageIndex"));
-        map.put("startIndex",page.getStartIndex());
+        Page page = new Page((Integer) map.get("pageSize"), (Integer) map.get("start"));
+        page.setPageIndex();
         List<Order> orderList = orderMapper.pageQuery(map);
         List<OrderVO> orderVOList = new ArrayList<>();
         for (Order order : orderList) {

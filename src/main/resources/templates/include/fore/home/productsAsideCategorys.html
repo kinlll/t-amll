@@ -1,8 +1,8 @@
-<div th:fragment="html"> 
+<div th:fragment="html">
 	<div  :cid="c.id" class="productsAsideCategorys" v-for="c in categories">
 		<div class="row show1" v-for="ps in c.productsByRow">
-					<a :href="'product?pid='+p.id" v-for="p in ps" v-if="p.subTitle !== undefined && p.subTitle.length!==0">
-						{{p.subTitle | subTitleFilter}}
+					<a :href="'product?pid='+p.id" v-for="p in ps" v-if="p.subtitle !== undefined && p.subtitle.length!==0">
+						{{p.subtitle | subTitleFilter}}
 					</a>
 					<div class="seperator"></div>
 		</div>

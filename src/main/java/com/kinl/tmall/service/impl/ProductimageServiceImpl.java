@@ -12,6 +12,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class ProductimageServiceImpl implements ProductimageService {
@@ -70,6 +71,21 @@ public class ProductimageServiceImpl implements ProductimageService {
         HttpServletRequest request = requestAttributes.getRequest();
         String realPath = request.getServletContext().getRealPath("img/productImage");
         return realPath + "\\" + imageId;
+    }
+
+    @Override
+    public Productimage findFirstImageByPid(Integer pid) {
+        return productimageMapper.findFirstImageByPid(pid);
+    }
+
+    @Override
+    public List<Productimage> findAllSimpleByPid(Integer pid) {
+        return productimageMapper.findAllSimpleByPid(pid);
+    }
+
+    @Override
+    public List<Productimage> findAllDetailsByPid(Integer pid) {
+        return productimageMapper.findAllDetailsByPid(pid);
     }
 
 

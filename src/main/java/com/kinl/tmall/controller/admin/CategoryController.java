@@ -44,10 +44,10 @@ public class CategoryController {
     @RequiresPermissions(value = {"admin:select"})
     @GetMapping("/pageCategory")
     public ResultVO pageCategory(@RequestParam(name = "pageSize",defaultValue = "5",required = false) Integer pageSize,
-                                 @RequestParam(name = "pageIndex",defaultValue = "1",required = false) Integer pageIndex){
+                                 @RequestParam(name = "start",defaultValue = "0",required = false) Integer start){
         Map<String,Object> map = new HashMap<>();
         map.put("pageSize",pageSize);
-        map.put("pageIndex",pageIndex);
+        map.put("start",start);
         try {
             Page page = categoryService.queryPage(map);
             return   ResultVOUtil.success(page);

@@ -101,4 +101,10 @@ public interface ProductimageMapper {
     ArrayList<Integer> findByIdAndDetails(Integer productId);
 
     Integer findFirstImage(Integer pid);
+
+    Productimage findFirstImageByPid(Integer pid);
+
+    List<Productimage> findAllSimpleByPid(Integer pid);
+
+    List<Productimage> findAllDetailsByPid(Integer pid);
 }

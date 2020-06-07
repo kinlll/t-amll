@@ -6,7 +6,9 @@ import com.kinl.tmall.dao.ProductMapper;
 import com.kinl.tmall.enums.ResultEnum;
 import com.kinl.tmall.exception.AllException;
 import com.kinl.tmall.pojo.Product;
+import com.kinl.tmall.pojo.Productimage;
 import com.kinl.tmall.service.ProductService;
+import com.kinl.tmall.service.ProductimageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +25,9 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private ProductMapper productMapper;
 
+    @Autowired
+    private ProductimageService productimageService;
+
     @Override
     public List<Product> findAll() {
         return productMapper.findAll();
@@ -36,9 +41,8 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Page pageQuery(Map<String, Object> map) {
         try {
-            Page page = new Page((Integer) map.get("pageSize"),(Integer) map.get("pageIndex"));
-            Integer startIndex = page.getStartIndex();
-            map.put("startIndex", startIndex);
+            Page page = new Page((Integer) map.get("pageSize"),(Integer) map.get("start"));
+            page.setPageIndex();
             List<Product> products = productMapper.pageQuery(map);
             Integer count = productMapper.queryCount(map);
             page.setDatas(products);
@@ -101,8 +105,24 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<Product> findbyCid(Integer cid) {
+        List<Product> products = null;
+        try {
+            products = productMapper.findbyCid(cid);
+            for (Product product : products) {
+                Productimage firstImage = productimageService.findFirstImageByPid(product.getId());
+                List<Productimage> simpleByPid = productimageService.findAllSimpleByPid(product.getId());
+                List<Productimage> detailsByPid = productimageService.findAllDetailsByPid(product.getId());
 
-        return productMapper.findbyCid(cid);
+                product.setFirstProductImage(firstImage);
+                product.setProductSingleImages(simpleByPid);
+                product.setProductDetailImages(detailsByPid);
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new AllException(ResultEnum.FIND_PRODUCT_ERROR);
+        }
+        return products;
     }
 
 }

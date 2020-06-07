@@ -397,7 +397,7 @@
   </update>
 
   <select id="pageQuery" resultType="Order">
-    select * from order_ limit #{map.startIndex},#{map.pageSize}
+    select * from order_ limit #{map.start},#{map.pageSize}
   </select>
 
   <select id="count" resultType="Integer">
