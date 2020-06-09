@@ -20,8 +20,9 @@ PropertyServiceImpl implements PropertyService {
 
     @Override
     public Page queryPage(Map<String, Object> map) {
-        Page page = new Page((Integer) map.get("pageSize"),(Integer)map.get("start"));
-        page.setPageIndex();
+        Page page = new Page((Integer) map.get("pageSize"),(Integer)map.get("pageIndex"));
+        Integer start = page.getStart();
+        map.put("start", start);
         List<Property> properties = propertyMapper.queryPage(map);
         Integer count = propertyMapper.queryCount(map);
         page.setDatas(properties);

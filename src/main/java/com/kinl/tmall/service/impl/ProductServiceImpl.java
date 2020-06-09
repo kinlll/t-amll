@@ -41,8 +41,9 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Page pageQuery(Map<String, Object> map) {
         try {
-            Page page = new Page((Integer) map.get("pageSize"),(Integer) map.get("start"));
-            page.setPageIndex();
+            Page page = new Page((Integer) map.get("pageSize"),(Integer) map.get("pageIndex"));
+            Integer start = page.getStart();
+            map.put("start", start);
             List<Product> products = productMapper.pageQuery(map);
             Integer count = productMapper.queryCount(map);
             page.setDatas(products);

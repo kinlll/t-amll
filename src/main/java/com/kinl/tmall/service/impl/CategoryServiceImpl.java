@@ -32,9 +32,10 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public Page queryPage(Map<String,Object> map) {
-        Page page = new Page((Integer) map.get("pageSize"), (Integer)map.get("start"));
+        Page page = new Page((Integer) map.get("pageSize"), (Integer)map.get("pageIndex"));
 
-        page.setPageIndex();
+        Integer start = page.getStart();
+        map.put("start", start);
 
         List<Category> categories = categoryMapper.queryList(map);
         Integer count = categoryMapper.queryCount(map);

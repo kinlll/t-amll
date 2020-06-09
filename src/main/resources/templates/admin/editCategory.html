@@ -6,8 +6,8 @@
 <script>
     $(function () {
         var data4Vue={
-            uri:'categories',
-            listURL:'admin_category_list',
+            uri:'admin/category',
+            listURL:'listCategory',
             bean:{id:0,name:''},
             file:''
         };
@@ -24,7 +24,7 @@
                     console.log(id); //在控制台输出id
                     var url = this.uri + "/" + id;
                     axios.get(url).then(function (response) {
-                        vue.bean = response.data;
+                        vue.bean = response.data.data;
                     })
                 },
                 update: function () {   //修改信息函数

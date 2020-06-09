@@ -1,10 +1,10 @@
 <div class="pageDiv" th:fragment="html">
 	<nav>
 	  <ul class="pagination">
-	    <li :class="{ disabled: pagination.pageIndex == 1 }">
+	    <li :class="{ disabled: pagination.pageIndex == 0 }">
 	      <a  href="#nowhere" @click="jump('first')">«</a>
 	    </li>
-	    <li :class="{ disabled: !pagination.pageIndex > 1 }">
+	    <li :class="{ disabled: pagination.pageIndex <= 0 }">
 	      <a  href="#nowhere" @click="jump('pre')">‹</a>
 	    </li>		    
 
@@ -14,10 +14,10 @@
 			</a>
 		</li>
 
-	    <li :class="{ disabled: !pagination.pageIndex < pagination.totalPageCount }">
+	    <li :class="{ disabled: pagination.pageIndex >= pagination.totalPageCount-1 }">
 	      <a  href="#nowhere" @click="jump('next')">›</a>
 	    </li>
-	    <li :class="{ disabled: pagination.totalPageCount }">
+	    <li :class="{ disabled: pagination.pageIndex == pagination.totalPageCount-1 }">
 	      <a  href="#nowhere" @click="jump('last')">»</a>
 	    </li>		    
 	  </ul>
