@@ -17,7 +17,7 @@
 	    <li :class="{ disabled: pagination.pageIndex >= pagination.totalPageCount-1 }">
 	      <a  href="#nowhere" @click="jump('next')">›</a>
 	    </li>
-	    <li :class="{ disabled: pagination.pageIndex == pagination.totalPageCount-1 }">
+	    <li :class="{ disabled: pagination.pageIndex >= pagination.totalPageCount-1 }">
 	      <a  href="#nowhere" @click="jump('last')">»</a>
 	    </li>		    
 	  </ul>

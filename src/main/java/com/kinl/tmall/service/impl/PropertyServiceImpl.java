@@ -1,6 +1,7 @@
 package com.kinl.tmall.service.impl;
 
 import com.kinl.tmall.Utils.Page;
+import com.kinl.tmall.VO.PropertyVO;
 import com.kinl.tmall.dao.PropertyMapper;
 import com.kinl.tmall.enums.ResultEnum;
 import com.kinl.tmall.exception.AllException;
@@ -13,8 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class
-PropertyServiceImpl implements PropertyService {
+public class PropertyServiceImpl implements PropertyService {
     @Autowired
     private PropertyMapper propertyMapper;
 
@@ -76,5 +76,19 @@ PropertyServiceImpl implements PropertyService {
     public List<Property> findByCid(Integer cid) {
         List<Property> properties = propertyMapper.findByCid(cid);
         return properties;
+    }
+
+    @Override
+    public Integer addVO(PropertyVO property) {
+        Property p1 = propertyMapper.findByName(property.getName());
+        if (p1 == null){
+            int insert = propertyMapper.insertVO(property);
+            if (insert == 0){
+                throw new AllException(ResultEnum.ADD_PROPERTY_ERROR);
+            }
+            return insert;
+        }else {
+            throw new AllException(ResultEnum.PROPERTYEXIST);
+        }
     }
 }

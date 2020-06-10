@@ -92,7 +92,7 @@
 		else if('next'== page && vue.pagination.pageIndex < vue.pagination.totalPageCount-1)
 			vue.list(vue.pagination.pageIndex+1);
 		
-		else if('last'== page && vue.pagination.pageIndex !== vue.pagination.totalPageCount-1)
+		else if('last'== page && vue.pagination.pageIndex <= vue.pagination.totalPageCount-1)
 			vue.list(vue.pagination.totalPageCount-1);
     }
     //跳转函数

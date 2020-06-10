@@ -2,6 +2,7 @@ package com.kinl.tmall.controller.admin;
 
 import com.kinl.tmall.Utils.Page;
 import com.kinl.tmall.Utils.ResultVOUtil;
+import com.kinl.tmall.VO.PropertyVO;
 import com.kinl.tmall.VO.ResultVO;
 import com.kinl.tmall.exception.AllException;
 import com.kinl.tmall.pojo.Category;
@@ -31,12 +32,13 @@ public class PropertyController {
     private PropertyValueService propertyValueService;
 
     @RequiresPermissions(value = {"admin:select"})
-    @GetMapping("/pageProperty/{categoryId}")
-    public ResultVO pageProperty(@PathVariable Integer categoryId,
-                                 @RequestParam(name = "pageIndex", defaultValue = "1", required = false) Integer pageIndex,
+    @GetMapping("categories/{cid}/property")
+    public ResultVO pageProperty(@PathVariable("cid") Integer categoryId,
+                                 @RequestParam(name = "start", defaultValue = "0", required = false) Integer pageIndex,
                                  @RequestParam(name = "pageSize", defaultValue = "5", required = false) Integer pageSize){
         Map<String, Object> map = new HashMap<>();
         map.put("categoryId", categoryId);
+        pageIndex = pageIndex < 0 ? 0 : pageIndex;
         map.put("pageIndex", pageIndex);
         map.put("pageSize", pageSize);
         try {
@@ -53,18 +55,17 @@ public class PropertyController {
     }
 
     @RequiresPermissions(value = {"admin:create"})
-    @PostMapping("/property/{categoryId}")
-    public ResultVO addProperty(@PathVariable Integer categoryId, Property property){
+    @PostMapping("/property")
+    public ResultVO addProperty(@RequestBody PropertyVO bean){
         try {
-            if (property.getName() == null || "".equals(property.getName())){
+            if (bean.getName() == null || "".equals(bean.getName())){
                 return ResultVOUtil.error(1,"属性名称不能为空");
             }
-            Category category = categoryService.findById(categoryId);
+            Category category = categoryService.findById(bean.getCategory().getId());
             if (category == null){
                 return ResultVOUtil.error(1, "没有该分类");
             }
-            property.setCid(categoryId);
-            propertyService.add(property);
+            propertyService.addVO(bean);
         } catch (AllException a) {
             return ResultVOUtil.error(1,a.getMessage());
         } catch (Exception e) {
@@ -93,7 +94,7 @@ public class PropertyController {
         }
     }
 
-    @RequiresPermissions(value = {"admin:create"})
+/*    @RequiresPermissions(value = {"admin:create"})
     @PostMapping("/property")
     public ResultVO addProperty(Property property){
         try {
@@ -106,7 +107,7 @@ public class PropertyController {
             e.printStackTrace();
             return ResultVOUtil.error(1,"更新失败");
         }
-    }
+    }*/
 
     @RequiresPermissions(value = {"admin:delete"})
     @DeleteMapping("/property/{propertyId}")

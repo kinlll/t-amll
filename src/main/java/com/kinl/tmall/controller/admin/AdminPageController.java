@@ -26,5 +26,11 @@ public class AdminPageController {
         return "admin/editCategory";
     }
 
+    @RequiresPermissions(value = {"admin:select"})
+    @RequestMapping("/admin_property_list")
+    public String admin_property_list(){
+        return "admin/listProperty";
+    }
+
 
 }

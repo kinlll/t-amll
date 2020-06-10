@@ -1,5 +1,6 @@
 package com.kinl.tmall.dao;
 
+import com.kinl.tmall.VO.PropertyVO;
 import com.kinl.tmall.pojo.Property;
 import com.kinl.tmall.pojo.PropertyExample;
 import java.util.List;
@@ -105,4 +106,6 @@ public interface PropertyMapper {
     Integer updateName(@Param("property") Property property);
 
     List<Property> findByCid(Integer cid);
+
+    int insertVO(PropertyVO record);
 }

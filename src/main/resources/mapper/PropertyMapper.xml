@@ -259,4 +259,10 @@
     select * from property where cid=#{cid}
   </select>
 
+  <insert id="insertVO" parameterType="com.kinl.tmall.VO.PropertyVO" >
+    insert into property (id, cid, name
+    )
+    values (#{id,jdbcType=INTEGER}, #{record.category.id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}
+    )
+  </insert>
 </mapper>

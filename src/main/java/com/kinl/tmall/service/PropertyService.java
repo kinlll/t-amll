@@ -1,6 +1,7 @@
 package com.kinl.tmall.service;
 
 import com.kinl.tmall.Utils.Page;
+import com.kinl.tmall.VO.PropertyVO;
 import com.kinl.tmall.pojo.Property;
 
 import java.util.List;
@@ -19,4 +20,6 @@ public interface PropertyService {
     Integer deleteById(Integer id);
 
     List<Property> findByCid(Integer cid);
+
+    Integer addVO(PropertyVO property);
 }

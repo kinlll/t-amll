@@ -46,6 +46,7 @@ public class CategoryController {
     public ResultVO pageCategory(@RequestParam(name = "pageSize",defaultValue = "5",required = false) Integer pageSize,
                                  @RequestParam(name = "start",defaultValue = "0",required = false) Integer pageIndex){
         Map<String,Object> map = new HashMap<>();
+        pageIndex = pageIndex < 0 ? 0 : pageIndex;
         map.put("pageSize",pageSize);
         map.put("pageIndex",pageIndex);
         try {
@@ -130,21 +131,20 @@ public class CategoryController {
         }
     }
 
-    @RequiresPermissions(value = {"admin:update"})
+    @RequiresPermissions(value = {"admin:select"})
     @PutMapping("/category/{id}")
-    public ResultVO putCategory(@PathVariable("id") Integer id, String name, MultipartFile image, HttpServletRequest request){
+    public ResultVO putCategory(Category bean, MultipartFile image, HttpServletRequest request){
         try {
-            Category category = categoryService.findById(id);
+            String name = request.getParameter("name");
+            Category category = categoryService.findById(bean.getId());
             if (category == null) {
                 return ResultVOUtil.error(1,"没有该分类");
             }
             category.setName(name);
-            Integer update = categoryService.update(category);
-            if (update == 0) {
-                return ResultVOUtil.error(1,"更新失败");
-            }
+            categoryService.update(category);
+
             if (image != null) {
-                saveOrUpdateImageFile(id, image, request);
+                saveOrUpdateImageFile(bean.getId(), image, request);
             }
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();

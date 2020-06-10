@@ -8,7 +8,8 @@
     $(function(){
         var cid = getUrlParms("cid");
         var data4Vue = {
-            uri:'properties',
+            uri:'admin/property',
+            urp: 'property',
             beans: [],
             bean: {id:0,name:'',category:{id:0}},
             pagination:{},
@@ -25,16 +26,16 @@
             },
             methods: {
                 getCategory:function(cid){
-                    var url = "categories/"+cid;
+                    var url = "category/"+cid;
                     axios.get(url).then(function(response) {
                         vue.category = response.data;
                     })
                 },
                 list:function(start){
-                    var url =  "categories/"+cid+"/"+this.uri+"?start="+start;
+                    var url =  "admin/categories/"+cid+"/"+this.urp+"?start="+start;
                     axios.get(url).then(function(response) {
-                        vue.pagination = response.data;
-                        vue.beans = response.data.content   ;
+                        vue.pagination = response.data.data;
+                        vue.beans = response.data.data.datas;
                     });
                 },
                 add: function () {
