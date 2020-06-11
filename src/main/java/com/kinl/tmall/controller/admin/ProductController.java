@@ -41,9 +41,9 @@ public class ProductController {
     private PropertyValueService propertyValueService;
 
     @RequiresPermissions(value = {"admin:select"})
-    @GetMapping("/pageProduct/{categoryId}")
-    public ResultVO getProduct(@PathVariable Integer categoryId,
-                               @RequestParam(name = "pageIndex", defaultValue = "1", required = false) Integer pageIndex,
+    @GetMapping("/categories/{cid}/product")
+    public ResultVO getProduct(@PathVariable("cid") Integer categoryId,
+                               @RequestParam(name = "start", defaultValue = "0", required = false) Integer pageIndex,
                                @RequestParam(name = "pageSize", defaultValue = "5", required = false) Integer pageSize){
         Map<String, Object> map = new HashMap<>();
         map.put("categoryId", categoryId);

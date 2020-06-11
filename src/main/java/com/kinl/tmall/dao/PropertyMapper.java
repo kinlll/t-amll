@@ -107,5 +107,5 @@ public interface PropertyMapper {
 
     List<Property> findByCid(Integer cid);
 
-    int insertVO(PropertyVO record);
+    int insertVO(@Param("propertyVO") PropertyVO propertyVO);
 }

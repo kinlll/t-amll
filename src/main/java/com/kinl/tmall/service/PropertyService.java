@@ -22,4 +22,6 @@ public interface PropertyService {
     List<Property> findByCid(Integer cid);
 
     Integer addVO(PropertyVO property);
+
+    PropertyVO findVOById(Integer id);
 }

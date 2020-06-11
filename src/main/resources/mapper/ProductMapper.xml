@@ -317,19 +317,19 @@
   </update>
 
   <select id="findAll" resultType="Product">
-    select * from Product
+    select * from product
   </select>
 
   <select id="findByCidFive" resultType="Product" parameterType="Integer">
-    select * from Product where cid = #{cid} limit 5
+    select * from product where cid = #{cid} limit 5
   </select>
 
   <select id="pageQuery" resultType="Product">
-    select * from Product where cid = #{map.categoryId} limit #{map.start},#{map.pageSize}
+    select * from product where cid = #{map.categoryId} limit #{map.start},#{map.pageSize}
   </select>
 
   <select id="queryCount" resultType="Integer">
-    select count(1) from Product where cid = #{map.categoryId}
+    select count(1) from product where cid = #{map.categoryId}
   </select>
 
   <update id="update" parameterType="Product">

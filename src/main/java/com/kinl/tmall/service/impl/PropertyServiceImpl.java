@@ -5,8 +5,11 @@ import com.kinl.tmall.VO.PropertyVO;
 import com.kinl.tmall.dao.PropertyMapper;
 import com.kinl.tmall.enums.ResultEnum;
 import com.kinl.tmall.exception.AllException;
+import com.kinl.tmall.pojo.Category;
 import com.kinl.tmall.pojo.Property;
+import com.kinl.tmall.service.CategoryService;
 import com.kinl.tmall.service.PropertyService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +20,9 @@ import java.util.Map;
 public class PropertyServiceImpl implements PropertyService {
     @Autowired
     private PropertyMapper propertyMapper;
+
+    @Autowired
+    private CategoryService categoryService;
 
     @Override
     public Page queryPage(Map<String, Object> map) {
@@ -90,5 +96,15 @@ public class PropertyServiceImpl implements PropertyService {
         }else {
             throw new AllException(ResultEnum.PROPERTYEXIST);
         }
+    }
+
+    @Override
+    public PropertyVO findVOById(Integer id) {
+        PropertyVO propertyVO = new PropertyVO();
+        Property property = propertyMapper.selectByPrimaryKey(id);
+        Category category = categoryService.findById(property.getCid());
+        BeanUtils.copyProperties(property, propertyVO);
+        propertyVO.setCategory(category);
+        return propertyVO;
     }
 }

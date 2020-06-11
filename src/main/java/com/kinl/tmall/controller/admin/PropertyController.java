@@ -54,7 +54,7 @@ public class PropertyController {
         }
     }
 
-    @RequiresPermissions(value = {"admin:create"})
+    @RequiresPermissions(value = {"admin:select"})
     @PostMapping("/property")
     public ResultVO addProperty(@RequestBody PropertyVO bean){
         try {
@@ -76,14 +76,14 @@ public class PropertyController {
     }
 
     @RequiresPermissions(value = {"admin:select"})
-    @GetMapping("/getProperty")
-    public ResultVO getProperty(Integer propertyId){
+    @GetMapping("/property/{id}")
+    public ResultVO getProperty(@PathVariable("id") Integer propertyId){
         try {
            /* Category category = categoryService.findById(categoryId);
             if (category == null){
                 return ResultVOUtil.error(1, "没有该分类");
             }*/
-            Property property = propertyService.findById(propertyId);
+            PropertyVO property = propertyService.findVOById(propertyId);
             if (property == null){
                 return ResultVOUtil.error(1, "没有该属性");
             }
@@ -91,6 +91,22 @@ public class PropertyController {
         } catch (Exception e) {
             e.printStackTrace();
             return ResultVOUtil.error(1,"查询属性失败");
+        }
+    }
+
+    @RequiresPermissions(value = {"admin:select"})
+    @PutMapping("/property")
+    public ResultVO putProperty(@RequestBody Property bean){
+        try {
+
+            Property property = propertyService.findById(bean.getId());
+            if (property == null) return ResultVOUtil.error(1,"属性不存在");
+            propertyService.update(bean);
+
+            return ResultVOUtil.success();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, "修改属性失败");
         }
     }
 
@@ -109,9 +125,9 @@ public class PropertyController {
         }
     }*/
 
-    @RequiresPermissions(value = {"admin:delete"})
-    @DeleteMapping("/property/{propertyId}")
-    public ResultVO deleteProperty(@PathVariable Integer propertyId){
+    @RequiresPermissions(value = {"admin:select"})
+    @DeleteMapping("/property/{id}")
+    public ResultVO deleteProperty(@PathVariable("id") Integer propertyId){
         try {
             Property property = propertyService.findById(propertyId);
             if (property == null) return ResultVOUtil.error(1,"属性不存在");

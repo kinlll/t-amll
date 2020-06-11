@@ -45,6 +45,10 @@ public class ProductServiceImpl implements ProductService {
             Integer start = page.getStart();
             map.put("start", start);
             List<Product> products = productMapper.pageQuery(map);
+            for (Product product : products) {
+                Productimage firstImageByPid = productimageService.findFirstImageByPid(product.getId());
+                product.setFirstProductImage(firstImageByPid);
+            }
             Integer count = productMapper.queryCount(map);
             page.setDatas(products);
             page.setRecord(count);

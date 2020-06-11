@@ -7,7 +7,8 @@
     $(function(){
         var cid = getUrlParms("cid");
         var data4Vue = {
-            uri:'products',
+            uri:'admin/product',
+            urp:'product',
             beans: [],
             bean: {id:0,name:'','subTitle':'','originalPrice':99.98,'promotePrice':19.98,'stock':99,category:{'id':0}},
             pagination:{},
@@ -24,16 +25,16 @@
             },
             methods: {
                 getCategory:function(cid){
-                    var url = "categories/"+cid;
+                    var url = "admin/category/"+cid;
                     axios.get(url).then(function(response) {
-                        vue.category = response.data;
+                        vue.category = response.data.data;
                     })
                 },
                 list:function(start){
-                    var url =  "categories/"+cid+"/"+this.uri+"?start="+start;
+                    var url =  "admin/categories/"+cid+"/"+this.urp+"?start="+start;
                     axios.get(url).then(function(response) {
-                        vue.pagination = response.data;
-                        vue.beans = response.data.content   ;
+                        vue.pagination = response.data.data;
+                        vue.beans = response.data.data.datas;
                     });
                 },
                 add: function () {
@@ -81,7 +82,7 @@
 
 <div id="workingArea" >
     <ol class="breadcrumb">
-        <li><a href="admin_category_list">所有分类</a></li>
+        <li><a href="listCategory">所有分类</a></li>
         <li><a :href="'admin_product_list?cid='+category.id">{{category.name}}</a></li>
         <li class="active">产品管理</li>
     </ol>
@@ -108,12 +109,12 @@
             <tr v-for="bean in beans ">
                 <td>{{bean.id}}</td>
                 <td>
-                    <img v-if="null != bean.firstProductImage" width="40px" :src="'img/productSingle/'+bean.firstProductImage.id+'.jpg'">
+                    <img v-if="null != bean.firstProductImage" width="40px" :src="'img/productImage/'+bean.firstProductImage.id+'.jpg'">
                 </td>
                 <td>{{bean.name}}</td>
-                <td>{{bean.subTitle}}</td>
-                <td>{{bean.originalPrice}}</td>
-                <td>{{bean.promotePrice}}</td>
+                <td>{{bean.subtitle}}</td>
+                <td>{{bean.originalprice}}</td>
+                <td>{{bean.promoteprice}}</td>
                 <td>{{bean.stock}}</td>
 
                 <td>

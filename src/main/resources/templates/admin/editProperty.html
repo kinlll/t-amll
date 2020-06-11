@@ -7,7 +7,7 @@
 <script>
     $(function(){
         var data4Vue = {
-            uri: 'properties',
+            uri: 'admin/property',
             listURL:'admin_property_list',
             bean: '',
             category:''
@@ -25,7 +25,7 @@
                     var id = getUrlParms("id");
                     var url = this.uri+"/"+id;
                     axios.get(url).then(function(response) {
-                        vue.bean = response.data;
+                        vue.bean = response.data.data;
                         vue.category = vue.bean.category;
                     })
                 },
@@ -45,7 +45,7 @@
 <div id="workingArea">
 
     <ol class="breadcrumb">
-        <li><a href="admin_category_list">所有分类</a></li>
+        <li><a href="listCategory">所有分类</a></li>
         <li><a :href="'admin_property_list?cid='+category.id">{{category.name}}</a></li>
         <li class="active">属性管理</li>
     </ol>

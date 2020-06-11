@@ -26,9 +26,9 @@
             },
             methods: {
                 getCategory:function(cid){
-                    var url = "category/"+cid;
+                    var url = "admin/category/"+cid;
                     axios.get(url).then(function(response) {
-                        vue.category = response.data;
+                        vue.category = response.data.data;
                     })
                 },
                 list:function(start){
@@ -53,7 +53,7 @@
                         return;
                     var url = this.uri+"/"+id;
                     axios.delete(url).then(function(response){
-                        if(0!=response.data.length)
+                        if(0!=response.data.code)
                             alert(response.data);
                         else
                             vue.list(0);
@@ -74,7 +74,7 @@
 
 <div id="workingArea" >
     <ol class="breadcrumb">
-        <li><a href="admin_category_list">所有分类</a></li>
+        <li><a href="listCategory">所有分类</a></li>
         <li><a :href="'admin_property_list?cid='+category.id">{{category.name}}</a></li>
         <li class="active">属性管理</li>
     </ol>

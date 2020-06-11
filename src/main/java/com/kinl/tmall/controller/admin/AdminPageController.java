@@ -32,5 +32,23 @@ public class AdminPageController {
         return "admin/listProperty";
     }
 
+    @RequiresPermissions(value = {"admin:select"})
+    @RequestMapping("/admin_property_edit")
+    public String admin_property_edit(){
+        return "admin/editProperty";
+    }
+
+    @RequiresPermissions(value = {"admin:select"})
+    @RequestMapping("/admin_product_list")
+    public String admin_product_list(){
+        return "admin/listProduct";
+    }
+
+    @RequiresPermissions(value = {"admin:select"})
+    @RequestMapping("/admin_productImage_list")
+    public String admin_productImage_list(){
+        return "admin/listProductImage";
+    }
+
 
 }
