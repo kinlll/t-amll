@@ -50,5 +50,9 @@ public class AdminPageController {
         return "admin/listProductImage";
     }
 
-
+    @RequiresPermissions(value = {"admin:select"})
+    @RequestMapping("/admin_propertyValue_edit")
+    public String admin_propertyValue_edit(){
+        return "admin/editPropertyValue";
+    }
 }

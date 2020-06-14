@@ -2,6 +2,7 @@ package com.kinl.tmall.service;
 
 import com.kinl.tmall.pojo.Productimage;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,9 +10,9 @@ public interface ProductimageService {
 
     Integer add(Productimage productimage);
 
-    ArrayList<String> findByIdAndSimple(Integer id);
+    ArrayList<Integer> findByIdAndSimple(Integer id);
 
-    ArrayList<String> findByIdAndDetails(Integer id);
+    ArrayList<Integer> findByIdAndDetails(Integer id);
 
     String findFirstImage(Integer pid);
 
@@ -20,4 +21,8 @@ public interface ProductimageService {
     List<Productimage> findAllSimpleByPid(Integer pid);
 
     List<Productimage> findAllDetailsByPid(Integer pid);
+
+    Productimage findById(Integer id);
+
+    void deleteById(Integer id, HttpServletRequest request);
 }

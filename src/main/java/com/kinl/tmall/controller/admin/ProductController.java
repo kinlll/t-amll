@@ -4,6 +4,7 @@ import com.kinl.tmall.Utils.ImageUtil;
 import com.kinl.tmall.Utils.Page;
 import com.kinl.tmall.Utils.ResultVOUtil;
 import com.kinl.tmall.VO.ProductImageVO;
+import com.kinl.tmall.VO.ProductVO;
 import com.kinl.tmall.VO.ResultVO;
 import com.kinl.tmall.exception.AllException;
 import com.kinl.tmall.pojo.*;
@@ -66,16 +67,16 @@ public class ProductController {
         }
     }
 
-    @RequiresPermissions(value = {"admin:update"})
-    @PostMapping("/product/{categoryId}")
-    public ResultVO addProduct(@PathVariable Integer categoryId, Product product){
+    @RequiresPermissions(value = {"admin:select"})
+    @PostMapping("/product")
+    public ResultVO addProduct(@RequestBody ProductVO bean){
         try {
-            Category category = categoryService.findById(categoryId);
+            Category category = categoryService.findById(bean.getCategory().getId());
             if (category == null) {
                 return ResultVOUtil.error(1,"没有该分类");
             }
-            product.setCid(categoryId);
-            productService.add(product);
+            bean.setCid(bean.getCategory().getId());
+            productService.addVO(bean);
             return ResultVOUtil.success();
         } catch (AllException a){
             a.printStackTrace();;
@@ -86,9 +87,9 @@ public class ProductController {
         }
     }
 
-    @RequiresPermissions(value = {"admin:create"})
-    @PostMapping("/productImageAdd/{productId}")
-    public ResultVO addProductImage(@PathVariable Integer productId, MultipartFile image, Integer type, HttpServletRequest request){   //type=1：为产品单个图片   type=2：为产品详情图片
+    @RequiresPermissions(value = {"admin:select"})
+    @PostMapping("/productImages")
+    public ResultVO addProductImage(@RequestParam("pid") Integer productId, MultipartFile image, @RequestParam("type") String type, HttpServletRequest request){   //type=1：为产品单个图片   type=2：为产品详情图片
         try {
             Product product = productService.findById(productId);
             if (product == null) {
@@ -97,10 +98,10 @@ public class ProductController {
             Productimage productimage = new Productimage();
             productimage.setPid(product.getId());
             if (type != null){
-                if (type == 1) {
-                    productimage.setType("单个图片");
-                } else if (type == 2) {
-                    productimage.setType("详情图片");
+                if ("single".equals(type)) {
+                    productimage.setType("single");
+                } else if ("detail".equals(type)) {
+                    productimage.setType("detail");
                 }else {
                     return ResultVOUtil.error(1,"没有该类型的图片");
                 }
@@ -135,17 +136,22 @@ public class ProductController {
     }
 
     @RequiresPermissions(value = {"admin:select"})
-    @GetMapping("/productImage/{productId}")
-    public ResultVO getProductImage(@PathVariable Integer productId){
+    @GetMapping("/products/{productId}/productImages")
+    public ResultVO getProductImage(@PathVariable Integer productId, @RequestParam("type") String type){
         try {
+            ProductImageVO productImageVO = new ProductImageVO();
             Product product = productService.findById(productId);
             if (product == null) {
                 return ResultVOUtil.error(1,"没有该产品");
             }
-            ArrayList<String> simpleArray = productimageService.findByIdAndSimple(productId);
-            ArrayList<String> detailsArray = productimageService.findByIdAndDetails(productId);
+            if ("single".equals(type)) {
+                ArrayList<Integer> simpleArray = productimageService.findByIdAndSimple(productId);
+                productImageVO.setSimpleImage(simpleArray);
+            }else if ("detail".equals(type)){
+                ArrayList<Integer> detailsArray = productimageService.findByIdAndDetails(productId);
+                productImageVO.setDetailsImage(detailsArray);
+            }
 
-            ProductImageVO productImageVO = new ProductImageVO(simpleArray, detailsArray);
             return ResultVOUtil.success(productImageVO);
         } catch (Exception e) {
             e.printStackTrace();
@@ -256,4 +262,24 @@ public class ProductController {
         }
     }
 
+
+    @RequiresPermissions(value = {"admin:select"})
+    @DeleteMapping("/productImages/{id}")
+    public ResultVO productImages(@PathVariable Integer id, HttpServletRequest request){
+        try {
+            Productimage productimage = productimageService.findById(id);
+            if (productimage == null) {
+                return ResultVOUtil.error(1,"没有该图片");
+            }
+            productimageService.deleteById(id, request);
+
+            return ResultVOUtil.success();
+        } catch (AllException a){
+            a.printStackTrace();
+            return ResultVOUtil.error(1,a.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1,"删除产品异常");
+        }
+    }
 }

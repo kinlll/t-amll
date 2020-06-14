@@ -1,5 +1,9 @@
 package com.kinl.tmall.pojo;
 
+import io.lettuce.core.dynamic.annotation.Param;
+import org.springframework.context.annotation.Primary;
+import org.springframework.web.bind.annotation.RequestMapping;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -19,6 +23,7 @@ public class Product implements Serializable {
      *
      * @mbggenerated
      */
+
     private String name;
 
     /**

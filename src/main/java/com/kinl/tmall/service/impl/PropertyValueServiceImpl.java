@@ -1,5 +1,6 @@
 package com.kinl.tmall.service.impl;
 
+import com.kinl.tmall.VO.PropertyValueVO;
 import com.kinl.tmall.dao.ProductMapper;
 import com.kinl.tmall.dao.PropertyMapper;
 import com.kinl.tmall.dao.PropertyvalueMapper;
@@ -13,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -71,5 +73,34 @@ public class PropertyValueServiceImpl implements PropertyValueService {
     public List<Propertyvalue> findByPid(Integer pid) {
         List<Propertyvalue> propertyvalues = propertyvalueMapper.findbyPid(pid);
         return propertyvalues;
+    }
+
+    @Override
+    public List<PropertyValueVO> findVOByPid(Integer pid) {
+        //List<Propertyvalue> propertyvalues = propertyvalueMapper.findbyPid(pid);
+        Product product = productMapper.selectByPrimaryKey(pid);
+        //获取产品的所有属性
+        List<Property> propertyList = propertyMapper.findByCid(product.getCid());
+        List<PropertyValueVO> propertyValueVOS = new ArrayList<>();
+        for (Property property : propertyList) {
+
+        }
+
+
+
+
+
+
+
+        for (Propertyvalue propertyvalue : propertyvalues) {
+            PropertyValueVO propertyValueVO = new PropertyValueVO();
+            Property property = propertyMapper.selectByPrimaryKey(propertyvalue.getPtid());
+            propertyValueVO.setId(propertyvalue.getId());
+            propertyValueVO.setProduct(product);
+            propertyValueVO.setProperty(property);
+            propertyValueVO.setValue(propertyvalue.getValue());
+            propertyValueVOS.add(propertyValueVO);
+        }
+        return propertyValueVOS;
     }
 }

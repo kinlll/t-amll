@@ -11,6 +11,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,10 +31,11 @@ public class ProductimageServiceImpl implements ProductimageService {
     }
 
     @Override
-    public ArrayList<String> findByIdAndSimple(Integer id) {
+    public ArrayList<Integer> findByIdAndSimple(Integer id) {
         ArrayList<Integer> simple = productimageMapper.findByIdAndSimple(id);
-        ArrayList<String> simpleArray = new ArrayList<>();
 
+        //前端设置图片地址，这里只返回图片id
+        /*<String> simpleArray = new ArrayList<>();
         ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = requestAttributes.getRequest();
         String realPath = request.getServletContext().getRealPath("img/productImage");
@@ -41,15 +43,16 @@ public class ProductimageServiceImpl implements ProductimageService {
             String s = integer.toString();
             String filePath = realPath + "\\" + s;
             simpleArray.add(filePath);
-        }
-        return simpleArray;
+        }*/
+        return simple;
     }
 
     @Override
-    public ArrayList<String> findByIdAndDetails(Integer id) {
+    public ArrayList<Integer> findByIdAndDetails(Integer id) {
         ArrayList<Integer> details = productimageMapper.findByIdAndDetails(id);
-        ArrayList<String> detailsArray = new ArrayList<>();
 
+        //前端设置图片地址，这里只返回图片id
+        /*ArrayList<String> detailsArray = new ArrayList<>();
         ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = requestAttributes.getRequest();
         String realPath = request.getServletContext().getRealPath("img/productImage");
@@ -57,8 +60,8 @@ public class ProductimageServiceImpl implements ProductimageService {
             String s = integer.toString();
             String filePath = realPath + "\\" + s;
             detailsArray.add(filePath);
-        }
-        return detailsArray;
+        }*/
+        return details;
     }
 
     @Override
@@ -86,6 +89,26 @@ public class ProductimageServiceImpl implements ProductimageService {
     @Override
     public List<Productimage> findAllDetailsByPid(Integer pid) {
         return productimageMapper.findAllDetailsByPid(pid);
+    }
+
+    @Override
+    public Productimage findById(Integer id) {
+        return productimageMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public void deleteById(Integer id, HttpServletRequest request) {
+        int i = productimageMapper.deleteByPrimaryKey(id);
+        if (i == 0) {
+            throw new AllException(ResultEnum.DELETE_PRODUCT_IMAGE_ERROR);
+        }
+        File imageFile = new File(request.getServletContext().getRealPath("img/productImage"));
+        File file = new File(imageFile, id + ".jpg");
+        boolean delete = file.delete();
+        if (!delete) {
+            throw new AllException(ResultEnum.DELETE_PRODUCT_IMAGE_ERROR);
+        }
+
     }
 
 

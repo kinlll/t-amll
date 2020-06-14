@@ -1,6 +1,7 @@
 package com.kinl.tmall.service;
 
 import com.kinl.tmall.Utils.Page;
+import com.kinl.tmall.VO.ProductVO;
 import com.kinl.tmall.pojo.Product;
 
 import java.util.List;
@@ -28,4 +29,5 @@ public interface ProductService {
 
     List<Product> findbyCid(Integer cid);
 
+    Integer addVO(ProductVO product);
 }

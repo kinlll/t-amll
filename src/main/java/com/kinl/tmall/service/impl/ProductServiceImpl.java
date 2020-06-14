@@ -2,11 +2,14 @@ package com.kinl.tmall.service.impl;
 
 import com.kinl.tmall.Utils.Page;
 import com.kinl.tmall.Utils.ResultVOUtil;
+import com.kinl.tmall.VO.ProductVO;
 import com.kinl.tmall.dao.ProductMapper;
 import com.kinl.tmall.enums.ResultEnum;
 import com.kinl.tmall.exception.AllException;
+import com.kinl.tmall.pojo.Category;
 import com.kinl.tmall.pojo.Product;
 import com.kinl.tmall.pojo.Productimage;
+import com.kinl.tmall.service.CategoryService;
 import com.kinl.tmall.service.ProductService;
 import com.kinl.tmall.service.ProductimageService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -27,6 +27,9 @@ public class ProductServiceImpl implements ProductService {
 
     @Autowired
     private ProductimageService productimageService;
+
+    @Autowired
+    private CategoryService categoryService;
 
     @Override
     public List<Product> findAll() {
@@ -72,7 +75,13 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product findById(Integer id) {
-        return productMapper.selectByPrimaryKey(id);
+        Product product = productMapper.selectByPrimaryKey(id);
+        if (product == null) {
+            throw new AllException(ResultEnum.PRODUCT_NOEXIST);
+        }
+        Category category = categoryService.findById(product.getCid());
+        product.setCategory(category);
+        return product;
     }
 
     @Override
@@ -128,6 +137,13 @@ public class ProductServiceImpl implements ProductService {
             throw new AllException(ResultEnum.FIND_PRODUCT_ERROR);
         }
         return products;
+    }
+
+    @Override
+    public Integer addVO(ProductVO product) {
+        //todo  jvm时间比当前时间早8小时
+        product.setCreatedate(new Date());
+        return productMapper.insertVO(product);
     }
 
 }

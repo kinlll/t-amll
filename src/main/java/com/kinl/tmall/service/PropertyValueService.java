@@ -1,5 +1,6 @@
 package com.kinl.tmall.service;
 
+import com.kinl.tmall.VO.PropertyValueVO;
 import com.kinl.tmall.pojo.Propertyvalue;
 
 import java.util.List;
@@ -12,4 +13,6 @@ public interface PropertyValueService {
     void updateValue(Integer pid, Map<Integer, String> map);
 
     List<Propertyvalue> findByPid(Integer pid);
+
+    List<PropertyValueVO> findVOByPid(Integer pid);
 }

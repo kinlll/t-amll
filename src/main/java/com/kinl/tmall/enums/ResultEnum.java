@@ -33,7 +33,8 @@ public enum ResultEnum {
     PRODUCT_EXIST_PROPERTYVALUE(25,"产品存在属性值"),
     ORDER_NOEXIST(26,"订单不存在"),
     ADD_ORDER_STATUS_ERROR(27,"改变订单状态失败"),
-    FIND_PRODUCT_ERROR(28, "查找产品失败");
+    FIND_PRODUCT_ERROR(28, "查找产品失败"),
+    DELETE_PRODUCT_IMAGE_ERROR(29, "删除图片失败"),
 
     ;
 

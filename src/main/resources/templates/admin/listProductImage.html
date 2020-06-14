@@ -9,6 +9,7 @@
         var pid = getUrlParms("pid");
         var data4Vue = {
             uri:'productImages',
+            urp:'admin/productImages',
             singleProductImages: [],
             detailProductImages: [],
             product: '',
@@ -28,29 +29,29 @@
             },
             methods: {
                 getProduct:function(pid){
-                    var url = "products/"+pid;
+                    var url = "admin/product/"+pid;
                     axios.get(url).then(function(response) {
-                        vue.product = response.data;
+                        vue.product = response.data.data;
                         vue.category = vue.product.category;
                     })
                 },
                 listSingles:function(start){
-                    var url =  "products/"+pid+"/"+this.uri+"?type=single";
+                    var url =  "admin/products/"+pid+"/"+this.uri+"?type=single";
                     axios.get(url).then(function(response) {
-                        vue.singleProductImages = response.data;
+                        vue.singleProductImages = response.data.data.simpleImage;
                     });
                 },
                 listDetails:function(start){
-                    var url =  "products/"+pid+"/"+this.uri+"?type=detail";
+                    var url =  "admin/products/"+pid+"/"+this.uri+"?type=detail";
                     axios.get(url).then(function(response) {
-                        vue.detailProductImages = response.data;
+                        vue.detailProductImages = response.data.data.detailsImage;
                     });
                 },
                 addSingle: function () {
                     if(!checkEmpty(this.singleFile, "单个产品图片"))
                         return;
 
-                    var url = this.uri+"?type=single&pid="+pid;
+                    var url = this.urp+"?type=single&pid="+pid;
 
                     var formData = new FormData();
                     formData.append("image", this.singleFile);
@@ -65,7 +66,7 @@
                     if(!checkEmpty(this.detailFile, "详情产品图片"))
                         return;
 
-                    var url = this.uri+"?type=detail&pid="+pid;
+                    var url = this.urp+"?type=detail&pid="+pid;
 
                     var formData = new FormData();
                     formData.append("image", this.detailFile);
@@ -79,7 +80,7 @@
                 deleteBean: function (id) {
                     if(!checkDeleteLink())
                         return;
-                    var url = this.uri+"/"+id;
+                    var url = this.urp+"/"+id;
                     axios.delete(url).then(function(response){
                         vue.listSingles();
                         vue.listDetails();
@@ -100,7 +101,7 @@
 
 <div id="workingArea" >
     <ol class="breadcrumb">
-        <li><a href="admin_category_list">所有分类</a></li>
+        <li><a href="listCategory">所有分类</a></li>
         <li><a :href="'admin_product_list?cid='+category.id">{{category.name}}</a></li>
         <li class="active">{{product.name}}</li>
         <li class="active">产品图片管理</li>
@@ -140,11 +141,11 @@
                         </thead>
                         <tbody>
                         <tr v-for="pi in singleProductImages">
-                            <td>{{pi.id}}</td>
+                            <td>{{pi}}</td>
                             <td>
-                                <a title="点击查看原图" :href="'img/productSingle/'+pi.id+'.jpg'"><img height="50px" :src="'img/productSingle/'+pi.id+'.jpg'"></a>
+                                <a title="点击查看原图" :href="'img/productImage/'+pi+'.jpg'"><img height="50px" :src="'img/productImage/'+pi+'.jpg'"></a>
                             </td>
-                            <td><a href="#nowhere" @click="deleteBean(pi.id)"><span class="glyphicon glyphicon-trash"></span></a></td>
+                            <td><a href="#nowhere" @click="deleteBean(pi)"><span class="glyphicon glyphicon-trash"></span></a></td>
 
                         </tr>
                         </tbody>
@@ -186,11 +187,11 @@
                         </thead>
                         <tbody>
                         <tr v-for="pi in detailProductImages">
-                            <td>{{pi.id}}</td>
+                            <td>{{pi}}</td>
                             <td>
-                                <a title="点击查看原图" :href="'img/productDetail/'+pi.id+'.jpg'"><img height="50px" :src="'img/productDetail/'+pi.id+'.jpg'"></a>
+                                <a title="点击查看原图" :href="'img/productImage/'+pi+'.jpg'"><img height="50px" :src="'img/productImage/'+pi+'.jpg'"></a>
                             </td>
-                            <td><a href="#nowhere" @click="deleteBean(pi.id)"><span class="glyphicon glyphicon-trash"></span></a></td>
+                            <td><a href="#nowhere" @click="deleteBean(pi)"><span class="glyphicon glyphicon-trash"></span></a></td>
 
                         </tr>
                         </tbody>

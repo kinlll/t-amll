@@ -1,5 +1,6 @@
 package com.kinl.tmall.dao;
 
+import com.kinl.tmall.VO.ProductVO;
 import com.kinl.tmall.pojo.Product;
 import com.kinl.tmall.pojo.ProductExample;
 import java.util.List;
@@ -112,4 +113,5 @@ public interface ProductMapper {
 
     List<Product> findbyCid(Integer cid);
 
+    int insertVO(@Param("record") ProductVO record);
 }

@@ -349,4 +349,15 @@
     select * from product where cid=#{cid}
   </select>
 
+  <insert id="insertVO" parameterType="com.kinl.tmall.VO.ProductVO">
+    insert into product (name,subTitle,originalPrice,promotePrice,stock,cid,createDate)values (
+    #{record.name,jdbcType=VARCHAR},
+    #{record.subTitle,jdbcType=VARCHAR},
+    #{record.originalPrice,jdbcType=REAL},
+    #{record.promotePrice,jdbcType=REAL},
+    #{record.stock,jdbcType=INTEGER},
+    #{record.cid,jdbcType=INTEGER},
+    #{record.createdate})
+  </insert>
+
 </mapper>
