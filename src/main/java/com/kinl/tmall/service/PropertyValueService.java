@@ -15,4 +15,10 @@ public interface PropertyValueService {
     List<Propertyvalue> findByPid(Integer pid);
 
     List<PropertyValueVO> findVOByPid(Integer pid);
+
+    Propertyvalue findById(Integer id);
+
+    Integer insert(PropertyValueVO propertyValueVO);
+
+    Integer update(PropertyValueVO propertyValueVO);
 }

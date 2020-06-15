@@ -266,4 +266,16 @@
     select * from propertyvalue where pid=#{pid}
   </select>
 
+  <select id="findByPidAndPtid" resultType="Propertyvalue">
+    select * from propertyvalue where pid=#{pid} and ptid=#{ptid}
+  </select>
+
+  <insert id="insertVO" parameterType="com.kinl.tmall.VO.PropertyValueVO" keyProperty="id" useGeneratedKeys="true">
+    insert into propertyvalue (pid, ptid, value) values (#{propertyValueVO.product.id},#{propertyValueVO.property.id},#{propertyValueVO.value})
+  </insert>
+
+  <update id="updateVO" parameterType="com.kinl.tmall.VO.PropertyValueVO" keyProperty="id" useGeneratedKeys="true">
+    update propertyvalue set value=#{propertyValueVO.value} where pid=#{propertyValueVO.product.id} and ptid=#{propertyValueVO.property.id}
+  </update>
+
 </mapper>

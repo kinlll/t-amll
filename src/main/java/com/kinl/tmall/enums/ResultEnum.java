@@ -35,6 +35,7 @@ public enum ResultEnum {
     ADD_ORDER_STATUS_ERROR(27,"改变订单状态失败"),
     FIND_PRODUCT_ERROR(28, "查找产品失败"),
     DELETE_PRODUCT_IMAGE_ERROR(29, "删除图片失败"),
+    UPDATE_PROPERTYVALUE_ERROR(30, "添加属性值失败"),
 
     ;
 

@@ -1,5 +1,6 @@
 package com.kinl.tmall.dao;
 
+import com.kinl.tmall.VO.PropertyValueVO;
 import com.kinl.tmall.pojo.Propertyvalue;
 import com.kinl.tmall.pojo.PropertyvalueExample;
 import java.util.List;
@@ -99,4 +100,10 @@ public interface PropertyvalueMapper {
     Integer updateByPtid(Propertyvalue propertyvalue);
 
     List<Propertyvalue> findbyPid(Integer pid);
+
+    Propertyvalue findByPidAndPtid(@Param("pid") Integer pid, @Param("ptid") Integer ptid);
+
+    Integer insertVO(PropertyValueVO propertyValueVO);
+
+    Integer updateVO(PropertyValueVO propertyValueVO);
 }

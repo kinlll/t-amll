@@ -83,24 +83,40 @@ public class PropertyValueServiceImpl implements PropertyValueService {
         List<Property> propertyList = propertyMapper.findByCid(product.getCid());
         List<PropertyValueVO> propertyValueVOS = new ArrayList<>();
         for (Property property : propertyList) {
-
-        }
-
-
-
-
-
-
-
-        for (Propertyvalue propertyvalue : propertyvalues) {
             PropertyValueVO propertyValueVO = new PropertyValueVO();
-            Property property = propertyMapper.selectByPrimaryKey(propertyvalue.getPtid());
-            propertyValueVO.setId(propertyvalue.getId());
+            //获取产品属性值
+            Propertyvalue propertyvalue = propertyvalueMapper.findByPidAndPtid(pid, property.getId());
+            if (propertyvalue != null) {
+                propertyValueVO.setId(propertyvalue.getId());
+                propertyValueVO.setValue(propertyvalue.getValue());
+            }
             propertyValueVO.setProduct(product);
             propertyValueVO.setProperty(property);
-            propertyValueVO.setValue(propertyvalue.getValue());
             propertyValueVOS.add(propertyValueVO);
         }
         return propertyValueVOS;
+    }
+
+    @Override
+    public Propertyvalue findById(Integer id) {
+        return propertyvalueMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public Integer insert(PropertyValueVO propertyValueVO) {
+        Integer integer = propertyvalueMapper.insertVO(propertyValueVO);
+        if (integer == 0) {
+            throw new AllException(ResultEnum.UPDATE_PROPERTYVALUE_ERROR);
+        }
+        return integer;
+    }
+
+    @Override
+    public Integer update(PropertyValueVO propertyValueVO) {
+        Integer integer = propertyvalueMapper.updateVO(propertyValueVO);
+        if (integer == 0) {
+            throw new AllException(ResultEnum.UPDATE_PROPERTYVALUE_ERROR);
+        }
+        return integer;
     }
 }
