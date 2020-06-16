@@ -51,13 +51,14 @@ public class PropertyValueController {
             if (property == null) {
                 return ResultVOUtil.error(1,"没有该属性");
             }
-            Propertyvalue propertyvalue = propertyValueService.findById(propertyValueVO.getId());
+            Propertyvalue propertyvalue = propertyValueService.findByPidAndPtid(product.getId(), property.getId());
             if (propertyvalue == null) {
                 propertyValueService.insert(propertyValueVO);
             }else {
                 propertyValueService.update(propertyValueVO);
             }
-            Propertyvalue resultProperty = propertyValueService.findById(propertyValueVO.getId());
+            //Propertyvalue resultProperty = propertyValueService.findById(propertyValueVO.getId());
+            Propertyvalue resultProperty = propertyValueService.findByPidAndPtid(product.getId(), property.getId());
             return ResultVOUtil.success(resultProperty);
         } catch (Exception e) {
             e.printStackTrace();

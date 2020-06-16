@@ -30,4 +30,8 @@ public interface ProductService {
     List<Product> findbyCid(Integer cid);
 
     Integer addVO(ProductVO product);
+
+    Integer updateVO(ProductVO product);
+
+    Integer update(Product product);
 }

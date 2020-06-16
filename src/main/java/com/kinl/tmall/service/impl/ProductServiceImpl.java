@@ -146,4 +146,18 @@ public class ProductServiceImpl implements ProductService {
         return productMapper.insertVO(product);
     }
 
+    @Override
+    public Integer updateVO(ProductVO product) {
+        Integer integer = productMapper.updateVO(product);
+        if (integer == 0) {
+            throw new AllException(ResultEnum.PRODUCT_UPDATE_ERROR);
+        }
+        return integer;
+    }
+
+    @Override
+    public Integer update(Product product) {
+        return productMapper.updateP(product);
+    }
+
 }

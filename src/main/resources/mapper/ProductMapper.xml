@@ -360,4 +360,24 @@
     #{record.createdate})
   </insert>
 
+  <update id="updateVO" parameterType="com.kinl.tmall.VO.ProductVO">
+    update product set
+        name=#{productVO.name},
+        subTitle=#{productVO.subTitle},
+        originalPrice=#{productVO.originalPrice},
+        promotePrice=#{productVO.promotePrice},
+        stock=#{productVO.stock} where
+        id=#{productVO.id}
+  </update>
+
+  <update id="updateP" parameterType="product">
+     update product set
+        name=#{product.name},
+        subTitle=#{product.subtitle},
+        originalPrice=#{product.originalprice},
+        promotePrice=#{product.promoteprice},
+        stock=#{product.stock} where
+        id=#{product.id}
+  </update>
+
 </mapper>

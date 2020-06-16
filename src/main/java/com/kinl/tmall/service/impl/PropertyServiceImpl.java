@@ -86,7 +86,7 @@ public class PropertyServiceImpl implements PropertyService {
 
     @Override
     public Integer addVO(PropertyVO property) {
-        Property p1 = propertyMapper.findByName(property.getName());
+        Property p1 = propertyMapper.findByCidAndName(property.getCategory().getId(), property.getName());
         if (p1 == null){
             int insert = propertyMapper.insertVO(property);
             if (insert == 0){

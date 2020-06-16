@@ -265,4 +265,8 @@
     values (#{propertyVO.category.id,jdbcType=INTEGER}, #{propertyVO.name,jdbcType=VARCHAR}
     )
   </insert>
+
+  <select id="findByCidAndName" resultType="property">
+    select * from property where name=#{name} and cid=#{cid}
+  </select>
 </mapper>

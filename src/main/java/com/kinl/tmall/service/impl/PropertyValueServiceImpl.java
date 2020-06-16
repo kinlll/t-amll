@@ -119,4 +119,18 @@ public class PropertyValueServiceImpl implements PropertyValueService {
         }
         return integer;
     }
+
+    @Override
+    public Propertyvalue findByPidAndPtid(Integer pid, Integer ptid) {
+        return propertyvalueMapper.findByPidAndPtid(pid, ptid);
+    }
+
+    @Override
+    public Integer deleteById(Integer id) {
+        int i = propertyvalueMapper.deleteByPrimaryKey(id);
+        if (i == 0){
+            throw new AllException(ResultEnum.DELETE_PROPERTYVALUE_ERROR);
+        }
+        return i;
+    }
 }

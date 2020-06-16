@@ -224,6 +224,22 @@ public class ProductController {
         }
     }
 
+    @RequiresPermissions(value = {"admin:select"})
+    @PutMapping("/product")
+    public ResultVO put(@RequestBody Product bean){
+        try {
+            Product product = productService.findById(bean.getId());
+            if (product == null) {
+                return ResultVOUtil.error(1, "没有该产品");
+            }
+            productService.update(bean);
+            return ResultVOUtil.success();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, e.getMessage());
+        }
+    }
+
     @RequiresPermissions(value = {"admin:update"})
     @PostMapping("/updateProduct/{productId}")
     public ResultVO updateProduct(@PathVariable Integer productId, @RequestBody Product requestProduct){
@@ -240,18 +256,20 @@ public class ProductController {
     }
 
     @RequiresPermissions(value = {"admin:delete"})
-    @DeleteMapping("/product/{productId}")
-    public ResultVO deleteProduct(@PathVariable Integer productId){
+    @DeleteMapping("/product/{id}")
+    public ResultVO deleteProduct(@PathVariable("id") Integer productId){
         try {
             Product product = productService.findById(productId);
             if (product == null) {
                 return ResultVOUtil.error(1,"没有该产品");
             }
+            //删除产品属性值
             List<Propertyvalue> propertyvalueList = propertyValueService.findByPid(productId);
-            if (propertyvalueList.size()>0){
-                return ResultVOUtil.error(1,"请先删除产品属性值");
+            for (Propertyvalue propertyvalue : propertyvalueList) {
+                propertyValueService.deleteById(propertyvalue.getId());
             }
-            Integer integer = productService.deleteById(productId);
+
+            productService.deleteById(productId);
             return ResultVOUtil.success();
         } catch (AllException a){
             a.printStackTrace();

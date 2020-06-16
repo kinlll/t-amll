@@ -21,4 +21,8 @@ public interface PropertyValueService {
     Integer insert(PropertyValueVO propertyValueVO);
 
     Integer update(PropertyValueVO propertyValueVO);
+
+    Propertyvalue findByPidAndPtid(Integer pid, Integer ptid);
+
+    Integer deleteById(Integer id);
 }

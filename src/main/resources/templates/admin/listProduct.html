@@ -61,8 +61,8 @@
                         return;
                     var url = this.uri+"/"+id;
                     axios.delete(url).then(function(response){
-                        if(0!=response.data.length)
-                            alert(response.data);
+                        if(0!=response.data.code)
+                            alert(response.data.data);
                         else
                             vue.list(0);
                     });

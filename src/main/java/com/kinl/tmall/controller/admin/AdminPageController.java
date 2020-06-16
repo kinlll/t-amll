@@ -55,4 +55,10 @@ public class AdminPageController {
     public String admin_propertyValue_edit(){
         return "admin/editPropertyValue";
     }
+
+    @RequiresPermissions(value = {"admin:select"})
+    @RequestMapping("/admin_product_edit")
+    public String admin_product_edit(){
+        return "admin/editProduct";
+    }
 }

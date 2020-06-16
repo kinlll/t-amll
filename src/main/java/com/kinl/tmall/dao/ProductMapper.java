@@ -114,4 +114,8 @@ public interface ProductMapper {
     List<Product> findbyCid(Integer cid);
 
     int insertVO(@Param("record") ProductVO record);
+
+    Integer updateVO(@Param("productVO") ProductVO productVO);
+
+    Integer updateP(@Param("product") Product product);
 }

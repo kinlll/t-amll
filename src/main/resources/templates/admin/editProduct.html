@@ -7,7 +7,7 @@
 <script>
     $(function () {
         var data4Vue={
-            uri:'products',
+            uri:'admin/product',
             listURL:'admin_product_list',
             bean:'',
             category:''
@@ -25,18 +25,18 @@
                     var id=getUrlParms("id");
                     var url=this.uri+"/"+id;
                     axios.get(url).then(function (response) {
-                        vue.bean=response.data;
+                        vue.bean=response.data.data;
                         vue.category=vue.bean.category;
                     })
                 },
                 update:function () {
                     if(!checkEmpty(this.bean.name, "产品名称"))
                         return;
-                    if (!checkEmpty(this.bean.subTitle, "小标题"))
+                    if (!checkEmpty(this.bean.subtitle, "小标题"))
                         return;
-                    if (!checkNumber(this.bean.originalPrice, "原价格"))
+                    if (!checkNumber(this.bean.originalprice, "原价格"))
                         return;
-                    if (!checkNumber(this.bean.promotePrice, "优惠价格"))
+                    if (!checkNumber(this.bean.promoteprice, "优惠价格"))
                         return;
                     if (!checkInt(this.bean.stock, "库存"))
                         return;
@@ -67,17 +67,17 @@
                 </tr>
                 <tr>
                     <td>产品小标题</td>
-                    <td><input  @keyup.enter="update" v-model.trim="bean.subTitle" type="text"
+                    <td><input  @keyup.enter="update" v-model.trim="bean.subtitle" type="text"
                                 class="form-control"></td>
                 </tr>
                 <tr>
                     <td>原价</td>
-                    <td><input  @keyup.enter="update" v-model.trim="bean.originalPrice" type="text"
+                    <td><input  @keyup.enter="update" v-model.trim="bean.originalprice" type="text"
                                 class="form-control"></td>
                 </tr>
                 <tr>
                     <td>优惠价</td>
-                    <td><input  @keyup.enter="update" v-model.trim="bean.promotePrice" type="text"
+                    <td><input  @keyup.enter="update" v-model.trim="bean.promoteprice" type="text"
                                 class="form-control"></td>
                 </tr>
                 <tr>

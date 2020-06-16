@@ -262,7 +262,7 @@
     update propertyvalue set value=#{value} where ptid=#{ptid}
   </update>
 
-  <select id="findbyPid" parameterType="Propertyvalue" resultType="Integer">
+  <select id="findbyPid" parameterType="Integer" resultType="Propertyvalue">
     select * from propertyvalue where pid=#{pid}
   </select>
 
@@ -270,11 +270,11 @@
     select * from propertyvalue where pid=#{pid} and ptid=#{ptid}
   </select>
 
-  <insert id="insertVO" parameterType="com.kinl.tmall.VO.PropertyValueVO" keyProperty="id" useGeneratedKeys="true">
+  <insert id="insertVO" parameterType="com.kinl.tmall.VO.PropertyValueVO">
     insert into propertyvalue (pid, ptid, value) values (#{propertyValueVO.product.id},#{propertyValueVO.property.id},#{propertyValueVO.value})
   </insert>
 
-  <update id="updateVO" parameterType="com.kinl.tmall.VO.PropertyValueVO" keyProperty="id" useGeneratedKeys="true">
+  <update id="updateVO" parameterType="com.kinl.tmall.VO.PropertyValueVO">
     update propertyvalue set value=#{propertyValueVO.value} where pid=#{propertyValueVO.product.id} and ptid=#{propertyValueVO.property.id}
   </update>
 

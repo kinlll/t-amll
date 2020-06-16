@@ -103,7 +103,7 @@ public interface PropertyvalueMapper {
 
     Propertyvalue findByPidAndPtid(@Param("pid") Integer pid, @Param("ptid") Integer ptid);
 
-    Integer insertVO(PropertyValueVO propertyValueVO);
+    Integer insertVO(@Param("propertyValueVO") PropertyValueVO propertyValueVO);
 
-    Integer updateVO(PropertyValueVO propertyValueVO);
+    Integer updateVO(@Param("propertyValueVO") PropertyValueVO propertyValueVO);
 }
