@@ -7,7 +7,8 @@
 <script>
     $(function(){                //jqurey代码，在html页面加载完成后执行
         var data4Vue = {         //vue用到的数据
-            uri:'admin/pageCategory',    //表示从哪里获取数据
+            uri:'admin/category',    //表示从哪里获取数据
+            urp: 'admin/pageCategory',
             beans: [],           //数据内容
             bean:{id: 0,name:''},  //存放分类信息
             pagination:{},       //存放分页数据
@@ -23,7 +24,7 @@
             },
             methods: {
                 list:function(start){
-                    var url =  this.uri+"?start="+start; //地址
+                    var url =  this.urp+"?start="+start; //地址
                     axios.get(url).then(function(response) {    //调用ajax的axios框架进行异步调用获取数据，将数据保存在本地的vue.beans中
                         vue.pagination=response.data.data;
                         vue.beans = response.data.data.datas;
@@ -48,8 +49,8 @@
                     if (!checkDeleteLink()) return;
                     var url=this.uri+"/"+id;
                     axios.delete(url).then(function (response) {
-                        if (0!=response.data.length){
-                            alert(response.data);
+                        if (0!=response.data.code){
+                            alert(response.data.message);
                         }else {
                             vue.list(0);
                         }

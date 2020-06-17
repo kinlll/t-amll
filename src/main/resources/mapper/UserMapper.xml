@@ -257,4 +257,12 @@
   <select id="findNameById" parameterType="Integer" resultType="String">
     select name from user where id=#{pid}
   </select>
+
+  <select id="pageQuery" resultType="User">
+    select * from user limit #{map.start}, #{map.pageSize}
+  </select>
+
+  <select id="count" resultType="Integer">
+    select count(1) from user
+  </select>
 </mapper>

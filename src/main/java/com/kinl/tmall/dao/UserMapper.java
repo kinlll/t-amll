@@ -2,6 +2,8 @@ package com.kinl.tmall.dao;
 
 import com.kinl.tmall.pojo.User;
 import com.kinl.tmall.pojo.UserExample;
+
+import java.util.HashMap;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
@@ -95,4 +97,8 @@ public interface UserMapper {
     int updateByPrimaryKey(User record);
 
     String findNameById(Integer pid);
+
+    List<User> pageQuery(@Param("map") HashMap<String, Object> map);
+
+    Integer count();
 }

@@ -58,15 +58,14 @@ public class CategoryController {
         }
     }
 
-    @RequiresPermissions(value = {"admin:create"})
-    @Transactional
-    @PostMapping("/addCategory")
-    public ResultVO addCategory(String categoryName, MultipartFile image, HttpServletRequest request){
-        if ("".equals(categoryName) || categoryName == null){
+    @RequiresPermissions(value = {"admin:select"})
+    @PostMapping("/category")
+    public ResultVO addCategory(String name, MultipartFile image, HttpServletRequest request){
+        if ("".equals(name) || name == null){
             throw new AllException(ResultEnum.CATEGORYE_EMPTY);
         }
         try {
-            Integer id = categoryService.addCategory(categoryName);
+            Integer id = categoryService.addCategory(name);
 
             saveOrUpdateImageFile(id, image, request);
 
@@ -99,11 +98,15 @@ public class CategoryController {
             Category category = categoryService.findById(id);
             if (category == null) return ResultVOUtil.error(1,"不存在该分类");
 
-            //判断分类从表对应属性、产品是否删除
+            //判断分类从表对应产品是否删除
             List<Product> productList = productService.findByCidFive(id);
-            if (productList.size()>0) return ResultVOUtil.error(1,"请先删除分类下产品");
+            if (productList.size()>0)
+                return ResultVOUtil.error(1,"请先删除分类下产品");
+            //删除属性
             List<Property> propertyList = propertyService.findByCid(id);
-            if (propertyList.size()>0) return ResultVOUtil.error(1,"请先删除分类下属性");
+            for (Property property : propertyList) {
+                propertyService.deleteById(property.getId());
+            }
 
             Integer result = categoryService.deleteById(id);
             if (result == 0){
@@ -117,7 +120,7 @@ public class CategoryController {
             return ResultVOUtil.error(1,"删除分类图片失败");
     }
         return ResultVOUtil.success();
-    }
+    } 
 
     @RequiresPermissions(value = {"admin:select"})
     @GetMapping("/category/{id}")

@@ -61,4 +61,10 @@ public class AdminPageController {
     public String admin_product_edit(){
         return "admin/editProduct";
     }
+
+    @RequiresPermissions(value = {"admin:select"})
+    @RequestMapping("/admin_user_list")
+    public String admin_user_list(){
+        return "admin/listUser";
+    }
 }

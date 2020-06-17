@@ -6,7 +6,7 @@
 <script>
     $(function () {
         var data4Vue={
-         uri:'users',
+         uri:'web/users',
          beans:[],
          pagination:{}
         };
@@ -21,8 +21,8 @@
                 list:function (start) {
                     var url=this.uri+"?start="+start;
                     axios.get(url).then(function (response) {
-                        vue.pagination=response.data;
-                        vue.beans=response.data.content;
+                        vue.pagination=response.data.data;
+                        vue.beans=response.data.data.datas;
                     });
                 },
                 jump:function (page) {
