@@ -20,7 +20,7 @@
                         this.sort = sort;
                         var url =  this.uri+"/"+cid+"?sort="+sort;
                         axios.get(url).then(function(response) {
-                            vue.c = response.data;
+                            vue.c = response.data.data;
                             vue.$nextTick(function(){
                                 linkDefaultActions();
                             })

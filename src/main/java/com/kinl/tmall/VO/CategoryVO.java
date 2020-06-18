@@ -10,7 +10,7 @@ public class CategoryVO implements Serializable {
     private Integer id;
 
     private String name;
-    //一个分类有多行
+
     private List<Product> products;
 
     //一行里有多个产品
