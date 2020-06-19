@@ -1,12 +1,12 @@
 <!--通过v-for把分类下的所有产品遍历出来，包括照片、价格、销量、等信息-->
 <div th:fragment="html">
     <div class="categoryProducts">
-        <div v-for="p in c.products"  class="productUnit" :price="p.promotePrice">
+        <div v-for="p in c.products"  class="productUnit" :price="p.promoteprice">
             <div class="productUnitFrame">
-                <a :href="'product?pid='+p.id">
-                    <img class="productImage" :src="'img/productSingle_middle/'+p.firstProductImage.id+'.jpg'">
+               <a :href="'product?pid='+p.id">
+                     <img class="productImage" :src="'img/productImage/'+p.firstProductImage.id+'.jpg'" v-if="p.firstProductImage !== null">
                 </a>
-                <span class="productPrice">{{p.promotePrice|formatMoneyFilter}} </span>
+              <span class="productPrice">{{p.promoteprice|formatMoneyFilter}} </span>
 
                 <a class="productLink" :href="'product?pid='+p.id">
                     {{p.name|subStringFilter(0,50)}}
