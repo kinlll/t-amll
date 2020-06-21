@@ -1,13 +1,15 @@
 package com.kinl.tmall.controller.web;
 
 import com.kinl.tmall.Utils.ResultVOUtil;
-import com.kinl.tmall.VO.CategoryVO;
-import com.kinl.tmall.VO.ResultVO;
+import com.kinl.tmall.VO.*;
 import com.kinl.tmall.comparator.*;
 import com.kinl.tmall.pojo.Category;
 import com.kinl.tmall.pojo.Product;
+import com.kinl.tmall.pojo.Propertyvalue;
 import com.kinl.tmall.service.CategoryService;
 import com.kinl.tmall.service.ProductService;
+import com.kinl.tmall.service.PropertyValueService;
+import com.kinl.tmall.service.ReviewService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +27,12 @@ public class ForeRestController {
 
     @Autowired
     private ProductService productService;
+
+    @Autowired
+    private PropertyValueService propertyValueService;
+
+    @Autowired
+    private ReviewService reviewService;
 
     @GetMapping("/forecategory/{cid}")
     public ResultVO forecategory(@PathVariable("cid") Integer cid, String sort){
@@ -57,6 +65,30 @@ public class ForeRestController {
             }
             return ResultVOUtil.success(categoryVO);
         } catch (BeansException e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, e.getMessage());
+        }
+    }
+
+    @GetMapping("/foreproduct/{pid}")
+    public ResultVO foreproduct(@PathVariable("pid") Integer pid){
+        try {
+            ForeProductVO foreProductVO = new ForeProductVO();
+            Product product = productService.findById(pid);
+            if (product == null)
+                return ResultVOUtil.error(1, "找不到该产品");
+
+            List<PropertyValueVO> propertyValueVOS = propertyValueService.findVOByPid(product.getId());
+
+
+            List<ReviewVO> reviewVOS = reviewService.findByPid(product.getId());
+
+            foreProductVO.setProduct(product);
+            foreProductVO.setPvs(propertyValueVOS);
+            foreProductVO.setReviews(reviewVOS);
+
+            return ResultVOUtil.success(foreProductVO);
+        } catch (Exception e) {
             e.printStackTrace();
             return ResultVOUtil.error(1, e.getMessage());
         }

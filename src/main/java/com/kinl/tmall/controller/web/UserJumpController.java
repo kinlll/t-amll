@@ -20,4 +20,9 @@ public class UserJumpController {
     public String category(){
         return "fore/category";
     }
+
+    @GetMapping("/product")
+    public String product(){
+        return "fore/product";
+    }
 }

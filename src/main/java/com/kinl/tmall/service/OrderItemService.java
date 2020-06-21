@@ -9,4 +9,6 @@ public interface OrderItemService {
     List<Orderitem> findByOid(Integer oid);
 
     Integer countNumByOid(Integer oid);
+
+    Integer countByPid(Integer pid);
 }

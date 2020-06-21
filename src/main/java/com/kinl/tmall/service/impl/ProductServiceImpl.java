@@ -9,9 +9,7 @@ import com.kinl.tmall.exception.AllException;
 import com.kinl.tmall.pojo.Category;
 import com.kinl.tmall.pojo.Product;
 import com.kinl.tmall.pojo.Productimage;
-import com.kinl.tmall.service.CategoryService;
-import com.kinl.tmall.service.ProductService;
-import com.kinl.tmall.service.ProductimageService;
+import com.kinl.tmall.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +28,12 @@ public class ProductServiceImpl implements ProductService {
 
     @Autowired
     private CategoryService categoryService;
+
+    @Autowired
+    private ReviewService reviewService;
+
+    @Autowired
+    private OrderItemService orderItemService;
 
     @Override
     public List<Product> findAll() {
@@ -79,8 +83,13 @@ public class ProductServiceImpl implements ProductService {
         if (product == null) {
             throw new AllException(ResultEnum.PRODUCT_NOEXIST);
         }
+        //获取图片
+        getProductImage(product);
+        //获取评论总数和销量 (这里暂时逻辑为加入购物车就增加销量)
+        getReviewAndSaleCount(product);
         Category category = categoryService.findById(product.getCid());
         product.setCategory(category);
+
         return product;
     }
 
@@ -117,20 +126,33 @@ public class ProductServiceImpl implements ProductService {
         return productMapper.findNameById(id);
     }
 
+
+    //加载产品所有图片，包括首图，单个图片，详情图片
+    private void getProductImage(Product product){
+        Productimage firstImage = productimageService.findFirstImageByPid(product.getId());
+        List<Productimage> simpleByPid = productimageService.findAllSimpleByPid(product.getId());
+        List<Productimage> detailsByPid = productimageService.findAllDetailsByPid(product.getId());
+
+        product.setFirstProductImage(firstImage);
+        product.setProductSingleImages(simpleByPid);
+        product.setProductDetailImages(detailsByPid);
+    }
+
+    //获取产品的评论总数和销量(这里暂时逻辑为加入购物车就增加销量)
+    private void getReviewAndSaleCount(Product product){
+        Integer reviewCount = reviewService.findCountBypid(product.getId());
+        Integer saleCount = orderItemService.countByPid(product.getId());
+        product.setReviewCount(reviewCount);
+        product.setSaleCount(saleCount);
+    }
+
     @Override
     public List<Product> findbyCid(Integer cid) {
         List<Product> products = null;
         try {
             products = productMapper.findbyCid(cid);
             for (Product product : products) {
-                Productimage firstImage = productimageService.findFirstImageByPid(product.getId());
-                List<Productimage> simpleByPid = productimageService.findAllSimpleByPid(product.getId());
-                List<Productimage> detailsByPid = productimageService.findAllDetailsByPid(product.getId());
-
-                product.setFirstProductImage(firstImage);
-                product.setProductSingleImages(simpleByPid);
-                product.setProductDetailImages(detailsByPid);
-
+               getProductImage(product);
             }
         } catch (Exception e) {
             e.printStackTrace();

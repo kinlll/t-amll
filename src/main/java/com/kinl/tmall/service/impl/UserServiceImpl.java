@@ -1,6 +1,7 @@
 package com.kinl.tmall.service.impl;
 
 import com.kinl.tmall.Utils.Page;
+import com.kinl.tmall.VO.UserVO;
 import com.kinl.tmall.dao.UserMapper;
 import com.kinl.tmall.pojo.User;
 import com.kinl.tmall.service.UserService;
@@ -32,5 +33,14 @@ public class UserServiceImpl implements UserService {
         page.setRecord(count);
         page.setTotalPageCount(count);
         return page;
+    }
+
+    @Override
+    public UserVO findVOById(Integer id) {
+        User user = userMapper.selectByPrimaryKey(id);
+        UserVO userVO = new UserVO();
+        userVO.setName(user.getName());
+        userVO.setAnonymousName(userVO.getAnonymousName());
+        return userVO;
     }
 }

@@ -3,7 +3,7 @@
         $(function(){
             var pid = getUrlParms("pid");
             var data4Vue = {
-                uri:'foreproduct',
+                uri:'web/foreproduct',
                 p:'',
                 category:null,
                 firstProductImage:null,
@@ -25,10 +25,10 @@
                     load:function(){
                         var url =  this.uri+"/"+pid;
                         axios.get(url).then(function(response) {
-                            var result = response.data;
-                            vue.p=result.data.product;
-                            vue.pvs=result.data.pvs;
-                            vue.reviews=result.data.reviews;
+                            var result = response.data.data;
+                            vue.p=result.product;
+                            vue.pvs=result.pvs;
+                            vue.reviews=result.reviews;
 
                             vue.category = vue.p.category;
                             vue.firstProductImage = vue.p.firstProductImage;

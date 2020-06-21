@@ -123,9 +123,9 @@
     <div class="imgAndInfo">
 
         <div class="imgInimgAndInfo">
-            <img v-if="firstProductImage!=null" :src="'img/productSingle/'+firstProductImage.id+'.jpg'" class="bigImg">
+            <img v-if="firstProductImage!=null" :src="'img/productImage/'+firstProductImage.id+'.jpg'" class="bigImg">
             <div class="smallImageDiv">
-                <img v-for="pi in p.productSingleImages" :src="'img/productSingle_small/'+pi.id+'.jpg'" :bigImageURL="'img/productSingle/'+pi.id+'.jpg'" class="smallImage">
+                <img v-for="pi in p.productSingleImages" :src="'img/productImage/'+pi.id+'.jpg'" :bigImageURL="'img/productImage/'+pi.id+'.jpg'" class="smallImage">
             </div>
             <div class="img4load hidden" ></div>
         </div>
@@ -136,7 +136,7 @@
                 {{p.name}}
             </div>
             <div class="productSubTitle">
-                {{p.subTitle}}
+                {{p.subtitle}}
             </div>
 
             <div class="productPrice">
@@ -154,7 +154,7 @@
                         <span class="originalPriceDesc">价格</span>
                         <span class="originalPriceYuan">¥</span>
                         <span class="originalPrice">
-                            {{p.originalPrice|formatMoneyFilter}}
+                            {{p.originalprice|formatMoneyFilter}}
                         </span>
                     </div>
 
@@ -162,7 +162,7 @@
                         <span class="promotionPriceDesc">促销价 </span>
                         <span class="promotionPriceYuan">¥</span>
                         <span class="promotionPrice">
-                            {{p.promotePrice|formatMoneyFilter}}
+                            {{p.promoteprice|formatMoneyFilter}}
                         </span>
                     </div>
                 </div>

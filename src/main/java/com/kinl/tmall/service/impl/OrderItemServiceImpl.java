@@ -2,6 +2,7 @@ package com.kinl.tmall.service.impl;
 
 import com.kinl.tmall.dao.OrderitemMapper;
 import com.kinl.tmall.pojo.Orderitem;
+import com.kinl.tmall.pojo.OrderitemExample;
 import com.kinl.tmall.service.OrderItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,6 +28,15 @@ public class OrderItemServiceImpl implements OrderItemService {
             Integer number = orderitem.getNumber();
             count+=number;
         }
+        return count;
+    }
+
+    @Override
+    public Integer countByPid(Integer pid) {
+        OrderitemExample orderitemExample = new OrderitemExample();
+        OrderitemExample.Criteria criteria = orderitemExample.createCriteria();
+        criteria.andPidEqualTo(pid);
+        int count = orderitemMapper.countByExample(orderitemExample);
         return count;
     }
 }
