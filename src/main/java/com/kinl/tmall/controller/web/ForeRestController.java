@@ -3,13 +3,10 @@ package com.kinl.tmall.controller.web;
 import com.kinl.tmall.Utils.ResultVOUtil;
 import com.kinl.tmall.VO.*;
 import com.kinl.tmall.comparator.*;
-import com.kinl.tmall.pojo.Category;
-import com.kinl.tmall.pojo.Product;
-import com.kinl.tmall.pojo.Propertyvalue;
-import com.kinl.tmall.service.CategoryService;
-import com.kinl.tmall.service.ProductService;
-import com.kinl.tmall.service.PropertyValueService;
-import com.kinl.tmall.service.ReviewService;
+import com.kinl.tmall.pojo.*;
+import com.kinl.tmall.service.*;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.mgt.SecurityManager;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +30,12 @@ public class ForeRestController {
 
     @Autowired
     private ReviewService reviewService;
+
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    private OrderItemService orderItemService;
 
     @GetMapping("/forecategory/{cid}")
     public ResultVO forecategory(@PathVariable("cid") Integer cid, String sort){
@@ -88,6 +91,20 @@ public class ForeRestController {
             foreProductVO.setReviews(reviewVOS);
 
             return ResultVOUtil.success(foreProductVO);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, e.getMessage());
+        }
+    }
+
+    @GetMapping("/forecart")
+    public ResultVO forecart(){
+        try {
+            String username = (String) SecurityUtils.getSubject().getPrincipal();
+            User user = userService.findByName(username);
+            List<OrderItemForeVO> orderItemForeVOS = orderItemService.findByUid(user.getId());
+
+            return ResultVOUtil.success(orderItemForeVOS);
         } catch (Exception e) {
             e.printStackTrace();
             return ResultVOUtil.error(1, e.getMessage());

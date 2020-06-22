@@ -25,4 +25,9 @@ public class UserJumpController {
     public String product(){
         return "fore/product";
     }
+
+    @GetMapping("/cart")
+    public String cart(){
+        return "fore/cart";
+    }
 }

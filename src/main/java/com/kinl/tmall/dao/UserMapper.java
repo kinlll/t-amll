@@ -101,4 +101,6 @@ public interface UserMapper {
     List<User> pageQuery(@Param("map") HashMap<String, Object> map);
 
     Integer count();
+
+    User findByName(String name);
 }

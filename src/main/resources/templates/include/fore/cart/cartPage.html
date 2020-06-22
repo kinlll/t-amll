@@ -3,7 +3,7 @@
     <script>
         $(function(){
             var data4Vue = {
-                uri:'forecart',
+                uri:'web/forecart',
                 orderItems:[]
             };
             //ViewModel
@@ -17,7 +17,7 @@
                     load:function(){
                         var url =  this.uri;
                         axios.get(url).then(function(response) {
-                            vue.orderItems = response.data;
+                            vue.orderItems = response.data.data;
                             vue.$nextTick(function(){
                                 linkDefaultActions();
                                 cartPageRegisterListeners();
