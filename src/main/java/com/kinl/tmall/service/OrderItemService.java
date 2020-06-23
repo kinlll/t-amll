@@ -14,4 +14,6 @@ public interface OrderItemService {
     Integer countByPid(Integer pid);
 
     List<OrderItemForeVO> findByUid(Integer uid);
+
+    Integer insertNoOid(Orderitem orderitem);
 }

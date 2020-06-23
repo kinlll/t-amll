@@ -272,4 +272,8 @@
   <select id="findByOid" parameterType="integer" resultType="Orderitem">
     select * from orderitem where oid=#{oid}
   </select>
+
+  <insert id="insertNoOid" parameterType="Orderitem">
+    insert into orderitem (pid,uid,number) values (#{orderitem.pid},#{orderitem.uid},#{orderitem.number})
+  </insert>
 </mapper>

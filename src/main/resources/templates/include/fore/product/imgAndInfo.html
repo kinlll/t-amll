@@ -32,12 +32,12 @@
 
             $(".addCartButton").removeAttr("disabled");
             $(".addCartLink").click(function(){
-                var url = "forecheckLogin";
+                var url = "web/forecheckLogin";
                 axios.get(url).then(function(response) {
                     if(0==response.data.code){
                         var pid = vue.p.id;
                         var num= $(".productNumberSetting").val();
-                        var url =  "foreaddCart?pid="+pid+"&num="+num;
+                        var url =  "web/foreaddCart?pid="+pid+"&num="+num;
                         axios.get(url).then(function(response) {
                             var result = response.data;
                             if(0==result.code){
@@ -55,7 +55,7 @@
                 });
             });
             $(".buyLink").click(function(){
-                var url = "forecheckLogin";
+                var url = "web/forecheckLogin";
                 axios.get(url).then(function(response) {
                     if(0==response.data.code){
                         var pid = vue.p.id;
@@ -74,7 +74,7 @@
             });
 
             $("button.loginSubmitButton").click(function(){
-                var url =  "forelogin";
+                var url =  "web/forelogin";
                 if(0==vue.user.name.length){
                     $("span.errorMessage").html("请输入用户名");
                     $("div.loginErrorMessageDiv").css("visibility","visible");

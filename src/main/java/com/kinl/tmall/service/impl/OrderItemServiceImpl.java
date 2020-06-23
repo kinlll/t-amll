@@ -2,6 +2,8 @@ package com.kinl.tmall.service.impl;
 
 import com.kinl.tmall.VO.OrderItemForeVO;
 import com.kinl.tmall.dao.OrderitemMapper;
+import com.kinl.tmall.enums.ResultEnum;
+import com.kinl.tmall.exception.AllException;
 import com.kinl.tmall.pojo.*;
 import com.kinl.tmall.service.OrderItemService;
 import com.kinl.tmall.service.OrderService;
@@ -79,5 +81,14 @@ public class OrderItemServiceImpl implements OrderItemService {
         }
 
         return orderItemForeVOS;
+    }
+
+    @Override
+    public Integer insertNoOid(Orderitem orderitem) {
+        Integer integer = orderitemMapper.insertNoOid(orderitem);
+        if (integer == 0) {
+            throw new AllException(ResultEnum.INSERT_ORDERITEM_ERROR);
+        }
+        return integer;
     }
 }

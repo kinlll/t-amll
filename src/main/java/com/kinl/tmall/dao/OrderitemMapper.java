@@ -95,4 +95,6 @@ public interface OrderitemMapper {
     int updateByPrimaryKey(Orderitem record);
 
     List<Orderitem> findByOid(Integer oid);
+
+    Integer insertNoOid(@Param("orderitem") Orderitem orderitem);
 }

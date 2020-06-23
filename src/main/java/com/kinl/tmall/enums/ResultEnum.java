@@ -38,6 +38,7 @@ public enum ResultEnum {
     UPDATE_PROPERTYVALUE_ERROR(30, "添加属性值失败"),
     DELETE_PROPERTYVALUE_ERROR(31,"删除属性值失败"),
     USER_NOT_EXIT(32, "找不到用户"),
+    INSERT_ORDERITEM_ERROR(33, "创建订单项失败"),
 
     ;
 
