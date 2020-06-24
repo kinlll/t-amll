@@ -78,6 +78,7 @@ public class OrderItemServiceImpl implements OrderItemService {
             orderItemForeVO.setUser(user);
             orderItemForeVO.setOrder(order);
             orderItemForeVO.setProduct(product);
+            orderItemForeVOS.add(orderItemForeVO);
         }
 
         return orderItemForeVOS;
@@ -88,6 +89,21 @@ public class OrderItemServiceImpl implements OrderItemService {
         Integer integer = orderitemMapper.insertNoOid(orderitem);
         if (integer == 0) {
             throw new AllException(ResultEnum.INSERT_ORDERITEM_ERROR);
+        }
+        return integer;
+    }
+
+    @Override
+    public Orderitem findByUidAndPid(Integer uid, Integer pid) {
+        Orderitem orderitem = orderitemMapper.findByUidAndPid(uid, pid);
+        return orderitem;
+    }
+
+    @Override
+    public Integer updateNumByUidAndPid(Integer uid, Integer pid, Integer num) {
+        Integer integer = orderitemMapper.updateNumByUidAndPid(uid, pid, num);
+        if (integer == 0) {
+            throw new AllException(ResultEnum.UPDATE_ORDERITEM_ERROR);
         }
         return integer;
     }

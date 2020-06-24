@@ -16,4 +16,8 @@ public interface OrderItemService {
     List<OrderItemForeVO> findByUid(Integer uid);
 
     Integer insertNoOid(Orderitem orderitem);
+
+    Orderitem findByUidAndPid(Integer uid, Integer pid);
+
+    Integer updateNumByUidAndPid(Integer uid, Integer pid, Integer num);
 }

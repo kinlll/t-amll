@@ -97,4 +97,8 @@ public interface OrderitemMapper {
     List<Orderitem> findByOid(Integer oid);
 
     Integer insertNoOid(@Param("orderitem") Orderitem orderitem);
+
+    Orderitem findByUidAndPid(@Param("uid") Integer uid,@Param("pid") Integer pid);
+
+    Integer updateNumByUidAndPid(@Param("uid") Integer uid,@Param("pid") Integer pid, @Param("num")Integer num);
 }

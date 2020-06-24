@@ -276,4 +276,12 @@
   <insert id="insertNoOid" parameterType="Orderitem">
     insert into orderitem (pid,uid,number) values (#{orderitem.pid},#{orderitem.uid},#{orderitem.number})
   </insert>
+
+  <select id="findByUidAndPid" parameterType="Integer" resultType="Orderitem">
+    select * from orderitem where uid=#{uid} and pid=#{pid}
+  </select>
+
+  <update id="updateNumByUidAndPid" parameterType="Integer">
+    update orderitem set number=#{num}+number where uid=#{uid} and pid=#{pid}
+  </update>
 </mapper>

@@ -141,6 +141,13 @@ public class ForeRestController {
             }
             String principal = (String) SecurityUtils.getSubject().getPrincipal();
             User user = userService.findByName(principal);
+
+            Orderitem orderitem1 = orderItemService.findByUidAndPid(user.getId(), pid);
+            if (orderitem1 != null) {
+                orderItemService.updateNumByUidAndPid(user.getId(), pid, num);
+                return ResultVOUtil.success();
+            }
+
             Orderitem orderitem = new Orderitem();
             orderitem.setNumber(num);
             orderitem.setPid(product.getId());

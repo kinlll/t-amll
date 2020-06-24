@@ -84,7 +84,6 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public Order findById(Integer id) {
         Order order = orderMapper.selectByPrimaryKey(id);
-        if (order == null) throw new AllException(ResultEnum.ORDER_NOEXIST);
         return order;
     }
 
