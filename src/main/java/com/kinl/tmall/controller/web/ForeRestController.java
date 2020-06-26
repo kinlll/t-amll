@@ -19,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -80,6 +81,26 @@ public class ForeRestController {
         }
     }
 
+    //删除购物车商品
+    @GetMapping("/foredeleteOrderItem")
+    public ResultVO foredeleteOrderItem(@RequestParam("oiid") Integer oiid){
+        try {
+            Orderitem orderitem = orderItemService.findById(oiid);
+            if (orderitem == null) {
+                return ResultVOUtil.error(1,"购物车没有改订单项");
+            }
+            if (orderitem.getOid() != null) {
+                return ResultVOUtil.error(1, "购物车内不可删除已购买订单");
+            }
+            orderItemService.deleteById(oiid);
+            return ResultVOUtil.success();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, e.getMessage());
+        }
+    }
+
+    //获取产品
     @GetMapping("/foreproduct/{pid}")
     public ResultVO foreproduct(@PathVariable("pid") Integer pid){
         try {
@@ -88,9 +109,10 @@ public class ForeRestController {
             if (product == null)
                 return ResultVOUtil.error(1, "找不到该产品");
 
+            //属性
             List<PropertyValueVO> propertyValueVOS = propertyValueService.findVOByPid(product.getId());
 
-
+            //评论
             List<ReviewVO> reviewVOS = reviewService.findByPid(product.getId());
 
             foreProductVO.setProduct(product);
@@ -104,12 +126,13 @@ public class ForeRestController {
         }
     }
 
+    //获取购物车
     @GetMapping("/forecart")
     public ResultVO forecart(){
         try {
             String username = (String) SecurityUtils.getSubject().getPrincipal();
             User user = userService.findByName(username);
-            List<OrderItemForeVO> orderItemForeVOS = orderItemService.findByUid(user.getId());
+            List<OrderItemForeVO> orderItemForeVOS = orderItemService.findByUidAndNoOid(user.getId());
 
             return ResultVOUtil.success(orderItemForeVOS);
         } catch (Exception e) {
@@ -118,6 +141,7 @@ public class ForeRestController {
         }
     }
 
+    //检查是否登录
     @GetMapping("/forecheckLogin")
     public ResultVO forecheckLogin(){
         boolean authenticated = SecurityUtils.getSubject().isAuthenticated();
@@ -128,6 +152,7 @@ public class ForeRestController {
         }
     }
 
+    //添加到购物车
     @GetMapping("/foreaddCart")
     public ResultVO foreaddCart(@RequestParam("pid") Integer pid, @RequestParam("num") Integer num){
 
@@ -161,6 +186,42 @@ public class ForeRestController {
         }
     }
 
+    //改变购物车商品数量
+    @GetMapping("/forechangeOrderItem")
+    public ResultVO forechangeOrderItem(@RequestParam("pid") Integer pid, @RequestParam("num") Integer num){
+        try {
+            Product product = productService.findById(pid);
+            if (product == null) {
+                return ResultVOUtil.error(1, "没有该产品");
+            }
+            if (product.getStock() < num) {
+                return ResultVOUtil.error(1, "没有这么多库存");
+            }
+            String principal = (String) SecurityUtils.getSubject().getPrincipal();
+            User user = userService.findByName(principal);
+            orderItemService.updateNumByUidAndPidInsert(user.getId(), pid, num);
+            return ResultVOUtil.success();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, e.getMessage());
+        }
+
+    }
+
+    //生成订单页面
+    @GetMapping("/forebuy")
+    public ResultVO forebuy(@RequestParam("oiid") int[] oiid){
+        List<OrderItemForeVO> orderItemForeVOS = new ArrayList<>();
+        for (int i =0; i < oiid.length; i++){
+            Orderitem orderitem = orderItemService.findById(oiid[i]);
+            if (orderitem == null) {
+                return ResultVOUtil.error(1, "没有该订单项");
+            }
+            orderItemForeVOS.add();
+        }
+    }
+
+    //小登录，只有前台用户登录模式
     @PostMapping("/forelogin")
     public ResultVO forelogin(@RequestBody UserVO user, HttpSession session){
         Subject subject = SecurityUtils.getSubject();

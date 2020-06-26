@@ -30,4 +30,9 @@ public class UserJumpController {
     public String cart(){
         return "fore/cart";
     }
+
+    @GetMapping("/buy")
+    public String buy(){
+        return "fore/buy";
+    }
 }

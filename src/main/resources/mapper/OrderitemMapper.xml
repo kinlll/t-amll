@@ -284,4 +284,8 @@
   <update id="updateNumByUidAndPid" parameterType="Integer">
     update orderitem set number=#{num}+number where uid=#{uid} and pid=#{pid}
   </update>
+
+  <update id="updateNumByUidAndPidInsert" parameterType="Integer">
+    update orderitem set number=#{num} where uid=#{uid} and pid=#{pid}
+  </update>
 </mapper>

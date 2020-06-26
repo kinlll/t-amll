@@ -60,27 +60,34 @@ public class OrderItemServiceImpl implements OrderItemService {
         return count;
     }
 
-    @Override
-    public List<OrderItemForeVO> findByUid(Integer uid) {
-        OrderitemExample orderitemExample = new OrderitemExample();
-        OrderitemExample.Criteria criteria = orderitemExample.createCriteria();
-        criteria.andUidEqualTo(uid);
-        List<Orderitem> orderitems = orderitemMapper.selectByExample(orderitemExample);
+
+
+    //List<Orderitem> 转 List<OrderItemForeVO>
+    private List<OrderItemForeVO> orderitem2OrderItemForeVO(List<Orderitem> orderitems){
         List<OrderItemForeVO> orderItemForeVOS = new ArrayList<>();
         for (Orderitem orderitem : orderitems) {
             OrderItemForeVO orderItemForeVO = new OrderItemForeVO();
             User user = userService.findById(orderitem.getUid());
             Product product = productService.findById(orderitem.getPid());
-            Order order = orderService.findById(orderitem.getOid());
 
             orderItemForeVO.setId(orderitem.getId());
             orderItemForeVO.setNumber(orderitem.getNumber());
             orderItemForeVO.setUser(user);
-            orderItemForeVO.setOrder(order);
             orderItemForeVO.setProduct(product);
-            orderItemForeVOS.add(orderItemForeVO);
+            if (orderitem.getOid() == null) {
+                orderItemForeVOS.add(orderItemForeVO);
+            }
         }
+        return orderItemForeVOS;
+    }
 
+    @Override
+    public List<OrderItemForeVO> findByUidAndNoOid(Integer uid) {
+        OrderitemExample orderitemExample = new OrderitemExample();
+        OrderitemExample.Criteria criteria = orderitemExample.createCriteria();
+        criteria.andUidEqualTo(uid);
+        List<Orderitem> orderitems = orderitemMapper.selectByExample(orderitemExample);
+        List<OrderItemForeVO> orderItemForeVOS = orderitem2OrderItemForeVO(orderitems);
         return orderItemForeVOS;
     }
 
@@ -106,5 +113,29 @@ public class OrderItemServiceImpl implements OrderItemService {
             throw new AllException(ResultEnum.UPDATE_ORDERITEM_ERROR);
         }
         return integer;
+    }
+
+    @Override
+    public Integer updateNumByUidAndPidInsert(Integer uid, Integer pid, Integer num) {
+        Integer integer = orderitemMapper.updateNumByUidAndPidInsert(uid, pid, num);
+        if (integer == 0) {
+            throw new AllException(ResultEnum.UPDATE_ORDERITEM_ERROR);
+        }
+        return integer;
+    }
+
+    @Override
+    public Orderitem findById(Integer oiid) {
+        Orderitem orderitem = orderitemMapper.selectByPrimaryKey(oiid);
+        return orderitem;
+    }
+
+    @Override
+    public Integer deleteById(Integer id) {
+        int i = orderitemMapper.deleteByPrimaryKey(id);
+        if (i == 0) {
+            throw new AllException(ResultEnum.DELETE_ORDERITEM_ERROR);
+        }
+        return i;
     }
 }

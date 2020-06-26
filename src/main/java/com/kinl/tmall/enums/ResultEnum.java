@@ -40,6 +40,7 @@ public enum ResultEnum {
     USER_NOT_EXIT(32, "找不到用户"),
     INSERT_ORDERITEM_ERROR(33, "创建订单项失败"),
     UPDATE_ORDERITEM_ERROR(34, "更新订单项失败"),
+    DELETE_ORDERITEM_ERROR(35, "删除订单项失败"),
 
     ;
 

@@ -153,6 +153,7 @@ public class ProductServiceImpl implements ProductService {
             products = productMapper.findbyCid(cid);
             for (Product product : products) {
                getProductImage(product);
+               getReviewAndSaleCount(product);
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -46,7 +46,7 @@
             $('#deleteConfirmModal').on('hidden.bs.modal', function (e) {
                 if(deleteOrderItem){
 
-                    var url = "foredeleteOrderItem?oiid="+deleteOrderItemid;
+                    var url = "web/foredeleteOrderItem?oiid="+deleteOrderItemid;
                     axios.get(url).then(function(response){
                         if(0==response.data.code){
                             $("tr.cartProductItemTR[oiid="+deleteOrderItemid+"]").hide();
@@ -210,7 +210,7 @@
             $(".cartProductItemSmallSumPrice[pid="+pid+"]").html("￥"+cartProductItemSmallSumPrice);
             calcCartSumPriceAndNumber();
 
-            var url = "forechangeOrderItem?pid="+pid+"&num="+num;
+            var url = "web/forechangeOrderItem?pid="+pid+"&num="+num;
             axios.get(url).then(function(response){
                 if(0!=response.data.code){
                     location.href="login";

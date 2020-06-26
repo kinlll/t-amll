@@ -13,11 +13,17 @@ public interface OrderItemService {
 
     Integer countByPid(Integer pid);
 
-    List<OrderItemForeVO> findByUid(Integer uid);
+    List<OrderItemForeVO> findByUidAndNoOid(Integer uid);
 
     Integer insertNoOid(Orderitem orderitem);
 
     Orderitem findByUidAndPid(Integer uid, Integer pid);
 
     Integer updateNumByUidAndPid(Integer uid, Integer pid, Integer num);
+
+    Integer updateNumByUidAndPidInsert(Integer uid, Integer pid, Integer num);
+
+    Orderitem findById(Integer oiid);
+
+    Integer deleteById(Integer id);
 }

@@ -101,4 +101,6 @@ public interface OrderitemMapper {
     Orderitem findByUidAndPid(@Param("uid") Integer uid,@Param("pid") Integer pid);
 
     Integer updateNumByUidAndPid(@Param("uid") Integer uid,@Param("pid") Integer pid, @Param("num")Integer num);
+
+    Integer updateNumByUidAndPidInsert(@Param("uid") Integer uid,@Param("pid") Integer pid, @Param("num")Integer num);
 }
