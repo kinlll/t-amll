@@ -43,6 +43,9 @@ public class ForeRestController {
     private UserService userService;
 
     @Autowired
+    private OrderService orderService;
+
+    @Autowired
     private OrderItemService orderItemService;
 
     @GetMapping("/forecategory/{cid}")
@@ -210,15 +213,48 @@ public class ForeRestController {
 
     //生成订单页面
     @GetMapping("/forebuy")
-    public ResultVO forebuy(@RequestParam("oiid") int[] oiid){
-        List<OrderItemForeVO> orderItemForeVOS = new ArrayList<>();
-        for (int i =0; i < oiid.length; i++){
-            Orderitem orderitem = orderItemService.findById(oiid[i]);
-            if (orderitem == null) {
-                return ResultVOUtil.error(1, "没有该订单项");
-            }
-            orderItemForeVOS.add();
+    public ResultVO forebuy(@RequestParam("oiid") int[] oiid, HttpSession session){
+        try {
+            List<OrderItemForeVO> orderItemForeVOS = orderItemService.findByIds(oiid);
+            float total = orderItemService.getTotal(orderItemForeVOS);
+
+            ForeBuyVO<OrderItemForeVO> foreBuyVO = new ForeBuyVO<>();
+            foreBuyVO.setOrderItems(orderItemForeVOS);
+            foreBuyVO.setTotal(total);
+
+            session.setAttribute("ois", orderItemForeVOS);
+
+            return ResultVOUtil.success(foreBuyVO);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, e.getMessage());
         }
+
+    }
+
+    //提交订单
+    @PostMapping("/forecreateOrder")
+    public ResultVO forecreateOrder(@RequestBody ForeOrderVO order, HttpSession session){
+        try {
+            String principal = (String) SecurityUtils.getSubject().getPrincipal();
+            User user = userService.findByName(principal);
+            if (user == null) {
+                return ResultVOUtil.error(1, "请先登录");
+            }
+            List<OrderItemForeVO> orderItemForeVOS = orderService.createOrder(order, user, session);
+            float total = orderItemService.getTotal(orderItemForeVOS);
+
+            ForeBuyVO<OrderItemForeVO> foreBuyVO = new ForeBuyVO<>();
+            foreBuyVO.setTotal(total);
+            foreBuyVO.setOrderItems(orderItemForeVOS);
+            foreBuyVO.setOid(orderItemForeVOS.get(0).getOrder().getId());
+
+            return ResultVOUtil.success(foreBuyVO);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, "创建订单失败");
+        }
+
     }
 
     //小登录，只有前台用户登录模式

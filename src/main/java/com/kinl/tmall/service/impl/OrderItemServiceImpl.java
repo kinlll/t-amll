@@ -138,4 +138,39 @@ public class OrderItemServiceImpl implements OrderItemService {
         }
         return i;
     }
+
+    @Override
+    public List<OrderItemForeVO> findByIds(int[] oiid) {
+        List<Orderitem> orderitems = new ArrayList<>();
+        for (int i = 0; i < oiid.length; i++){
+            Orderitem orderitem = orderitemMapper.selectByPrimaryKey(oiid[i]);
+            if (orderitem == null) {
+                throw new AllException(ResultEnum.ORDERITEM_NOEXIT);
+            }
+            orderitems.add(orderitem);
+        }
+        List<OrderItemForeVO> orderItemForeVOS = orderitem2OrderItemForeVO(orderitems);
+        return orderItemForeVOS;
+    }
+
+    @Override
+    public float getTotal(List<OrderItemForeVO> orderItemForeVOS) {
+        float total = 0;
+        for (OrderItemForeVO orderItemForeVO : orderItemForeVOS) {
+            Float promoteprice = orderItemForeVO.getProduct().getPromoteprice();
+            Integer number = orderItemForeVO.getNumber();
+            float v = promoteprice * number;
+            total += v;
+        }
+        return total;
+    }
+
+    @Override
+    public Integer updateById(OrderItemForeVO orderItemForeVO) {
+        Integer integer = orderitemMapper.updateById(orderItemForeVO);
+        if (integer == 0){
+            throw new AllException(ResultEnum.UPDATE_ORDERITEM_ERROR);
+        }
+        return integer;
+    }
 }

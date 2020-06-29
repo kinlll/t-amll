@@ -288,4 +288,8 @@
   <update id="updateNumByUidAndPidInsert" parameterType="Integer">
     update orderitem set number=#{num} where uid=#{uid} and pid=#{pid}
   </update>
+
+  <update id="updateById" parameterType="com.kinl.tmall.VO.OrderItemForeVO">
+    update orderitem set oid=#{orderItemForeVO.order.id} where id=#{orderItemForeVO.id}
+  </update>
 </mapper>

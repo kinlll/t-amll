@@ -2,6 +2,7 @@ package com.kinl.tmall.service;
 
 import com.kinl.tmall.VO.OrderItemForeVO;
 import com.kinl.tmall.pojo.Orderitem;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -26,4 +27,10 @@ public interface OrderItemService {
     Orderitem findById(Integer oiid);
 
     Integer deleteById(Integer id);
+
+    List<OrderItemForeVO> findByIds(int[] oiid);
+
+    float getTotal(List<OrderItemForeVO> orderItemForeVOS);
+
+    Integer updateById(OrderItemForeVO orderItemForeVO);
 }

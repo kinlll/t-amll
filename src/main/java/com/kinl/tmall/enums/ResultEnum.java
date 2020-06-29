@@ -41,6 +41,8 @@ public enum ResultEnum {
     INSERT_ORDERITEM_ERROR(33, "创建订单项失败"),
     UPDATE_ORDERITEM_ERROR(34, "更新订单项失败"),
     DELETE_ORDERITEM_ERROR(35, "删除订单项失败"),
+    ORDERITEM_NOEXIT(36, "订单项不存在"),
+    ADD_ORDER_ERROR(37, "创建订单失败"),
 
     ;
 

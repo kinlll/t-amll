@@ -1,5 +1,6 @@
 package com.kinl.tmall.dao;
 
+import com.kinl.tmall.VO.OrderItemForeVO;
 import com.kinl.tmall.pojo.Orderitem;
 import com.kinl.tmall.pojo.OrderitemExample;
 import java.util.List;
@@ -103,4 +104,6 @@ public interface OrderitemMapper {
     Integer updateNumByUidAndPid(@Param("uid") Integer uid,@Param("pid") Integer pid, @Param("num")Integer num);
 
     Integer updateNumByUidAndPidInsert(@Param("uid") Integer uid,@Param("pid") Integer pid, @Param("num")Integer num);
+
+    Integer updateById(@Param("orderItemForeVO") OrderItemForeVO orderItemForeVO);
 }

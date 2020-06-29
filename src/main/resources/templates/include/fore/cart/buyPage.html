@@ -29,7 +29,7 @@
                         });
                     },
                     submitOrder:function(){
-                        var url =  "forecreateOrder";
+                        var url =  "web/forecreateOrder";
                         axios.post(url,this.order).then(function(response) {
                             var result = response.data;
                             var oid = result.data.oid;
@@ -56,7 +56,7 @@
                     <tr>
                         <td class="firstColumn">详细地址<span class="redStar">*</span></td>
 
-                        <td><textarea name="address" v-model="order.address" placeholder="建议您如实填写详细收货地址，例如接到名称，门牌好吗，楼层和房间号等信息"></textarea></td>
+                        <td><textarea name="address" v-model="order.address" placeholder="建议您如实填写详细收货地址，例如接到名称，门牌号码，楼层和房间号等信息"></textarea></td>
                     </tr>
                     <tr>
                         <td>邮政编码</td>
@@ -100,7 +100,7 @@
                 <tbody class="productListTableTbody">
                 <tr class="orderItemTR" v-for="oi,index in orderItems" >
                     <td class="orderItemFirstTD">
-                        <img class="orderItemImg"  :src="'img/productSingle_middle/'+oi.product.firstProductImage.id+'.jpg'">
+                        <img class="orderItemImg"  :src="'img/productImage/'+oi.product.firstProductImage.id+'.jpg'">
                     </td>
                     <td class="orderItemProductInfo">
                         <a  :href="'product?pid='+oi.product.id" class="orderItemProductLink">
@@ -112,7 +112,7 @@
                     </td>
                     <td>
                                 <span class="orderItemProductPrice">
-                                    {{oi.product.promotePrice | formatMoneyFilter}}
+                                    {{oi.product.promoteprice | formatMoneyFilter}}
                                 </span>
                     </td>
                     <td>
@@ -120,7 +120,7 @@
                     </td>
                     <td>
                                 <span class="orderItemUnitSum">
-                                    {{oi.product.promotePrice*oi.number | formatMoneyFilter}}
+                                    {{oi.product.promoteprice*oi.number | formatMoneyFilter}}
                                 </span>
                     </td>
                     <td rowspan="5" class="orderItemLastTD" v-if="index==0" >
@@ -128,7 +128,7 @@
                             <input type="radio" value="" checked="checked">
                             普通配送
                         </label>
-                            <select class="orderItemDeliverySelect form-control">
+                            <select class="">  <!--class="orderItemDeliverySelect form-control"-->
                                 <option>快递 免邮费</option>
                             </select>
                     </td>

@@ -408,4 +408,9 @@
     update order_ set status = #{status,jdbcType=VARCHAR},deliveryDate = #{deliverydate,jdbcType=TIMESTAMP} where id=#{id}
   </update>
 
+  <insert id="insertForeVO" parameterType="com.kinl.tmall.VO.ForeOrderVO" useGeneratedKeys="true" keyProperty="id">
+    insert into order_ (orderCode,address,post,receiver,mobile,userMessage,createDate,uid,status)
+    values (#{orderCode},#{address},#{post},#{receiver},#{mobile},#{userMessage},#{createDate},#{uid},#{status})
+  </insert>
+
 </mapper>

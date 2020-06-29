@@ -1,9 +1,14 @@
 package com.kinl.tmall.service;
 
 import com.kinl.tmall.Utils.Page;
+import com.kinl.tmall.VO.ForeOrderVO;
+import com.kinl.tmall.VO.OrderItemForeVO;
 import com.kinl.tmall.pojo.Order;
+import com.kinl.tmall.pojo.User;
 
+import javax.servlet.http.HttpSession;
 import java.text.ParseException;
+import java.util.List;
 import java.util.Map;
 
 public interface OrderService {
@@ -13,4 +18,6 @@ public interface OrderService {
     Order findById(Integer id);
 
     Integer updateStatus(Order order);
+
+    List<OrderItemForeVO> createOrder(ForeOrderVO orderVO, User user, HttpSession session);
 }

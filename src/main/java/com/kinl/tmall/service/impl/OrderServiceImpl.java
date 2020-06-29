@@ -3,23 +3,29 @@ package com.kinl.tmall.service.impl;
 import com.kinl.tmall.Utils.DateFormatUtil;
 import com.kinl.tmall.Utils.Page;
 import com.kinl.tmall.Utils.PriceUtil;
+import com.kinl.tmall.VO.ForeOrderVO;
+import com.kinl.tmall.VO.OrderItemForeVO;
 import com.kinl.tmall.VO.OrderItemVO;
 import com.kinl.tmall.VO.OrderVO;
 import com.kinl.tmall.dao.OrderMapper;
+import com.kinl.tmall.enums.OrderStatusEnum;
 import com.kinl.tmall.enums.ResultEnum;
 import com.kinl.tmall.exception.AllException;
 import com.kinl.tmall.pojo.Order;
 import com.kinl.tmall.pojo.Orderitem;
+import com.kinl.tmall.pojo.User;
 import com.kinl.tmall.service.*;
+import org.apache.commons.lang.RandomStringUtils;
+import org.apache.commons.lang.math.IntRange;
+import org.apache.commons.lang.math.RandomUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpSession;
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @Service
 public class OrderServiceImpl implements OrderService {
@@ -95,5 +101,41 @@ public class OrderServiceImpl implements OrderService {
             throw new AllException(ResultEnum.ADD_ORDER_STATUS_ERROR);
         }
         return integer;
+    }
+
+    private String getOrderCode(){
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyHHddHHmmss", Locale.CHINA);
+        String format = simpleDateFormat.format(new Date());
+        for (int i = 0; i < 4; i++){
+            int random = RandomUtils.nextInt(10);
+            format+=random;
+        }
+        return format;
+    }
+
+    @Override
+    public List<OrderItemForeVO> createOrder(ForeOrderVO orderVO, User user, HttpSession session) {
+        orderVO.setCreateDate(new Date());
+        orderVO.setStatus(OrderStatusEnum.WAITPAY.name());
+        orderVO.setUid(user.getId());
+        orderVO.setOrderCode(getOrderCode());
+        Integer integer = orderMapper.insertForeVO(orderVO);
+        if (integer == 0){
+            throw new AllException(ResultEnum.ADD_ORDER_ERROR);
+        }
+        Order order = new Order();
+        BeanUtils.copyProperties(orderVO, order);
+        order.setConfirmdate(orderVO.getConfirmDate());
+        order.setCreatedate(orderVO.getCreateDate());
+        order.setDeliverydate(orderVO.getDeliveryDate());
+        order.setOrdercode(orderVO.getOrderCode());
+        order.setPaydate(orderVO.getPayDate());
+        order.setUsermessage(orderVO.getUserMessage());
+        List<OrderItemForeVO> orderItemForeVOS = (List<OrderItemForeVO>) session.getAttribute("ois");
+        for (OrderItemForeVO orderItemForeVO : orderItemForeVOS) {
+            orderItemForeVO.setOrder(order);
+            orderItemService.updateById(orderItemForeVO);
+        }
+        return orderItemForeVOS;
     }
 }
