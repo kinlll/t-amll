@@ -1,8 +1,12 @@
 package com.kinl.tmall.dao;
 
+import com.kinl.tmall.VO.AdminOrderVO;
 import com.kinl.tmall.VO.ForeOrderVO;
 import com.kinl.tmall.pojo.Order;
 import com.kinl.tmall.pojo.OrderExample;
+
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -106,4 +110,10 @@ public interface OrderMapper {
     Integer updateStatus(Order order);
 
     Integer insertForeVO(ForeOrderVO orderVO);
+
+    Integer updateStatusAndPayDate(Integer oid, Date payDate, String status);
+
+    List<ForeOrderVO> findByUid(Integer uid);
+
+    List<AdminOrderVO> queryPageAdmin(HashMap<String, Object> map);
 }

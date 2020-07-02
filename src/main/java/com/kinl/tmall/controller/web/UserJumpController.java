@@ -35,4 +35,19 @@ public class UserJumpController {
     public String buy(){
         return "fore/buy";
     }
+
+    @GetMapping("/alipay")
+    public String alipay(){
+        return "fore/alipay";
+    }
+
+    @GetMapping("/payed")
+    public String payed(){
+        return "fore/payed";
+    }
+
+    @GetMapping("/bought")
+    public String bought(){
+        return "fore/bought";
+    }
 }

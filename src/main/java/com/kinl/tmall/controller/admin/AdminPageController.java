@@ -67,4 +67,10 @@ public class AdminPageController {
     public String admin_user_list(){
         return "admin/listUser";
     }
+
+    @RequiresPermissions(value = {"admin:select"})
+    @RequestMapping("/admin_order_list")
+    public String admin_order_list() {
+        return "admin/listOrder";
+    }
 }

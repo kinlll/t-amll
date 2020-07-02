@@ -4,7 +4,7 @@
             var oid = getUrlParms("oid");
             var total = getUrlParms("total");
             var data4Vue = {
-                uri:'forepayed',
+                uri:'web/forepayed',
                 order:[],
                 total:0
             };
@@ -20,7 +20,7 @@
                     load:function(){
                         var url =  this.uri+"?oid="+oid;
                         axios.get(url).then(function(response) {
-                            vue.order = response.data;
+                            vue.order = response.data.data;
                         });
                     }
                 }

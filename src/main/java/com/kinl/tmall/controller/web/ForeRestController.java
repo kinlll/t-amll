@@ -129,6 +129,28 @@ public class ForeRestController {
         }
     }
 
+    //购买单个商品
+    @GetMapping("/forebuyone")
+    public ResultVO forebuyone(@RequestParam("pid") Integer pid, @RequestParam("num") Integer num){
+        try {
+            Product product = productService.findById(pid);
+            if (product == null) {
+                return ResultVOUtil.error(1, "没有该产品");
+            }
+            if (product.getStock() < num) {
+                return ResultVOUtil.error(1, "没有这么多库存");
+            }
+            String username = (String) SecurityUtils.getSubject().getPrincipal();
+            User user = userService.findByName(username);
+            orderItemCreat(pid, num);
+            Orderitem orderitem = orderItemService.findByUidAndPid(user.getId(), pid);
+            return ResultVOUtil.success(orderitem.getId());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, e.getMessage());
+        }
+    }
+
     //获取购物车
     @GetMapping("/forecart")
     public ResultVO forecart(){
@@ -155,6 +177,24 @@ public class ForeRestController {
         }
     }
 
+    //生成订单项
+    public void orderItemCreat(Integer pid, Integer num){
+        String principal = (String) SecurityUtils.getSubject().getPrincipal();
+        User user = userService.findByName(principal);
+
+        Orderitem orderitem1 = orderItemService.findByUidAndPid(user.getId(), pid);
+        if (orderitem1 != null) {
+            orderItemService.updateNumByUidAndPid(user.getId(), pid, num);
+            return;
+        }
+
+        Orderitem orderitem = new Orderitem();
+        orderitem.setNumber(num);
+        orderitem.setPid(pid);
+        orderitem.setUid(user.getId());
+        orderItemService.insertNoOid(orderitem);
+    }
+
     //添加到购物车
     @GetMapping("/foreaddCart")
     public ResultVO foreaddCart(@RequestParam("pid") Integer pid, @RequestParam("num") Integer num){
@@ -167,20 +207,8 @@ public class ForeRestController {
             if (product.getStock() < num) {
                 return ResultVOUtil.error(1, "没有这么多商品库存");
             }
-            String principal = (String) SecurityUtils.getSubject().getPrincipal();
-            User user = userService.findByName(principal);
-
-            Orderitem orderitem1 = orderItemService.findByUidAndPid(user.getId(), pid);
-            if (orderitem1 != null) {
-                orderItemService.updateNumByUidAndPid(user.getId(), pid, num);
-                return ResultVOUtil.success();
-            }
-
-            Orderitem orderitem = new Orderitem();
-            orderitem.setNumber(num);
-            orderitem.setPid(product.getId());
-            orderitem.setUid(user.getId());
-            orderItemService.insertNoOid(orderitem);
+            //生成订单项
+            orderItemCreat(pid, num);
 
             return ResultVOUtil.success();
         } catch (Exception e) {
@@ -255,6 +283,46 @@ public class ForeRestController {
             return ResultVOUtil.error(1, "创建订单失败");
         }
 
+    }
+
+    //支付
+    @GetMapping("/forepayed")
+    public ResultVO forepayed(@RequestParam("oid") Integer oid){
+        try {
+            Order order = orderService.findById(oid);
+            if (order == null) {
+                return ResultVOUtil.error(1, "没有该订单");
+            }
+
+            //模拟用户支付页面，应付款应该根据订单从数据库查询，而不是使用前端传过来的
+            List<OrderItemForeVO> orderItemForeVOS = orderItemService.findVOByOid(oid);
+            float total1 = orderItemService.getTotal(orderItemForeVOS);
+
+            orderService.waitDelivery(oid);
+
+            Order order1 = orderService.findById(oid);
+            return ResultVOUtil.success(order1);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, e.getMessage());
+        }
+    }
+
+    //全部订单页面
+    @GetMapping("/forebought")
+    public ResultVO forebought(){
+        try {
+            String principal = (String) SecurityUtils.getSubject().getPrincipal();
+            User user = userService.findByName(principal);
+            if (user == null) {
+                return ResultVOUtil.error(1, "请先登录");
+            }
+            List<ForeOrderVO> foreOrderVOS = orderService.findByUid(user.getId());
+            return ResultVOUtil.success(foreOrderVOS);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, e.getMessage());
+        }
     }
 
     //小登录，只有前台用户登录模式

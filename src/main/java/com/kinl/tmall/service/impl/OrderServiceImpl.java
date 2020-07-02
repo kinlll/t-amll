@@ -3,10 +3,7 @@ package com.kinl.tmall.service.impl;
 import com.kinl.tmall.Utils.DateFormatUtil;
 import com.kinl.tmall.Utils.Page;
 import com.kinl.tmall.Utils.PriceUtil;
-import com.kinl.tmall.VO.ForeOrderVO;
-import com.kinl.tmall.VO.OrderItemForeVO;
-import com.kinl.tmall.VO.OrderItemVO;
-import com.kinl.tmall.VO.OrderVO;
+import com.kinl.tmall.VO.*;
 import com.kinl.tmall.dao.OrderMapper;
 import com.kinl.tmall.enums.OrderStatusEnum;
 import com.kinl.tmall.enums.ResultEnum;
@@ -18,6 +15,7 @@ import com.kinl.tmall.service.*;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.math.IntRange;
 import org.apache.commons.lang.math.RandomUtils;
+import org.apache.shiro.SecurityUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -116,7 +114,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public List<OrderItemForeVO> createOrder(ForeOrderVO orderVO, User user, HttpSession session) {
         orderVO.setCreateDate(new Date());
-        orderVO.setStatus(OrderStatusEnum.WAITPAY.name());
+        orderVO.setStatus(OrderStatusEnum.WAITPAY.getStatus());
         orderVO.setUid(user.getId());
         orderVO.setOrderCode(getOrderCode());
         Integer integer = orderMapper.insertForeVO(orderVO);
@@ -137,5 +135,69 @@ public class OrderServiceImpl implements OrderService {
             orderItemService.updateById(orderItemForeVO);
         }
         return orderItemForeVOS;
+    }
+
+    @Override
+    public Integer waitDelivery(Integer oid) {
+
+        Integer integer = orderMapper.updateStatusAndPayDate(oid, new Date(), OrderStatusEnum.WAITDELIVERY.getStatus());
+        if (integer == 0) {
+            throw new AllException(ResultEnum.UPDATE_ORDER_ERROR);
+        }
+        return integer;
+    }
+
+    @Override
+    public List<ForeOrderVO> findByUid(Integer uid) {
+        List<ForeOrderVO> foreOrderVOS = orderMapper.findByUid(uid);
+        for (ForeOrderVO foreOrderVO : foreOrderVOS) {
+            List<OrderItemForeVO> orderItems = orderItemService.findVOByOid(foreOrderVO.getId());
+            float total = orderItemService.getTotal(orderItems);
+            Integer totalNumber = orderItemService.getTotalNumber(orderItems);
+            foreOrderVO.setTotalNumber(totalNumber);
+            foreOrderVO.setTotal(total);
+            foreOrderVO.setOrderItems(orderItems);
+        }
+        return foreOrderVOS;
+    }
+
+    private String changeStatus(String status){
+        String statusDesc = "";
+        if (OrderStatusEnum.WAITPAY.getStatus().equals(status)){
+                statusDesc = "待付款";
+        }else if (OrderStatusEnum.WAITDELIVERY.getStatus().equals(status)){
+            statusDesc = "待发货";
+        }else if (OrderStatusEnum.WAITCONFIRM.getStatus().equals(status)){
+            statusDesc = "待收货";
+        }else if (OrderStatusEnum.WAITREVIEW.getStatus().equals(status)){
+            statusDesc = "待评价";
+        }else if (OrderStatusEnum.COMPLETE.getStatus().equals(status)){
+            statusDesc = "完成";
+        }else if (OrderStatusEnum.DELETE.getStatus().equals(status)){
+            statusDesc = "删除";
+        }
+        return statusDesc;
+    }
+
+    @Override
+    public Page queryPageAdmin(HashMap<String, Object> map) {
+        Page page = new Page((Integer) map.get("pageSize"), (Integer)map.get("pageIndex"));
+        Integer start = page.getStart();
+        map.put("start", start);
+        List<AdminOrderVO> adminOrderVOS = orderMapper.queryPageAdmin(map);
+        for (AdminOrderVO adminOrderVO : adminOrderVOS) {
+            User user = userService.findById(adminOrderVO.getUid());
+            adminOrderVO.setUser(user);
+            List<OrderItemForeVO> orderItemForeVOS = orderItemService.findVOByOid(adminOrderVO.getId());
+            adminOrderVO.setOrderItems(orderItemForeVOS);
+            adminOrderVO.setTotal(orderItemService.getTotal(orderItemForeVOS));
+            adminOrderVO.setTotalNumber(orderItemService.getTotalNumber(orderItemForeVOS));
+            adminOrderVO.setStatusDesc(changeStatus(adminOrderVO.getStatus()));
+        }
+        page.setDatas(adminOrderVOS);
+        Integer count = orderMapper.count();
+        page.setRecord(count);
+        page.setTotalPageCount(count);
+        return page;
     }
 }

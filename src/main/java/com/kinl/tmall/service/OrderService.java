@@ -8,6 +8,7 @@ import com.kinl.tmall.pojo.User;
 
 import javax.servlet.http.HttpSession;
 import java.text.ParseException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -20,4 +21,10 @@ public interface OrderService {
     Integer updateStatus(Order order);
 
     List<OrderItemForeVO> createOrder(ForeOrderVO orderVO, User user, HttpSession session);
+
+    Integer waitDelivery(Integer oid);
+
+    List<ForeOrderVO> findByUid(Integer uid);
+
+    Page queryPageAdmin(HashMap<String, Object> map);
 }

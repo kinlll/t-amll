@@ -3,6 +3,7 @@ package com.kinl.tmall.controller.admin;
 import com.kinl.tmall.Utils.Page;
 import com.kinl.tmall.Utils.ResultVOUtil;
 import com.kinl.tmall.VO.ResultVO;
+import com.kinl.tmall.enums.OrderStatusEnum;
 import com.kinl.tmall.exception.AllException;
 import com.kinl.tmall.pojo.Order;
 import com.kinl.tmall.service.OrderService;
@@ -15,7 +16,7 @@ import java.util.Map;
 
 
 @RestController
-@RequestMapping("/admin/order")
+@RequestMapping("/admin")
 public class OrderController {
 
     @Autowired
@@ -26,6 +27,7 @@ public class OrderController {
     public ResultVO pageOrder(@RequestParam(name = "pageIndex", defaultValue = "1", required = false) Integer pageIndex,
                               @RequestParam(name = "pageSize", defaultValue = "5", required = false) Integer pageSize){
         try {
+            pageIndex = pageIndex < 0 ? 0 : pageIndex;
             Map<String, Object> map = new HashMap<>();
             map.put("pageIndex", pageIndex);
             map.put("pageSize", pageSize);
@@ -38,8 +40,46 @@ public class OrderController {
         }
     }
 
-    @RequiresPermissions(value = {"admin:update"})
-    @PostMapping("/orderDelivery/{orderId}")
+    @RequiresPermissions(value = {"admin:select"})
+    @GetMapping("/orders")
+    public ResultVO orders(@RequestParam(name = "start", defaultValue = "1", required = false) Integer pageIndex,
+                           @RequestParam(name = "pageSize", defaultValue = "5", required = false) Integer pageSize){
+        try {
+            pageIndex = pageIndex < 0 ? 0 : pageIndex;
+            HashMap<String, Object> map = new HashMap<>();
+            map.put("pageIndex", pageIndex);
+            map.put("pageSize", pageSize);
+
+            Page page = orderService.queryPageAdmin(map);
+            return ResultVOUtil.success(page);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, "查找订单失败");
+        }
+    }
+
+    @RequiresPermissions(value = {"admin:select"})
+    @PutMapping("/deliveryOrder/{id}")
+    public ResultVO deliveryOrder(@PathVariable Integer id){
+        try {
+            Order order1 = orderService.findById(id);
+            if (order1 == null) {
+                return ResultVOUtil.error(1, "没有该订单");
+            }
+            if (!OrderStatusEnum.WAITDELIVERY.getStatus().equals(order1.getStatus())){
+                return ResultVOUtil.error(1, "该订单已发货");
+            }
+            order1.setStatus(OrderStatusEnum.WAITCONFIRM.getStatus());
+            orderService.updateStatus(order1);
+            return ResultVOUtil.success();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, "发货失败");
+        }
+    }
+
+
+
     public ResultVO orderDelivery(@PathVariable Integer orderId){
         try {
             Order order = orderService.findById(orderId);

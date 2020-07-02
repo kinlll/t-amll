@@ -74,9 +74,7 @@ public class OrderItemServiceImpl implements OrderItemService {
             orderItemForeVO.setNumber(orderitem.getNumber());
             orderItemForeVO.setUser(user);
             orderItemForeVO.setProduct(product);
-            if (orderitem.getOid() == null) {
-                orderItemForeVOS.add(orderItemForeVO);
-            }
+            orderItemForeVOS.add(orderItemForeVO);
         }
         return orderItemForeVOS;
     }
@@ -87,6 +85,7 @@ public class OrderItemServiceImpl implements OrderItemService {
         OrderitemExample.Criteria criteria = orderitemExample.createCriteria();
         criteria.andUidEqualTo(uid);
         List<Orderitem> orderitems = orderitemMapper.selectByExample(orderitemExample);
+        orderitems.removeIf(orderitem -> orderitem.getOid() != null);
         List<OrderItemForeVO> orderItemForeVOS = orderitem2OrderItemForeVO(orderitems);
         return orderItemForeVOS;
     }
@@ -172,5 +171,22 @@ public class OrderItemServiceImpl implements OrderItemService {
             throw new AllException(ResultEnum.UPDATE_ORDERITEM_ERROR);
         }
         return integer;
+    }
+
+    @Override
+    public List<OrderItemForeVO> findVOByOid(Integer oid) {
+        List<Orderitem> orderitems = findByOid(oid);
+        List<OrderItemForeVO> orderItemForeVOS = orderitem2OrderItemForeVO(orderitems);
+        return orderItemForeVOS;
+    }
+
+    @Override
+    public Integer getTotalNumber(List<OrderItemForeVO> orderItemForeVOS) {
+        int count = 0;
+        for (OrderItemForeVO orderItemForeVO : orderItemForeVOS) {
+            Integer number = orderItemForeVO.getNumber();
+            count += number;
+        }
+        return count;
     }
 }

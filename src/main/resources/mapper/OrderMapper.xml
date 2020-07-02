@@ -413,4 +413,16 @@
     values (#{orderCode},#{address},#{post},#{receiver},#{mobile},#{userMessage},#{createDate},#{uid},#{status})
   </insert>
 
+  <update id="updateStatusAndPayDate" >
+    update order_ set status=#{status}, payDate=#{payDate} where id=#{oid}
+  </update>
+
+  <select id="findByUid" parameterType="Integer" resultType="com.kinl.tmall.VO.ForeOrderVO" >
+    select * from order_ where uid=#{uid}
+  </select>
+
+  <select id="queryPageAdmin" resultType="com.kinl.tmall.VO.AdminOrderVO">
+    select * from order_ limit #{start},#{pageSize}
+  </select>
+
 </mapper>

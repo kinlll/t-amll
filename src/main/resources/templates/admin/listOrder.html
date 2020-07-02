@@ -7,7 +7,7 @@
     $(function(){
 
         var data4Vue = {
-            uri:'orders',
+            uri:'admin/orders',
             beans: [],
             pagination:{}
         };
@@ -23,8 +23,8 @@
                 list:function(start){
                     var url =  this.uri+ "?start="+start;
                     axios.get(url).then(function(response) {
-                        vue.pagination = response.data;
-                        vue.beans = response.data.content;
+                        vue.pagination = response.data.data;
+                        vue.beans = response.data.data.datas;
                     });
                 },
                 showOrderItems: function(order){
@@ -38,7 +38,7 @@
                     jumpByNumber(start,vue);
                 },
                 deliveryOrder:function(order,e){
-                    var url =  "deliveryOrder/"+order.id;
+                    var url =  "admin/deliveryOrder/"+order.id;
                     axios.put(url).then(function(response) {
                         $(e.target).hide();
                     });
@@ -117,11 +117,11 @@
                             <table width="800px" align="center" class="orderPageOrderItemTable">
                                 <tr v-for="orderItem in bean.orderItems">
                                     <td align="left">
-                                        <img width="40px" height="40px" :src="'img/productSingle/'+orderItem.product.firstProductImage.id+'.jpg'">
+                                        <img width="40px" height="40px" :src="'img/productImage/'+orderItem.product.firstProductImage.id+'.jpg'" v-if="orderItem.product.firstProductImage !== null">
                                     </td>
 
                                     <td>
-                                            <span>{{orderItem.product.name}}</span>
+                                            <a :href="'product?pid='+orderItem.product.id">{{orderItem.product.name}}</a>
                                     </td>
                                     <td align="right">
 
@@ -129,7 +129,7 @@
                                     </td>
                                     <td align="right">
 
-                                        <span class="text-muted">单价：￥{{orderItem.product.promotePrice}}</span>
+                                        <span class="text-muted">单价：￥{{orderItem.product.promoteprice}}</span>
                                     </td>
 
                                 </tr>

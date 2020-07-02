@@ -13,6 +13,10 @@ public enum OrderStatusEnum {
 
     private String status;
 
+    public String getStatus() {
+        return status;
+    }
+
     OrderStatusEnum(String status) {
         this.status = status;
     }

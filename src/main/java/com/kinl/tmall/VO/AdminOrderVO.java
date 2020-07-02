@@ -1,32 +1,15 @@
 package com.kinl.tmall.VO;
 
+import com.kinl.tmall.pojo.User;
 import lombok.Data;
 
 import java.util.Date;
 import java.util.List;
 
 @Data
-public class ForeOrderVO {
+public class AdminOrderVO {
 
     private Integer id;
-
-    private Integer uid;
-
-    //订单状态
-    private String status;
-
-    private String address;
-
-    private String userMessage;
-
-    private String orderCode;
-
-    private String post;
-
-    //收货人信息
-    private String receiver;
-
-    private String mobile;
 
     //创建订单时间
     private Date createDate;
@@ -40,11 +23,19 @@ public class ForeOrderVO {
     //确认收货时间
     private Date confirmDate;
 
-    private List<OrderItemForeVO> orderItems;
-
     //订单金额
     private float total;
 
+    private String status;
+
     //订单商品数量
     private Integer totalNumber;
+
+    private Integer uid;
+
+    private User user;
+
+    private String statusDesc;
+
+    private List<OrderItemForeVO> orderItems;
 }

@@ -60,9 +60,9 @@
                     if(0==response.data.code){
                         var pid = vue.p.id;
                         var num= $(".productNumberSetting").val();
-                        var url =  "forebuyone?pid="+pid+"&num="+num;
+                        var url =  "web/forebuyone?pid="+pid+"&num="+num;
                         axios.get(url).then(function(response) {
-                            var oiid = response.data;
+                            var oiid = response.data.data;
                             location.href="buy?oiid="+oiid;
                         });
                     }

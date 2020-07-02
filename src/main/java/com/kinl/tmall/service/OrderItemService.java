@@ -33,4 +33,8 @@ public interface OrderItemService {
     float getTotal(List<OrderItemForeVO> orderItemForeVOS);
 
     Integer updateById(OrderItemForeVO orderItemForeVO);
+
+    List<OrderItemForeVO> findVOByOid(Integer oid);
+
+    Integer getTotalNumber(List<OrderItemForeVO> orderItemForeVOS);
 }

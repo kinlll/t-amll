@@ -2,7 +2,7 @@
     <script>
         $(function(){
             var data4Vue = {
-                uri:'forebought',
+                uri:'web/forebought',
                 orders:[]
             };
             //ViewModel
@@ -16,7 +16,7 @@
                     load:function(){
                         var url =  this.uri;
                         axios.get(url).then(function(response) {
-                            vue.orders = response.data;
+                            vue.orders = response.data.data;
                             vue.$nextTick(function(){
                                 linkDefaultActions();
                                 orderPageRegisterListeners();
@@ -117,7 +117,7 @@
                 </tr>
 
                 <tr class="orderItemProductInfoPartTR" v-for="oi,index in o.orderItems" >
-                    <td class="orderItemProductInfoPartTD"><img width="80" height="80" :src="'img/productSingle_middle/'+oi.product.firstProductImage.id+'.jpg'"></td>
+                    <td class="orderItemProductInfoPartTD"><img width="80" height="80" :src="'img/productImage/'+oi.product.firstProductImage.id+'.jpg'" v-if="oi.product.firstProductImage !== null"></td>
                     <td class="orderItemProductInfoPartTD">
                         <div class="orderListItemProductLinkOutDiv">
                             <a :href="'product?pid='+oi.product.id">{{oi.product.name}}</a>
@@ -129,8 +129,8 @@
                         </div>
                     </td>
                     <td  class="orderItemProductInfoPartTD" width="100px">
-                        <div class="orderListItemProductOriginalPrice">￥{{oi.product.originalPrice|formatMoneyFilter}}</div>
-                        <div class="orderListItemProductPrice">￥{{oi.product.promotePrice|formatMoneyFilter}}</div>
+                        <div class="orderListItemProductOriginalPrice">￥{{oi.product.originalprice|formatMoneyFilter}}</div>
+                        <div class="orderListItemProductPrice">￥{{oi.product.promoteprice|formatMoneyFilter}}</div>
                     </td>
                     <template v-if="index==0">
                         <td valign="top" :rowspan="o.orderItems.length" class="orderListItemNumberTD orderItemOrderInfoPartTD" width="100px">
