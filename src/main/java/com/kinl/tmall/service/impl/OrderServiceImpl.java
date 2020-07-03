@@ -200,4 +200,23 @@ public class OrderServiceImpl implements OrderService {
         page.setTotalPageCount(count);
         return page;
     }
+
+    @Override
+    public Integer update(Order order) {
+        int i = orderMapper.updateByPrimaryKey(order);
+        if (i == 0) {
+            throw new AllException(ResultEnum.UPDATE_ORDER_ERROR);
+        }
+        return i;
+    }
+
+    @Override
+    public ForeOrderVO findVOById(Integer oid) {
+        Order order = orderMapper.selectByPrimaryKey(oid);
+        if (order == null) {
+            throw new AllException(ResultEnum.FIND_OREDER_ERROR);
+        }
+        orderItemService.
+        return null;
+    }
 }

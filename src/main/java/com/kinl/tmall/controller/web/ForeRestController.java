@@ -5,6 +5,7 @@ import com.kinl.tmall.VO.*;
 import com.kinl.tmall.comparator.*;
 import com.kinl.tmall.configuration.CustomizedToken;
 import com.kinl.tmall.enums.LoginType;
+import com.kinl.tmall.enums.OrderStatusEnum;
 import com.kinl.tmall.enums.ResultEnum;
 import com.kinl.tmall.pojo.*;
 import com.kinl.tmall.service.*;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -145,6 +147,25 @@ public class ForeRestController {
             orderItemCreat(pid, num);
             Orderitem orderitem = orderItemService.findByUidAndPid(user.getId(), pid);
             return ResultVOUtil.success(orderitem.getId());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, e.getMessage());
+        }
+    }
+
+    //确认收货
+    @GetMapping("/foreconfirmPay")
+    public ResultVO foreconfirmPay(@RequestParam("oid") Integer oid){
+        try {
+            Order order = orderService.findById(oid);
+            if (order == null) {
+                return ResultVOUtil.error(1, "没有该订单");
+            }
+            order.setStatus(OrderStatusEnum.WAITCONFIRM.getStatus());
+            order.setConfirmdate(new Date());
+            orderService.update(order);
+            orderService.findVOById(oid);
+            return ResultVOUtil.success();
         } catch (Exception e) {
             e.printStackTrace();
             return ResultVOUtil.error(1, e.getMessage());

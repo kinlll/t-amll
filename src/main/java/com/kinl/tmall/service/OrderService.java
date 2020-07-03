@@ -27,4 +27,8 @@ public interface OrderService {
     List<ForeOrderVO> findByUid(Integer uid);
 
     Page queryPageAdmin(HashMap<String, Object> map);
+
+    Integer update(Order order);
+
+    ForeOrderVO findVOById(Integer oid);
 }

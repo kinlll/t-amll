@@ -50,4 +50,9 @@ public class UserJumpController {
     public String bought(){
         return "fore/bought";
     }
+
+    @GetMapping("/confirmPay")
+    public String confirmPay(){
+        return "fore/confirmPay";
+    }
 }
