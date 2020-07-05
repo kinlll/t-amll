@@ -48,6 +48,8 @@ public class WebShiroConfig {
         filterChainDefinitionMap.put("/web/**","anon");
         filterChainDefinitionMap.put("/category/**", "anon");
         filterChainDefinitionMap.put("/product/**", "anon");
+        filterChainDefinitionMap.put("/register", "anon");
+        filterChainDefinitionMap.put("/registerSuccess", "anon");
 
 
         filterChainDefinitionMap.put("/**", "authc");
@@ -78,6 +80,7 @@ public class WebShiroConfig {
     @Bean
     public UserWebShiroRealm userWebShiroRealm(){
         UserWebShiroRealm userWebShiroRealm = new UserWebShiroRealm();
+        userWebShiroRealm.setCredentialsMatcher(credentialsMatcher());
         return userWebShiroRealm;
     }
 

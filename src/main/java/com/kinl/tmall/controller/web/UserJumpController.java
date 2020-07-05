@@ -55,4 +55,24 @@ public class UserJumpController {
     public String confirmPay(){
         return "fore/confirmPay";
     }
+
+    @GetMapping("/orderConfirmed")
+    public String orderConfirmed(){
+        return "fore/orderConfirmed";
+    }
+
+    @GetMapping("/review")
+    public String review(){
+        return "fore/review";
+    }
+
+    @GetMapping("/register")
+    public String register(){
+        return "fore/register";
+    }
+
+    @GetMapping("/registerSuccess")
+    public String registerSuccess(){
+        return "fore/registerSuccess";
+    }
 }

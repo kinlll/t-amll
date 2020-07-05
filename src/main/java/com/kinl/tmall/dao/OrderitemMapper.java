@@ -106,4 +106,6 @@ public interface OrderitemMapper {
     Integer updateNumByUidAndPidInsert(@Param("uid") Integer uid,@Param("pid") Integer pid, @Param("num")Integer num);
 
     Integer updateById(@Param("orderItemForeVO") OrderItemForeVO orderItemForeVO);
+
+    Orderitem findFirstByOid(Integer oid);
 }

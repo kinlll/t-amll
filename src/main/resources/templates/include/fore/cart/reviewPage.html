@@ -3,7 +3,7 @@
         $(function(){
             var oid = getUrlParms("oid");
             var data4Vue = {
-                uri:'forereview',
+                uri:'web/forereview',
                 orders:[],
                 p:'',
                 o:null,
@@ -23,8 +23,8 @@
                         var url =  this.uri+"?oid="+oid;
                         axios.get(url).then(function(response) {
                             var result = response.data;
-                            vue.p = result.data.p;
-                            vue.o = result.data.o;
+                            vue.p = result.data.product;
+                            vue.o = result.data.order;
                             vue.reviews = result.data.reviews;
                             vue.$nextTick(function(){
                                 linkDefaultActions();
@@ -32,7 +32,7 @@
                         });
                     },
                     doreview:function(){
-                        var url =  "foredoreview?oid="+vue.o.id+"&pid="+vue.p.id+"&content="+vue.content;
+                        var url =  "web/foredoreview?oid="+vue.o.id+"&pid="+vue.p.id+"&content="+vue.content;
                         axios.post(url).then(function(response) {
                             var result = response.data;
                             vue.showReviews = true;
@@ -45,7 +45,7 @@
     </script>
     <div class="reviewDiv">
         <div class="reviewProductInfoDiv">
-            <div class="reviewProductInfoImg"><img v-if="null!=p.firstProductImage" width="400px" height="400px" :src="'img/productSingle/'+p.firstProductImage.id+'.jpg'"></div>
+            <div class="reviewProductInfoImg"><img v-if="null!==p.firstProductImage" width="400px" height="400px" :src="'img/productImage/'+p.firstProductImage.id+'.jpg'"></div>
             <div class="reviewProductInfoRightDiv">
                 <div class="reviewProductInfoRightText">
                     {{p.name}}
@@ -53,7 +53,7 @@
                 <table class="reviewProductInfoTable">
                     <tr>
                         <td width="75px">价格:</td>
-                        <td><span class="reviewProductInfoTablePrice">￥{{p.originalPrice|formatMoneyFilter}}</span> 元 </td>
+                        <td><span class="reviewProductInfoTablePrice">￥{{p.originalprice|formatMoneyFilter}}</span> 元 </td>
                     </tr>
                     <tr>
                         <td>配送</td>
@@ -66,7 +66,7 @@
                 </table>
 
                 <div class="reviewProductInfoRightBelowDiv">
-                    <span class="reviewProductInfoRightBelowImg"><img1 src="img/site/reviewLight.png"></span>
+                    <span class="reviewProductInfoRightBelowImg"><img src="img/site/reviewLight.png"></span>
                     <span v-if="null!=o" class="reviewProductInfoRightBelowText" >现在查看的是 您所购买商品的信息
     于 {{o.createDate | formatDateFilter('YYYY-MM-DD')}} 下单购买了此商品 </span>
 

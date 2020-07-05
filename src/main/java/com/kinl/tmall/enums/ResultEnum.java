@@ -45,6 +45,9 @@ public enum ResultEnum {
     ADD_ORDER_ERROR(37, "创建订单失败"),
     UPDATE_ORDER_ERROR(38, "更新订单失败"),
     FIND_OREDER_ERROR(38, "找不到该订单"),
+    FIND_ORDERITEM_ERROR(39, "查找订单项失败"),
+    INSERT_REVIRE_ERROR(40, "插入评论失败"),
+    INSERT_USER_ERROR(41, "创建账户失败"),
 
     ;
 

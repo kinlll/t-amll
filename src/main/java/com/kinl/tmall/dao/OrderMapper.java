@@ -116,4 +116,6 @@ public interface OrderMapper {
     List<ForeOrderVO> findByUid(Integer uid);
 
     List<AdminOrderVO> queryPageAdmin(HashMap<String, Object> map);
+
+    ForeOrderVO findVOById(Integer id);
 }

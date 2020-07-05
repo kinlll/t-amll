@@ -3,6 +3,8 @@ package com.kinl.tmall.service.impl;
 import com.kinl.tmall.VO.ReviewVO;
 import com.kinl.tmall.VO.UserVO;
 import com.kinl.tmall.dao.ReviewMapper;
+import com.kinl.tmall.enums.ResultEnum;
+import com.kinl.tmall.exception.AllException;
 import com.kinl.tmall.pojo.Review;
 import com.kinl.tmall.pojo.ReviewExample;
 import com.kinl.tmall.service.ReviewService;
@@ -48,5 +50,14 @@ public class ReviewServiceImpl implements ReviewService {
         criteria.andPidEqualTo(pid);
         int count = reviewMapper.countByExample(reviewExample);
         return count;
+    }
+
+    @Override
+    public Integer create(Review review) {
+        int insert = reviewMapper.insert(review);
+        if (insert == 0) {
+            throw new AllException(ResultEnum.INSERT_REVIRE_ERROR);
+        }
+        return insert;
     }
 }

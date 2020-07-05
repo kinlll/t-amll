@@ -17,4 +17,6 @@ public interface UserService {
     User findByName(String name);
 
     User findById(Integer id);
+
+    Integer insert(User user);
 }

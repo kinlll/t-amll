@@ -425,4 +425,8 @@
     select * from order_ limit #{start},#{pageSize}
   </select>
 
+  <select id="findVOById" parameterType="Integer" resultType="com.kinl.tmall.VO.ForeOrderVO">
+    select * from order_ where id=#{id}
+  </select>
+
 </mapper>

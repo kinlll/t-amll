@@ -37,4 +37,6 @@ public interface OrderItemService {
     List<OrderItemForeVO> findVOByOid(Integer oid);
 
     Integer getTotalNumber(List<OrderItemForeVO> orderItemForeVOS);
+
+    Orderitem findFirstByOid(Integer oid);
 }

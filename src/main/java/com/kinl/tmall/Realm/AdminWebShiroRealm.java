@@ -60,7 +60,7 @@ public class AdminWebShiroRealm extends AuthorizingRealm {
                 admin.getName(), //用户名
                 admin.getPassword(), //密码
                 salt, //盐值
-                getName()); //realm name
+                getName()); //当前realm name
 
         return simpleAuthenticationInfo;
     }

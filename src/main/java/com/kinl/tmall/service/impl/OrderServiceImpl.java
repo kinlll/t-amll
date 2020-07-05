@@ -212,11 +212,14 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public ForeOrderVO findVOById(Integer oid) {
-        Order order = orderMapper.selectByPrimaryKey(oid);
-        if (order == null) {
+        ForeOrderVO foreOrderVO = orderMapper.findVOById(oid);
+        if (foreOrderVO == null) {
             throw new AllException(ResultEnum.FIND_OREDER_ERROR);
         }
-        orderItemService.
-        return null;
+        List<OrderItemForeVO> orderItemForeVOS = orderItemService.findVOByOid(oid);
+        foreOrderVO.setOrderItems(orderItemForeVOS);
+        foreOrderVO.setTotal(orderItemService.getTotal(orderItemForeVOS));
+        foreOrderVO.setTotalNumber(orderItemService.getTotalNumber(orderItemForeVOS));
+        return foreOrderVO;
     }
 }

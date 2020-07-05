@@ -61,4 +61,13 @@ public class UserServiceImpl implements UserService {
         }
         return user;
     }
+
+    @Override
+    public Integer insert(User user) {
+        int insert = userMapper.insert(user);
+        if (insert == 0) {
+            throw new AllException(ResultEnum.INSERT_USER_ERROR);
+        }
+        return insert;
+    }
 }

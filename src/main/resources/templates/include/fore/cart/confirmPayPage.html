@@ -17,7 +17,7 @@
                     load:function(){
                         var url =  this.uri+"?oid="+oid;
                         axios.get(url).then(function(response) {
-                            vue.order = response.data;
+                            vue.order = response.data.data;
                         });
                     }
                 }
@@ -35,7 +35,8 @@
                 {{order.payDate|formatDateFilter}}
             </div>
             <div class="confirmPayTime3">
-                yyyy-MM-dd HH:mm:ss
+                <!--yyyy-MM-dd HH:mm:ss-->
+                {{order.deliveryDate|formatDateFilter}}
             </div>
         </div>
         <div class="confirmPayOrderInfoDiv">
@@ -54,13 +55,13 @@
                 </tr>
                 </thead>
                 <tr v-for="oi in order.orderItems">
-                    <td><img width="50px" :src="'img/productSingle_middle/'+oi.product.firstProductImage.id+'.jpg'"></td>
+                    <td><img width="50px" :src="'img/productImage/'+oi.product.firstProductImage.id+'.jpg'" v-if="oi.product.firstProductImage !== null"></td>
                     <td class="confirmPayOrderItemProductLink">
                         <a href="#nowhere">{{oi.product.name}}</a>
                     </td>
-                    <td>￥{{oi.product.originalPrice|formatMoneyFilter}}</td>
-                    <td>1</td>
-                    <td><span class="conformPayProductPrice">￥{{oi.product.promotePrice|formatMoneyFilter}}</span></td>
+                    <td>￥{{oi.product.originalprice|formatMoneyFilter}}</td>
+                    <td>{{oi.number}}</td>
+                    <td><span class="conformPayProductPrice">￥{{oi.product.promoteprice|formatMoneyFilter}}</span></td>
                     <td><span>快递 ： 0.00 </span></td>
                 </tr>
             </table>

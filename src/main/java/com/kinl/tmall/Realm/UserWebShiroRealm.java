@@ -1,17 +1,19 @@
 package com.kinl.tmall.Realm;
 
 import com.kinl.tmall.configuration.CustomizedToken;
-import com.kinl.tmall.enums.ResultEnum;
-import com.kinl.tmall.exception.AllException;
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.authc.AuthenticationInfo;
-import org.apache.shiro.authc.AuthenticationToken;
-import org.apache.shiro.authc.SimpleAuthenticationInfo;
+import com.kinl.tmall.pojo.User;
+import com.kinl.tmall.service.UserService;
+import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.util.ByteSource;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class UserWebShiroRealm extends AuthorizingRealm {
+
+    @Autowired
+    private UserService userService;
     
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
@@ -23,18 +25,14 @@ public class UserWebShiroRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
         System.out.println("UserWebShiroRealm.doGetAuthenticationInfo()");
         CustomizedToken customizedToken = (CustomizedToken) token;
-        //获取用户输入的账号
-        String username = (String) customizedToken.getPrincipal();
-        String userpwd = new String((char[]) customizedToken.getCredentials());
-        
-        /// TODO: 2020/4/4
-
-        String password = "123";  //假设的从数据库中获取的密码
-        if (!userpwd.equals(password)){
-            throw new AllException(ResultEnum.USERPWD_ERROR); //密码不正确
+        String principal = (String) customizedToken.getPrincipal();
+        User user = userService.findByName(principal);
+        if (user == null) {
+            throw new UnknownAccountException();
         }
+        ByteSource bytesSalt = ByteSource.Util.bytes(user.getSalt());
         SimpleAuthenticationInfo simpleAuthenticationInfo = new SimpleAuthenticationInfo(
-                username, password, getName());
+                user.getName(), user.getPassword(), bytesSalt, getName());
         
         return simpleAuthenticationInfo;
     }

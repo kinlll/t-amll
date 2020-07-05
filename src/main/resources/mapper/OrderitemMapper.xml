@@ -292,4 +292,8 @@
   <update id="updateById" parameterType="com.kinl.tmall.VO.OrderItemForeVO">
     update orderitem set oid=#{orderItemForeVO.order.id} where id=#{orderItemForeVO.id}
   </update>
+
+  <select id="findFirstByOid" parameterType="Integer" resultType="Orderitem">
+    select * from orderitem where oid=#{oid} limit 0,1
+  </select>
 </mapper>

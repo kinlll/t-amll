@@ -11,8 +11,11 @@ import com.kinl.tmall.pojo.*;
 import com.kinl.tmall.service.*;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
+import org.apache.shiro.crypto.hash.Md5Hash;
+import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.subject.Subject;
+import org.apache.shiro.util.ByteSource;
 import org.apache.shiro.web.session.HttpServletSession;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
@@ -153,7 +156,7 @@ public class ForeRestController {
         }
     }
 
-    //确认收货
+    //加载确认收货页面
     @GetMapping("/foreconfirmPay")
     public ResultVO foreconfirmPay(@RequestParam("oid") Integer oid){
         try {
@@ -161,10 +164,25 @@ public class ForeRestController {
             if (order == null) {
                 return ResultVOUtil.error(1, "没有该订单");
             }
-            order.setStatus(OrderStatusEnum.WAITCONFIRM.getStatus());
+            ForeOrderVO foreOrderVO = orderService.findVOById(oid);
+            return ResultVOUtil.success(foreOrderVO);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, e.getMessage());
+        }
+    }
+
+    //确认收货
+    @GetMapping("/foreorderConfirmed")
+    public ResultVO foreorderConfirmed(@RequestParam("oid") Integer oid){
+        try {
+            Order order = orderService.findById(oid);
+            if (order == null) {
+                return ResultVOUtil.error(1, "没有该订单");
+            }
+            order.setStatus(OrderStatusEnum.WAITREVIEW.getStatus());
             order.setConfirmdate(new Date());
             orderService.update(order);
-            orderService.findVOById(oid);
             return ResultVOUtil.success();
         } catch (Exception e) {
             e.printStackTrace();
@@ -340,6 +358,91 @@ public class ForeRestController {
             }
             List<ForeOrderVO> foreOrderVOS = orderService.findByUid(user.getId());
             return ResultVOUtil.success(foreOrderVOS);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, e.getMessage());
+        }
+    }
+
+    //获取评论页面
+    @GetMapping("/forereview")
+    public ResultVO forereview(@RequestParam("oid") Integer oid){
+        try {
+            Order order = orderService.findById(oid);
+            if (order == null) {
+                return ResultVOUtil.error(1, "找不到订单");
+            }
+            ForeReviewVO foreReviewVO = new ForeReviewVO();
+            Orderitem orderitem = orderItemService.findFirstByOid(oid);
+            Product product = productService.findById(orderitem.getPid());
+            List<ReviewVO> reviewVOS = reviewService.findByPid(product.getId());
+
+            foreReviewVO.setOrder(order);
+            foreReviewVO.setProduct(product);
+            foreReviewVO.setReviews(reviewVOS);
+
+            return ResultVOUtil.success(foreReviewVO);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, e.getMessage());
+        }
+    }
+
+    //评论
+    @PostMapping("/foredoreview")
+    public ResultVO foredoreview(@RequestParam("oid") Integer oid, @RequestParam("pid") Integer pid, @RequestParam("content") String content){
+        try {
+            Order order = orderService.findById(oid);
+            Product product = productService.findById(pid);
+            if (order == null || product == null) {
+                return ResultVOUtil.error(1,"没有改订单或该商品");
+            }
+            if (content.trim() == null) {
+                return ResultVOUtil.error(1, "评论内容不能为空");
+            }
+            String principal = (String) SecurityUtils.getSubject().getPrincipal();
+            User user = userService.findByName(principal);
+
+            Review review = new Review();
+            review.setContent(content);
+            review.setCreatedate(new Date());
+            review.setPid(pid);
+            review.setUid(user.getId());
+
+            reviewService.create(review);
+            order.setStatus(OrderStatusEnum.COMPLETE.getStatus());
+            orderService.update(order);
+
+            //获取商品内容和评论
+            ForeReviewVO foreReviewVO = new ForeReviewVO();
+            Orderitem orderitem = orderItemService.findFirstByOid(oid);
+            List<ReviewVO> reviewVOS = reviewService.findByPid(product.getId());
+            foreReviewVO.setOrder(order);
+            foreReviewVO.setProduct(product);
+            foreReviewVO.setReviews(reviewVOS);
+
+            return ResultVOUtil.success(foreReviewVO);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, e.getMessage());
+        }
+    }
+
+    //注册
+    @PostMapping("/foreregister")
+    public ResultVO foreregister(@RequestBody User user){
+        try {
+            if ("".equals(user.getName())  || "".equals(user.getPassword())) {
+                return ResultVOUtil.error(1, "账号密码不能为空");
+            }
+            user.setSalt(user.getName());
+            ByteSource salt = ByteSource.Util.bytes(user.getName());
+            Md5Hash md5Hash = new Md5Hash(user.getPassword(), salt);
+            String s = md5Hash.toHex();
+            user.setPassword(s);
+            userService.insert(user);
+
+            return ResultVOUtil.success();
         } catch (Exception e) {
             e.printStackTrace();
             return ResultVOUtil.error(1, e.getMessage());

@@ -189,4 +189,13 @@ public class OrderItemServiceImpl implements OrderItemService {
         }
         return count;
     }
+
+    @Override
+    public Orderitem findFirstByOid(Integer oid) {
+        Orderitem orderitem = orderitemMapper.findFirstByOid(oid);
+        if (orderitem == null) {
+            throw new AllException(ResultEnum.FIND_ORDERITEM_ERROR);
+        }
+        return orderitem;
+    }
 }
