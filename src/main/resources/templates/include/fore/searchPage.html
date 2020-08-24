@@ -3,29 +3,30 @@
         $(function(){
             var keyword = getUrlParms("keyword");
             var data4Vue = {
-                uri:'foresearch',
+                uri:'web/foresearch',
                 products:[]
             };
             //ViewModel
-                    var vue = new Vue({
-                        el: '#workingArea',
-                        data: data4Vue,
-                        mounted:function(){ //mounted　表示这个 Vue 对象加载成功了
-                            this.load();
-                        },
-                        methods: {
-                            load:function(){
-                                var url =  this.uri+"?keyword="+keyword;
-                                axios.post(url).then(function(response) {
-                                    vue.products = response.data;
-                                    vue.$nextTick(function(){
-                                        linkDefaultActions();
-                                    })
-                                });
-                            }
+            var vue = new Vue({
+                el: '#workingArea',
+                data: data4Vue,
+                mounted:function(){ //mounted　表示这个 Vue 对象加载成功了
+                    this.load();
+                },
+                methods: {
+                    load: function () {
+                        var url = this.uri + "?keyword=" + keyword;
+                        axios.post(url).then(function (response) {
+                            vue.products = response.data.data;
+                            vue.$nextTick(function () {
+                                linkDefaultActions();
+                            })
+                        });
+                    }
                 }
+
             });
-        })
+        });
     </script>
 
     <div id="searchResult">

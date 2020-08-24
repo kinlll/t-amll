@@ -4,6 +4,7 @@ import com.kinl.tmall.Utils.ResultVOUtil;
 import com.kinl.tmall.VO.*;
 import com.kinl.tmall.comparator.*;
 import com.kinl.tmall.configuration.CustomizedToken;
+import com.kinl.tmall.configuration.ElasticsearchConfiguration;
 import com.kinl.tmall.enums.LoginType;
 import com.kinl.tmall.enums.OrderStatusEnum;
 import com.kinl.tmall.enums.ResultEnum;
@@ -17,16 +18,15 @@ import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.ByteSource;
 import org.apache.shiro.web.session.HttpServletSession;
+import org.elasticsearch.search.SearchHit;
+import org.elasticsearch.search.SearchHits;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @RestController
 @RequestMapping("/web")
@@ -52,6 +52,9 @@ public class ForeRestController {
 
     @Autowired
     private OrderItemService orderItemService;
+
+    @Autowired
+    private ElasticsearchConfiguration esConfig;
 
     @GetMapping("/forecategory/{cid}")
     public ResultVO forecategory(@PathVariable("cid") Integer cid, String sort){
@@ -435,6 +438,10 @@ public class ForeRestController {
             if ("".equals(user.getName())  || "".equals(user.getPassword())) {
                 return ResultVOUtil.error(1, "账号密码不能为空");
             }
+            User byName = userService.findByName(user.getName());
+            if (byName != null) {
+                return ResultVOUtil.error(1,"该用户名已被使用");
+            }
             user.setSalt(user.getName());
             ByteSource salt = ByteSource.Util.bytes(user.getName());
             Md5Hash md5Hash = new Md5Hash(user.getPassword(), salt);
@@ -446,6 +453,26 @@ public class ForeRestController {
         } catch (Exception e) {
             e.printStackTrace();
             return ResultVOUtil.error(1, e.getMessage());
+        }
+    }
+    
+    //搜索
+    // TODO: 2020/8/23
+    @PostMapping("/foresearch")
+    public ResultVO foresearch(@RequestParam("keyword") String keyword){
+        try {
+            esConfig.createIndex();
+            SearchHits hits = esConfig.search(keyword);
+            List<Product> products = new ArrayList<>();
+            for (SearchHit hit : hits) {
+                Map<String, Object> map = hit.getSourceAsMap();
+                Product product = productService.findById((Integer) map.get("id"));
+                products.add(product);
+            }
+            return ResultVOUtil.success(products);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResultVOUtil.error(1, "搜索失败");
         }
     }
 

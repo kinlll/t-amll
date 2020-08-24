@@ -50,6 +50,7 @@ public class WebShiroConfig {
         filterChainDefinitionMap.put("/product/**", "anon");
         filterChainDefinitionMap.put("/register", "anon");
         filterChainDefinitionMap.put("/registerSuccess", "anon");
+        filterChainDefinitionMap.put("/search", "anon");
 
 
         filterChainDefinitionMap.put("/**", "authc");

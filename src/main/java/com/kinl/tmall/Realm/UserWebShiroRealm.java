@@ -17,7 +17,7 @@ public class UserWebShiroRealm extends AuthorizingRealm {
     
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-        /// TODO: 2020/4/3
+        /// TODO: 2020/4/3  用户权限，暂无实现内容
         return null;
     }
 

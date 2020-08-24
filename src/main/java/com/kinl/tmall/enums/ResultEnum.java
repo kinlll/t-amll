@@ -48,6 +48,9 @@ public enum ResultEnum {
     FIND_ORDERITEM_ERROR(39, "查找订单项失败"),
     INSERT_REVIRE_ERROR(40, "插入评论失败"),
     INSERT_USER_ERROR(41, "创建账户失败"),
+    DELETE_DOCUMENT_ERROR(42,"删除文档失败"),
+    CREATE_INDEX_ERROR(43,"创建索引失败"),
+    SEARCH_ERROR(44, "搜索失败"),
 
     ;
 

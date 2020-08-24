@@ -75,4 +75,9 @@ public class UserJumpController {
     public String registerSuccess(){
         return "fore/registerSuccess";
     }
+
+    @GetMapping("/search")
+    public String search(){
+        return "fore/search";
+    }
 }

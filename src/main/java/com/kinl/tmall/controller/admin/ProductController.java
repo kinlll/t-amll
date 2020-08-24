@@ -3,14 +3,18 @@ package com.kinl.tmall.controller.admin;
 import com.kinl.tmall.Utils.ImageUtil;
 import com.kinl.tmall.Utils.Page;
 import com.kinl.tmall.Utils.ResultVOUtil;
+import com.kinl.tmall.VO.EsVO;
 import com.kinl.tmall.VO.ProductImageVO;
 import com.kinl.tmall.VO.ProductVO;
 import com.kinl.tmall.VO.ResultVO;
+import com.kinl.tmall.configuration.ElasticsearchConfiguration;
 import com.kinl.tmall.exception.AllException;
 import com.kinl.tmall.pojo.*;
 import com.kinl.tmall.service.*;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.elasticsearch.client.RestHighLevelClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchAutoConfiguration;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -40,6 +44,9 @@ public class ProductController {
 
     @Autowired
     private PropertyValueService propertyValueService;
+
+    @Autowired
+    private ElasticsearchConfiguration esConfig;
 
     @RequiresPermissions(value = {"admin:select"})
     @GetMapping("/categories/{cid}/product")
@@ -77,6 +84,14 @@ public class ProductController {
             }
             bean.setCid(bean.getCategory().getId());
             productService.addVO(bean);
+
+            RestHighLevelClient client = esConfig.getClient();
+            EsVO esVO = new EsVO();
+            esVO.setId(bean.getId());
+            esVO.setName(bean.getName());
+            esVO.setSubtitle(bean.getSubTitle());
+            esConfig.add(esVO);
+
             return ResultVOUtil.success();
         } catch (AllException a){
             a.printStackTrace();;
@@ -268,8 +283,10 @@ public class ProductController {
             for (Propertyvalue propertyvalue : propertyvalueList) {
                 propertyValueService.deleteById(propertyvalue.getId());
             }
-
             productService.deleteById(productId);
+
+            esConfig.delete(productId);
+
             return ResultVOUtil.success();
         } catch (AllException a){
             a.printStackTrace();
