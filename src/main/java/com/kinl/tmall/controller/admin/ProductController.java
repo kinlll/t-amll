@@ -85,6 +85,7 @@ public class ProductController {
             bean.setCid(bean.getCategory().getId());
             productService.addVO(bean);
 
+            // elasticsearch 添加文档
             RestHighLevelClient client = esConfig.getClient();
             EsVO esVO = new EsVO();
             esVO.setId(bean.getId());

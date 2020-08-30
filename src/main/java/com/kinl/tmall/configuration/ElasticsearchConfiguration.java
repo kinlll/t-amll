@@ -138,8 +138,10 @@ public class ElasticsearchConfiguration {
          BoolQueryBuilder boolBuilder = QueryBuilders.boolQuery();
          SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
          MatchQueryBuilder matchQueryBuilder = QueryBuilders.matchQuery("name", search);
+         MatchQueryBuilder matchQueryBuilder1 = QueryBuilders.matchQuery("subtitle", search);
 
-         boolBuilder.must(matchQueryBuilder);
+         boolBuilder.should(matchQueryBuilder);
+         boolBuilder.should(matchQueryBuilder1);
          sourceBuilder.query(boolBuilder);
          sourceBuilder.size(1000);
          sourceBuilder.timeout(new TimeValue(60, TimeUnit.SECONDS));
