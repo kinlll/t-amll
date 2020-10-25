@@ -143,16 +143,20 @@
             <version>7.6.2</version>
         </dependency>
 
-        <!-- redis -->
+
+        <!--springboot中的redis依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
-
-        <!--redis连接池-->
+        <!-- lettuce pool 缓存连接池-->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-pool2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
         </dependency>
 
         <!-- 阿里巴巴转换 fastjson -->

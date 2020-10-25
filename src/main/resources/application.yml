@@ -1,6 +1,6 @@
 ## 端口配置
 server:
-  port: 8081
+  port: 8080
 
 ## log配置
 logging:
@@ -35,19 +35,21 @@ spring:
   redis:
     host: 47.105.164.91
     port: 6379
+    password:
+    #Redis服务器连接密码（默认为空）
     ## Redis服务器连接密码（默认为空）
     #password: root
     ##超时连接时间(毫秒)
-    timeout: 5000
+    timeout: 30000
     lettuce:
       pool:
         ##连接池中最大连接数
-        max-active: 10
+        max-active: 8
         ##连接池中最大空闲连接
-        max-idle: 10
-        ##连接池中最小空闲连接
+        max-idle: 8
         ## 连接池最大阻塞等待时间（使用负值表示没有限制）
-        max-wait: 300
+        max-wait: -1
+        ##连接池中最小空闲连接
         min-idle: 0
 #    jedis:
 #      pool:

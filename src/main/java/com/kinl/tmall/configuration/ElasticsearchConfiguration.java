@@ -28,6 +28,7 @@ import org.elasticsearch.rest.RestStatus;
 import org.elasticsearch.search.SearchHit;
 import org.elasticsearch.search.SearchHits;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -39,21 +40,25 @@ import java.util.concurrent.TimeUnit;
 
 @Configuration
 @Data
-@ConfigurationProperties(prefix = "elastic-search")
-@PropertySource("elasticsearch.properties")
+//@ConfigurationProperties(prefix = "elastic-search")
+@PropertySource("classpath:elasticsearch.properties")
 @Component
 public class ElasticsearchConfiguration {
 
    //ES集群名
+   @Value("${elastic-search.clusterName}")
    private String clusterName;
 
    //ES查询的索引名称
+   @Value("${elastic-search.index}")
    private String index;
 
    //ES集群中节点的域名或IP
+   @Value("${elastic-search.ip}")
    private String ip;
 
    //ES连接端口号
+   @Value("${elastic-search.port}")
    private Integer port;
 
    @Bean

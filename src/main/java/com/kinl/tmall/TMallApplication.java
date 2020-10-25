@@ -15,6 +15,7 @@ import org.springframework.web.context.request.RequestContextListener;
 
 @SpringBootApplication
 @MapperScan(basePackages = "com.kinl.tmall.dao")
+@Component
 public class TMallApplication extends SpringBootServletInitializer {
 
     @Override

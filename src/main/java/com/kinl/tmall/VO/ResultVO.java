@@ -2,8 +2,12 @@ package com.kinl.tmall.VO;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class ResultVO<T> {
+public class ResultVO<T> implements Serializable {
+
+    private static final long serialVersionUID = -5644975618653920523L;
 
     private Integer code;
 
@@ -14,5 +18,8 @@ public class ResultVO<T> {
     public void resultVO(Integer code, String message) {
         this.code = code;
         this.message = message;
+    }
+
+    public ResultVO() {
     }
 }

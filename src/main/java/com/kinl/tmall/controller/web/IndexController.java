@@ -6,7 +6,7 @@ import com.kinl.tmall.pojo.Product;
 import com.kinl.tmall.service.CategoryService;
 import com.kinl.tmall.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
@@ -21,6 +21,7 @@ public class IndexController {
     @Autowired
     private ProductService productService;
 
+    @Cacheable(value = "product")
     @GetMapping("/forehome")
     public ResultVO<List<CategoryVO>> index(){
         ResultVO<List<CategoryVO>> resultVO = new ResultVO<>();
@@ -55,7 +56,10 @@ public class IndexController {
             if (i + 7 > size){
                 toIndex = size - i;
             }
-            List<Product> products1 = products.subList(i, i + toIndex);
+
+            //使用subList，在redis读取时出现了序列化问题，需要用一个new ArrayLust封装一下 !!!!!!
+//            List<Product> products1 = products.subList(i, i + toIndex);
+            ArrayList<Product> products1 = new ArrayList<>(products.subList(i, i + toIndex));
             lists.add(products1);
         }
 

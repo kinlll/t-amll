@@ -7,6 +7,8 @@ import java.util.List;
 
 public class CategoryVO implements Serializable {
 
+    private static final long serialVersionUID = 3207372630803424615L;
+
     private Integer id;
 
     private String name;
